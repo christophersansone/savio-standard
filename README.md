@@ -8,6 +8,10 @@
 
 **Status: working draft — pilot planning.** The project name is a working title; the final name belongs to the founding team. The steward entity is not yet designated and appears throughout as `[Steward Entity]`.
 
+> ### 📖 Start here: the [Strategic Plan](docs/strategic-plan.md)
+>
+> Who we are, why we exist, and how this works — the problem we are naming, the theory of change, the six pillars, the covenant, and the year-one pilot. Everything else in this repository serves that document. If you read only one thing, read it.
+
 ## What this is
 
 Catholic grade schools promise a community formed by the Gospel, yet many families experience something different: social aggression that persists despite everyone's good intentions, a school office asked to carry burdens it was never built to carry, and a culture where the kindest families quietly leave. The Savio Project organizes parents directly — independent of school administration — to build real community, adopt a shared standard of conduct, learn a common language for social aggression, handle parent-to-parent conflict with charity and skill, raise children who stand up for one another, and form children as wise, supervised users of technology.
@@ -20,7 +24,7 @@ A group of parents adopting the framework at their school is called a **Savio Co
 
 | Path | Contents |
 |---|---|
-| `docs/strategic-plan.md` | Why we exist, how the initiative works, and how it will succeed |
+| `docs/strategic-plan.md` | **Start here** — who we are, why we exist, and how this will succeed |
 | `docs/stewardship-and-operations.md` | How the organization operates: entity, licensing, terms, money |
 | `docs/stewardship-commitment.md` | The steward's public promises, one page |
 | `docs/why-a-steward.md` | Plain-language Q&A for contributors on ownership and stewardship |
@@ -37,10 +41,11 @@ Core program content lives in `content/` as it is drafted:
 |---|---|
 | `content/covenant.md` | The Family Covenant — the signable one-pager and how activation works |
 | `content/parent-to-parent-protocol.md` | The full protocol guide with scripts, worked examples, and the quick-reference card |
+| `content/glossary.md` | The shared language — parent version; child versions by age tier to follow |
 | `content/facilitator-onboarding.md` | Facilitator training guide: method, scripts, hard moments, refusal criteria |
 | `content/roles-and-responsibilities.md` | The six volunteer roles — pitch, duties, time, and term for each |
 
-Still to come: the glossary (parent and child versions), formation series kits, children's program meeting kits, facilitator manual, the Digital Oversight guide, and situation guides.
+Still to come: the glossary's child versions, formation series kits, children's program meeting kits, the Digital Oversight guide, and situation guides.
 
 ## Contributing
 
