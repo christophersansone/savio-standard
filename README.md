@@ -42,6 +42,8 @@ Core program content lives in `content/` as it is drafted:
 | `content/covenant.md` | The Family Covenant — the signable one-pager and how activation works |
 | `content/parent-to-parent-protocol.md` | The full protocol guide with scripts, worked examples, and the quick-reference card |
 | `content/glossary.md` | The shared language — parent version; child versions by age tier to follow |
+| `content/manifesto-parents.md` | The parents' manifesto — our self-evident truths and stated expectations, one page |
+| `content/manifesto-community.md` | The community manifesto — the same truths as "we choose X over Y" affirmations, signable by parents, staff, administration, and clergy |
 | `content/facilitator-onboarding.md` | Facilitator training guide: method, scripts, hard moments, refusal criteria |
 | `content/roles-and-responsibilities.md` | The six volunteer roles — pitch, duties, time, and term for each |
 

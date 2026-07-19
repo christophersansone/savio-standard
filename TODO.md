@@ -29,6 +29,7 @@ Working checklist — basic project management, not codified content. Edit freel
 - [ ] Facilitator onboarding — drafted at `content/facilitator-onboarding.md`; review pending
 - [ ] Roles & responsibilities — drafted at `content/roles-and-responsibilities.md`; review pending
 - [ ] Glossary — parent version drafted at `content/glossary.md`; child versions (K–2, 3–5, 6–8) to follow
+- [ ] Manifesto — both versions drafted (`content/manifesto-parents.md`, `content/manifesto-community.md`); founding team to review and choose how each is used
 - [ ] The founding-team charter
 
 ## Pilot
