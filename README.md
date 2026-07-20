@@ -34,6 +34,7 @@ A group of parents adopting the framework at their school is called a **Savio Co
 | `CLA.md` | Contributor License Agreement (required for content contributions) |
 | `CODE_OF_CONDUCT.md` | The Golden Rule, applied to this repository |
 | `TODO.md` | Working checklist for legal, content, and pilot tasks |
+| `website/` | The public website, generated from this repository's Markdown ([details](website/README.md)) — content contributors can ignore it |
 
 Core program content lives in `content/` as it is drafted:
 

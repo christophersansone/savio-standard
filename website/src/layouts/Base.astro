@@ -1,0 +1,113 @@
+---
+import '@fontsource-variable/source-serif-4';
+import '@fontsource-variable/source-sans-3';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/cormorant-garamond/700.css';
+import '../styles/global.css';
+import { REPO_URL } from '../lib/registry';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'The Savio Project',
+  description = 'A parent-led movement to rebuild culture in Catholic grade schools.',
+} = Astro.props;
+
+const pageTitle = title === 'The Savio Project' ? title : `${title} · The Savio Project`;
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: '/plan', label: 'The Plan' },
+  { href: '/manifesto', label: 'Manifesto' },
+  { href: '/covenant', label: 'Covenant' },
+  { href: '/protocol', label: 'Protocol' },
+  { href: '/library', label: 'Library' },
+];
+
+const isActive = (href: string) => path === href || path.startsWith(href + '/');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div class="h-[3px] bg-gradient-to-r from-gold-soft via-gold to-gold-soft"></div>
+
+    <header class="border-b border-line bg-paper/90 backdrop-blur sticky top-0 z-10">
+      <div class="mx-auto max-w-5xl px-5 py-4 flex items-baseline justify-between gap-6">
+        <a href="/" class="font-display text-2xl font-semibold tracking-wide text-ink-deep whitespace-nowrap">
+          The Savio Project
+        </a>
+        <nav class="font-sans text-[0.8rem] font-semibold tracking-[0.14em] uppercase flex flex-wrap gap-x-5 gap-y-1 items-baseline">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                class:list={[
+                  'transition-colors hover:text-gold',
+                  isActive(item.href) ? 'text-gold' : 'text-ink-soft',
+                ]}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+          <a href={REPO_URL} class="text-ink-soft hover:text-gold transition-colors" title="GitHub repository">
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-line bg-paper-deep mt-20">
+      <div class="mx-auto max-w-5xl px-5 py-10 font-sans text-sm text-ink-soft">
+        <div class="ornament mb-6 text-gold">✦</div>
+        <div class="grid gap-8 sm:grid-cols-3">
+          <div>
+            <p class="font-display text-lg text-ink-deep mb-1">The Savio Project</p>
+            <p class="italic font-serif">
+              A lay movement under the patronage of St.&nbsp;Dominic&nbsp;Savio and St.&nbsp;John&nbsp;Bosco.
+            </p>
+          </div>
+          <div>
+            <p class="eyebrow mb-2">Our promise</p>
+            <p>
+              Free for families, forever. Read the{' '}
+              <a href="/commitment" class="underline decoration-gold-soft underline-offset-2 hover:text-gold">Stewardship Commitment</a>.
+            </p>
+          </div>
+          <div>
+            <p class="eyebrow mb-2">Built in the open</p>
+            <p>
+              Every document on this site lives in a public{' '}
+              <a href={REPO_URL} class="underline decoration-gold-soft underline-offset-2 hover:text-gold">repository</a>{' '}
+              — corrections and contributions welcome.
+            </p>
+          </div>
+        </div>
+        <p class="mt-8 text-xs text-ink-soft/80">
+          Working draft · “The Savio Project” is a working title · Content licensed{' '}
+          <a href={`${REPO_URL}/blob/master/LICENSE.md`} class="underline underline-offset-2 hover:text-gold">CC BY-NC-SA 4.0</a>{' '}
+          · © 2026 [Steward Entity]
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

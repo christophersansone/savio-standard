@@ -1,0 +1,193 @@
+---
+import Base from '../layouts/Base.astro';
+import { docs, REPO_URL } from '../lib/registry';
+
+const featured = docs.filter((d) => d.featured);
+
+const pillars = [
+  {
+    n: 'I',
+    name: 'Community',
+    text: 'School Leads and Homeroom Hosts keep the culture alive in every room — every family known, every family invited, every time.',
+  },
+  {
+    n: 'II',
+    name: 'Formation',
+    text: 'An eight-session parent series on social aggression, conflict, and childhood — because we cannot enforce a standard we cannot articulate.',
+  },
+  {
+    n: 'III',
+    name: 'Shared Language',
+    text: 'A covenant and a glossary held in common, so a child, her parents, and the other family are finally using the same words.',
+  },
+  {
+    n: 'IV',
+    name: 'Conflict Navigation',
+    text: 'A protocol for the hard conversation between parents — and trained facilitators for when it gets stuck.',
+  },
+  {
+    n: 'V',
+    name: 'Upstander Kids',
+    text: 'Monthly club meetings where children rehearse courage — skits, stories, and scripts until standing up is muscle memory.',
+  },
+  {
+    n: 'VI',
+    name: 'Digital Oversight',
+    text: 'Simple household norms every family can keep: messages open to review, no devices in bedrooms, nothing unfiltered, ever.',
+  },
+];
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="mx-auto max-w-3xl px-5 pt-20 pb-14 text-center">
+    <p class="eyebrow mb-6">A parent-led movement for Catholic grade schools</p>
+    <h1 class="font-display text-5xl sm:text-6xl font-semibold leading-[1.08] text-ink-deep text-balance">
+      The Golden Rule is the standard,<br class="hidden sm:block" /> not the goal.
+    </h1>
+    <p class="mt-7 text-lg leading-relaxed text-ink-soft max-w-2xl mx-auto">
+      We are parents who choose a Catholic school on purpose — and who believe our children should be
+      surrounded by classmates who treat one another with kindness and dignity. Culture is not delegated
+      to a school office. It is built by families, together, on purpose.
+    </p>
+    <div class="mt-9 flex flex-wrap justify-center gap-4 font-sans">
+      <a
+        href="/plan"
+        class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
+      >
+        Read the Plan
+      </a>
+      <a
+        href="/covenant"
+        class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
+      >
+        The Covenant
+      </a>
+    </div>
+  </section>
+
+  <!-- Quote band -->
+  <section class="border-y border-line bg-paper-deep">
+    <div class="mx-auto max-w-4xl px-5 py-12 grid gap-10 sm:grid-cols-2 text-center font-serif italic text-ink-soft">
+      <figure>
+        <blockquote class="text-lg leading-relaxed">
+          “So in everything, do to others what you would have them do to you, for this sums up the Law and
+          the Prophets.”
+        </blockquote>
+        <figcaption class="eyebrow mt-4 not-italic">Matthew 7:12</figcaption>
+      </figure>
+      <figure>
+        <blockquote class="text-lg leading-relaxed">
+          “I can’t do big things, but I want everything I do, even the smallest thing, to be for the
+          greater glory of God.”
+        </blockquote>
+        <figcaption class="eyebrow mt-4 not-italic">St. Dominic Savio</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- The problem -->
+  <section class="mx-auto max-w-3xl px-5 py-16 text-center">
+    <p class="eyebrow mb-4">Why this exists</p>
+    <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">A community cannot delegate its culture</h2>
+    <p class="text-lg leading-relaxed text-ink-soft">
+      Social aggression persists despite everyone’s good intentions. The school office is asked to carry
+      burdens it was never built to carry. Conversations between parents fail in predictable ways — and
+      the kindest families quietly leave. The adults best positioned to change any of this are not
+      employed by the school. They are us.
+    </p>
+  </section>
+
+  <!-- Patron -->
+  <section class="border-y border-line bg-paper-deep">
+    <div class="mx-auto max-w-3xl px-5 py-14 text-center">
+      <p class="eyebrow mb-4">Our patron</p>
+      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">Why “Savio”</h2>
+      <p class="text-lg leading-relaxed text-ink-soft">
+        St. Dominic Savio was a schoolboy — fourteen when he died, canonized for the holiness of an
+        ordinary school life. At his school he organized his classmates into a company of mutual care:
+        he defended the smallest boys from bullying, broke up fights, and befriended the friendless. He
+        is exactly what this movement asks our children to become, and behind the pupil stands the
+        teacher — his mentor, St. John Bosco, who formed young people through reason, religion, and
+        loving-kindness so thoroughly that discipline was rarely needed. Every gathering, covenant, and
+        skit in this project is an attempt to make Savio’s way ordinary again.
+      </p>
+      <p class="mt-6 font-sans text-sm">
+        <a href="/plan#patronage-and-identity" class="text-gold font-semibold uppercase tracking-wide hover:text-ink-deep transition-colors">
+          Read more in the plan →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="mx-auto max-w-5xl px-5 pb-16">
+    <div class="ornament mb-10"><span class="eyebrow">The six pillars</span></div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        pillars.map((p) => (
+          <div class="rounded-lg border border-line bg-white/50 p-6">
+            <div class="font-display text-gold text-xl font-semibold">{p.n}</div>
+            <h3 class="font-display text-xl font-semibold text-ink-deep mt-1 mb-2">{p.name}</h3>
+            <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">{p.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section class="mx-auto max-w-5xl px-5 pb-16">
+    <div class="ornament mb-10"><span class="eyebrow">Start reading</span></div>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {
+        featured.map((d) => (
+          <a
+            href={'/' + d.slug}
+            class="group rounded-lg border border-line bg-white/50 p-6 transition-all hover:border-gold-soft hover:shadow-sm"
+          >
+            <p class="eyebrow mb-2">{d.section}</p>
+            <h3 class="font-display text-2xl font-semibold text-ink-deep group-hover:text-gold transition-colors">
+              {d.title}
+            </h3>
+            <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-2">{d.description}</p>
+          </a>
+        ))
+      }
+    </div>
+    <p class="mt-8 text-center font-sans text-sm text-ink-soft">
+      Everything else — the glossary, the community roles, the facilitator guide, and the project’s own
+      governance — is in the <a href="/library" class="text-gold underline underline-offset-2">library</a>.
+    </p>
+  </section>
+
+  <!-- How it starts -->
+  <section class="border-t border-line bg-paper-deep">
+    <div class="mx-auto max-w-4xl px-5 py-16 text-center">
+      <p class="eyebrow mb-4">How it starts</p>
+      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-10">No permission required</h2>
+      <div class="grid gap-8 sm:grid-cols-3 font-sans text-[0.95rem] text-ink-soft">
+        <div>
+          <div class="font-display text-4xl text-gold font-semibold mb-2">1</div>
+          <p><strong class="text-ink-deep">Sign the covenant.</strong> Privately — no one knows until your grade activates.</p>
+        </div>
+        <div>
+          <div class="font-display text-4xl text-gold font-semibold mb-2">2</div>
+          <p><strong class="text-ink-deep">Eight families activate a grade.</strong> All are introduced. No family stands alone.</p>
+        </div>
+        <div>
+          <div class="font-display text-4xl text-gold font-semibold mb-2">3</div>
+          <p><strong class="text-ink-deep">A community forms.</strong> Hosts, formation nights, a shared language — a culture, on purpose.</p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a
+          href={REPO_URL}
+          class="font-sans text-sm font-semibold uppercase tracking-wide text-gold hover:text-ink-deep transition-colors"
+        >
+          Built in the open on GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

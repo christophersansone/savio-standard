@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import { docs, REPO_URL } from '../lib/registry';
+import type { Section } from '../lib/registry';
+
+const sections: Section[] = ['Start Here', 'For Families', 'For Communities', 'The Project'];
+---
+
+<Base
+  title="Library"
+  description="Every document of The Savio Project — the plan, the covenant, the manifestos, and the guides — free, forever."
+>
+  <section class="mx-auto max-w-5xl px-5 py-14">
+    <header class="mb-12 text-center">
+      <p class="eyebrow mb-3">The Library</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-semibold text-ink-deep">Every document, free, forever</h1>
+      <p class="mt-4 font-sans text-ink-soft max-w-2xl mx-auto">
+        The canonical versions live in a public repository; these pages are generated from it. Spot
+        something to improve? Every page has a “suggest an edit” link.
+      </p>
+    </header>
+
+    {
+      sections.map((section) => (
+        <div class="mb-12">
+          <div class="ornament mb-6">
+            <span class="eyebrow">{section}</span>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            {docs
+              .filter((d) => d.section === section)
+              .map((d) => (
+                <a
+                  href={'/' + d.slug}
+                  class="group rounded-lg border border-line bg-white/50 p-5 transition-all hover:border-gold-soft hover:shadow-sm"
+                >
+                  <h2 class="font-display text-xl font-semibold text-ink-deep group-hover:text-gold transition-colors">
+                    {d.title}
+                  </h2>
+                  <p class="font-sans text-sm leading-relaxed text-ink-soft mt-1.5">{d.description}</p>
+                </a>
+              ))}
+          </div>
+        </div>
+      ))
+    }
+
+    <p class="text-center font-sans text-sm text-ink-soft">
+      Looking for the license, contributor agreement, or code of conduct? They live{' '}
+      <a href={REPO_URL} class="text-gold underline underline-offset-2">in the repository</a>.
+    </p>
+  </section>
+</Base>

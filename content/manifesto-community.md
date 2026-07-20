@@ -8,14 +8,14 @@ We, the parents, teachers, staff, administrators, and clergy of **[School]**, ch
 - The Golden Rule is the standard of a Christian community, not its aspiration.
 - Parents are the first educators of their children, and the school is their indispensable partner; neither can form a child alone.
 - A Catholic school is a community of believers before it is an institution, and what a community tolerates, it teaches.
-- The faith is not a subject. It is taught in religion class and proven in the hallway, the lunchroom, the faculty room, and the group chat.
+- The Faith is not a subject. It is _taught_ in religion class and _lived_ in the hallway, the lunchroom, the faculty room, and the group chat.
 
 Therefore, in how we live together, **we choose:**
 
 - **The dignity of every child** over the comfort of any adult.
 - **One standard for every family** over exceptions for any family, however generous, however employed, however difficult the conversation.
 - **Formation** over mere discipline, and real discipline whenever formation requires it.
-- **Discernment** over false balance: when accounts conflict, we weigh patterns, power, and the cost of speaking up, knowing that a child who reports cruelty at social risk is rarely inventing it, and that treating unequal things equally is not justice.
+- **Discernment** over false balance: when accounts conflict, we weigh patterns, power dynamics, and the cost of speaking up, knowing that treating unequal things equally is not justice.
 - **Truth spoken with charity** over peace kept with silence.
 - **The protection of the vulnerable** over the reputation of the institution.
 - **Partnership between home and school** over management of one by the other.
