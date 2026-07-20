@@ -27,12 +27,16 @@ npm run build    # static build to dist/
 
 `VITE_CACHE_DIR`, `ASTRO_OUT_DIR`, and `ASTRO_CACHE_DIR` env vars can relocate caches/output (useful in restricted sandboxes); unset, everything is default.
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Workers, static assets)
 
-- Root directory: `website`
+`wrangler.jsonc` declares this a static-assets-only Worker serving `dist/` (with `404.html` for unknown routes). In the Cloudflare Workers build configuration:
+
+- Path (root directory): `/website`
 - Build command: `npm run build`
-- Output directory: `dist`
-- Update `site` in `astro.config.mjs` when the real domain exists.
+- Deploy command: `npx wrangler deploy` (default)
+- Non-production deploy command: `npx wrangler versions upload` (default — gives every branch/PR build a preview URL)
+
+Custom domains (`savioproject.org`, `www`) are attached on the Worker under Settings → Domains & Routes.
 
 ## License
 

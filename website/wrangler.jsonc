@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "savio-project",
+  "compatibility_date": "2026-07-01",
+  // Static-assets-only Worker: no script, just the built site.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

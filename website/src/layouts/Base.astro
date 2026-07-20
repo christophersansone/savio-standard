@@ -10,15 +10,38 @@ import { REPO_URL } from '../lib/registry';
 interface Props {
   title?: string;
   description?: string;
+  /** OpenGraph type: 'website' for landing/index pages, 'article' for documents */
+  type?: 'website' | 'article';
 }
 
 const {
   title = 'The Savio Project',
   description = 'A parent-led movement to rebuild culture in Catholic grade schools.',
+  type = 'website',
 } = Astro.props;
 
 const pageTitle = title === 'The Savio Project' ? title : `${title} · The Savio Project`;
 const path = Astro.url.pathname;
+const canonical = new URL(path, Astro.site);
+const ogImage = new URL('/og.png', Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'The Savio Project',
+      url: Astro.site?.toString(),
+      logo: new URL('/favicon.svg', Astro.site).toString(),
+      description,
+    },
+    {
+      '@type': 'WebSite',
+      name: 'The Savio Project',
+      url: Astro.site?.toString(),
+    },
+  ],
+};
 
 const nav = [
   { href: '/plan', label: 'The Plan' },
@@ -38,9 +61,23 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <meta property="og:site_name" content="The Savio Project" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Savio Project — The Golden Rule is the standard, not the goal." />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body class="min-h-screen flex flex-col">

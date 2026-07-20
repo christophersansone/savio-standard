@@ -13,7 +13,7 @@ if (!entry) throw new Error(`Missing entry: ${doc.collection}/${doc.id}`);
 const { Content } = await render(entry);
 ---
 
-<Base title={doc.title} description={doc.description}>
+<Base title={doc.title} description={doc.description} type="article">
   <article class="mx-auto max-w-3xl px-5 py-14">
     <header class="mb-10 border-b border-line pb-8">
       <p class="eyebrow mb-3">{doc.section}</p>

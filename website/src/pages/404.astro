@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found" description="This page doesn’t exist — but the library does.">
+  <section class="mx-auto max-w-2xl px-5 py-24 text-center">
+    <p class="eyebrow mb-4">404</p>
+    <h1 class="font-display text-5xl font-semibold text-ink-deep mb-6">Not every path leads somewhere</h1>
+    <p class="text-lg leading-relaxed text-ink-soft mb-10">
+      This page doesn’t exist. The documents you’re probably looking for are all in the library — free,
+      forever.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 font-sans">
+      <a
+        href="/"
+        class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
+      >
+        Home
+      </a>
+      <a
+        href="/library"
+        class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
+      >
+        The Library
+      </a>
+    </div>
+  </section>
+</Base>

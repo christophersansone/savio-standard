@@ -6,7 +6,7 @@ import { stripLeadingH1, rewriteRepoLinks } from './src/lib/markdown-plugins.mjs
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://savio-project.pages.dev', // update when the domain exists
+  site: 'https://savioproject.org',
   outDir: process.env.ASTRO_OUT_DIR || './dist',
   cacheDir: process.env.ASTRO_CACHE_DIR || undefined,
   vite: {
