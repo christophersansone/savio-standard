@@ -8,7 +8,7 @@ We are parents who choose a Catholic school on purpose, not once but every day, 
 - The Golden Rule is the standard of a Christian community, not its aspiration.
 - Parents are the first and primary educators of their children; the school is our indispensable partner, never our replacement.
 - A Catholic school is a community of believers before it is an institution, and what a community tolerates, it teaches.
-- The Faith is not a subject. It is _taught_ in religion class and _lived_ in the hallway, the lunchroom, the field, and the group chat.
+- The Faith is not a subject. It is _taught_ in religion class and _lived_ in the hallway, the lunchroom, the sports field, and the group chat.
 
 Because we hold these truths, we state our expectations plainly, beginning with ourselves.
 
@@ -34,11 +34,11 @@ Because we hold these truths, we state our expectations plainly, beginning with 
 
 **We expect of our school:**
 
-- That the Faith be taught in the curriculum and required in the corridors: how children treat one another is part of their Catholic formation, not an interruption to it.
-- That one standard apply to every child, without favoritism: no preference to the benefactor's child, the staff member's child, or the family whose conversation is hardest to have.
-- That when accounts conflict, discernment replace false balance: weighing patterns, power dynamics, and the cost of speaking up, knowing that treating unequal things equally is not justice.
-- That aggression be answered firmly enough to change behavior, and that the child who reported it be protected for having spoken.
-- That parents be treated as partners: told early, involved early, trusted with the truth.
+- **That the Faith be taught in the curriculum and required in the corridors:** how children treat one another is part of their Catholic formation, not an interruption to it.
+- **That one standard apply to every child, without favoritism:** no preference to the benefactor's child, the staff member's child, or the family whose conversation is hardest to have.
+- **That when accounts conflict, discernment replace false balance:** weighing patterns, power dynamics, and the cost of speaking up, knowing that treating unequal things equally is not justice.
+- **That aggression be answered firmly enough to change behavior,** and that the child who reported it be protected for having spoken.
+- **That parents be treated as partners:** told early, involved early, trusted with the truth.
 
 And we pledge in return: when our school upholds this standard, we will be its strongest allies. We will defend it publicly, support its judgments even when they fall on our own child, and assume goodwill in its hardest decisions.
 
