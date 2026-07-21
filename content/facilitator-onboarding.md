@@ -1,6 +1,6 @@
 # Facilitator Onboarding Guide
 
-*The Savio Project (working title) · Working draft · Read alongside the [Parent-to-Parent Protocol](parent-to-parent-protocol.md)*
+*The Savio Standard (working title) · Working draft · Read alongside the [Parent-to-Parent Protocol](parent-to-parent-protocol.md)*
 
 Thank you for taking this on. The facilitated conversation is the project's safety net: it exists for the conflicts that direct parent-to-parent contact couldn't resolve — the hot ones, the stuck ones, the ones where two children tell sincerely different stories. When it works, two families that were sliding toward a cold war walk out with a repair plan and, often, more respect for each other than before the conflict. You are the reason it works.
 

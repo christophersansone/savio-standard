@@ -21,7 +21,7 @@ export interface Doc {
   featured?: boolean;
 }
 
-export const REPO_URL = 'https://github.com/christophersansone/savio-project';
+export const REPO_URL = 'https://github.com/christophersansone/savio-standard';
 
 export const docs: Doc[] = [
   {

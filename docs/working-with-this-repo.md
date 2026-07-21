@@ -59,8 +59,8 @@ You already know most of Markdown without realizing it. The essentials:
 
 ```
 # fork the repo on GitHub first, then:
-git clone https://github.com/YOUR-USERNAME/savio-project.git
-cd savio-project
+git clone https://github.com/YOUR-USERNAME/savio-standard.git
+cd savio-standard
 git checkout -b my-change
 # edit, then:
 git add -A && git commit -m "Clarify covenant activation wording"
@@ -72,4 +72,4 @@ House rules: one topic per PR (a typo sweep and a rewrite are two PRs); whole-do
 
 ## Questions
 
-Open an issue at [github.com/christophersansone/savio-project/issues](https://github.com/christophersansone/savio-project/issues) with the label `question`, or just ask in whatever channel you found this project through. There are no dumb questions here — most of this project's intended contributors are parents, not programmers, and the workflow above was chosen because it's the one non-programmers can genuinely use.
+Open an issue at [github.com/christophersansone/savio-standard/issues](https://github.com/christophersansone/savio-standard/issues) with the label `question`, or just ask in whatever channel you found this project through. There are no dumb questions here — most of this project's intended contributors are parents, not programmers, and the workflow above was chosen because it's the one non-programmers can genuinely use.

@@ -1,6 +1,6 @@
 # The Glossary: A Shared Language
 
-*The Savio Project (working title) · Working draft · Parent version — child versions by age tier (K–2, 3–5, 6–8) to follow*
+*The Savio Standard (working title) · Working draft · Parent version — child versions by age tier (K–2, 3–5, 6–8) to follow*
 
 Shared language is what converts "drama" — a word that hides everything — into specific, discussable behavior. When a fourth grader, her parents, and the parents of the girl who excluded her are all using the same words with the same meanings, a conversation becomes possible that vague language forecloses. These terms are taught to parents in session two of the formation series and to children in the children's program meetings. The definitions below are the working core; the glossary grows as the community's experience does.
 

@@ -1,6 +1,6 @@
 # Stewardship & Operations
 
-*The Savio Project (working title) — companion to the [Strategic Plan](strategic-plan.md) · Working draft · © 2026 [Steward Entity]*
+*The Savio Standard (working title) — companion to the [Strategic Plan](strategic-plan.md) · Working draft · © 2026 [Steward Entity]*
 
 ## 1. Purpose
 

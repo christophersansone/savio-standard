@@ -1,4 +1,4 @@
-<!-- Thank you for contributing to The Savio Project! A maintainer will review this PR — sometimes merging as-is, sometimes discussing right here. Unmerged isn't rejected; it's a conversation. -->
+<!-- Thank you for contributing to The Savio Standard! A maintainer will review this PR — sometimes merging as-is, sometimes discussing right here. Unmerged isn't rejected; it's a conversation. -->
 
 ## What does this change, and why?
 

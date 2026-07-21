@@ -1,6 +1,6 @@
 # Roles & Responsibilities
 
-*The Savio Project (working title) · Working draft · The pitch and the job, for every role in a Savio Community*
+*The Savio Standard (working title) · Working draft · The pitch and the job, for every role in a Savio Community*
 
 **These are the roles of a community adopting the framework — not the roles of the project itself.** A Savio Community is an independent, self-organizing group of parents at one school; the roles below are how such a community organizes its own work. The project behind the framework has its own, separate roles — the steward (the organization holding the project's rights) and the maintainers (the people who tend the content repository) — described in [Why a Steward?](../docs/why-a-steward.md) and [CONTRIBUTING.md](../CONTRIBUTING.md). At the pilot school the same people may wear hats from both lists; the hats remain different hats.
 

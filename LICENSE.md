@@ -26,7 +26,7 @@ License terms for existing users will never be tightened retroactively. Terms ma
 
 ## Exclusions
 
-- **Names and marks.** "The Savio Project" and any successor or program names, logos, and marks are *not* licensed under CC BY-NC-SA and may not be used to name, brand, or endorse any product, service, or organization without written permission. Communities may identify themselves as independent parent groups using the framework (e.g., "the Savio Community at [School]").
+- **Names and marks.** "The Savio Standard" and any successor or program names, logos, and marks are *not* licensed under CC BY-NC-SA and may not be used to name, brand, or endorse any product, service, or organization without written permission. Communities may identify themselves as independent parent groups using the framework (e.g., "the Savio Community at [School]").
 - **Third-party material.** Quotations and references to third-party works remain the property of their respective owners and are used for identification and educational context only.
 
 ## No warranty

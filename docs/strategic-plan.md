@@ -1,4 +1,4 @@
-# The Savio Project
+# The Savio Standard
 
 *A Parent-Led Movement to Rebuild Culture in Catholic Grade Schools*
 
@@ -14,7 +14,7 @@
 
 ## 1. Executive Summary
 
-Catholic grade schools promise a community formed by the Gospel, yet many families experience something different: social aggression that persists despite everyone's good intentions, a school office asked to carry burdens it was never built to carry, and a culture where the kindest families quietly leave. The Savio Project (a working title, pending the founding team) — a lay movement under the patronage of St. Dominic Savio, the schoolboy saint who organized his classmates to defend the smallest among them — is a parent-led response. It does not ask the school or parish for permission, budget, or policy change. It organizes parents directly — to build real community, adopt a shared standard of conduct, learn a common language for social aggression, handle parent-to-parent conflict with charity and skill, raise children who stand up for one another through a dedicated children's program, and form children as wise, supervised users of technology from an early age.
+Catholic grade schools promise a community formed by the Gospel, yet many families experience something different: social aggression that persists despite everyone's good intentions, a school office asked to carry burdens it was never built to carry, and a culture where the kindest families quietly leave. The Savio Standard (a working title, pending the founding team) — a lay movement under the patronage of St. Dominic Savio, the schoolboy saint who organized his classmates to defend the smallest among them — is a parent-led response. It does not ask the school or parish for permission, budget, or policy change. It organizes parents directly — to build real community, adopt a shared standard of conduct, learn a common language for social aggression, handle parent-to-parent conflict with charity and skill, raise children who stand up for one another through a dedicated children's program, and form children as wise, supervised users of technology from an early age.
 
 The strategy borrows one proven mechanic from the Wait Until 8th movement — commitments organized by school and grade level that "activate" when a critical mass of families signs on, so no family stands alone — while charting its own course on digital formation. It draws its content from the best available research on relational aggression and bystander intervention, and its spiritual frame from the Church's own teaching that parents — not schools — are the primary educators of their children (CCC 2223; *Gravissimum Educationis*).
 
@@ -70,7 +70,7 @@ The Project is a lay movement of Catholic school families under the patronage of
 
 Behind the pupil stands the teacher. Bosco's Oratory in the Valdocco district of Turin — part playground, part school, part church, part home — formed young people whom the institutions of his day could not reach, and his "preventive system" is the Project's method in miniature: form young people through reason, religion, and loving-kindness so thoroughly that discipline is rarely needed, rather than punishing failures after the fact. His axiom, "It is not enough to love the young; they must know that they are loved," is the standard for every meeting, conversation, and intervention.
 
-**On the name.** "The Savio Project" is the current working name; the final name belongs to the founding team. The children's program will carry its own kid-facing name, also to be chosen (one candidate already in early development: a club built on the Golden Rule).
+**On the name.** "The Savio Standard" is the current working name; the final name belongs to the founding team. The children's program will carry its own kid-facing name, also to be chosen (one candidate already in early development: a club built on the Golden Rule).
 
 ### Principles
 

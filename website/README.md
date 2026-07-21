@@ -1,6 +1,6 @@
 # Website
 
-The public website for The Savio Project, generated from the Markdown in this repository's `content/` and `docs/` directories. The site holds no copies of any content — it reads the canonical files directly at build time via Astro content collections (see `src/content.config.ts`).
+The public website for The Savio Standard, generated from the Markdown in this repository's `content/` and `docs/` directories. The site holds no copies of any content — it reads the canonical files directly at build time via Astro content collections (see `src/content.config.ts`).
 
 **Content contributors can ignore this folder entirely.** Edit the Markdown at the repository root; the site rebuilds from it automatically on merge.
 
@@ -36,7 +36,7 @@ npm run build    # static build to dist/
 - Deploy command: `npx wrangler deploy` (default)
 - Non-production deploy command: `npx wrangler versions upload` (default — gives every branch/PR build a preview URL)
 
-Custom domains (`savioproject.org`, `www`) are attached on the Worker under Settings → Domains & Routes.
+Custom domains (`saviostandard.org`, `www`) are attached on the Worker under Settings → Domains & Routes. `saviostandard.com` is attached as well, redirecting to the `.org` canonical.
 
 ## License
 

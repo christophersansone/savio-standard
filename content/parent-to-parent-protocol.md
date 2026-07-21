@@ -1,6 +1,6 @@
 # The Parent-to-Parent Protocol
 
-*The Savio Project (working title) · Working draft · The full guide — a printable quick-reference card is at the end*
+*The Savio Standard (working title) · Working draft · The full guide — a printable quick-reference card is at the end*
 
 Most conversations between parents about a conflict between their children fail. They fail in predictable ways — denial, script-flipping, gossip, escalation to the school — and the failure usually costs a friendship and teaches both children nothing. This protocol exists because the conversation doesn't have to fail. It has three modes: **approaching** another parent, **receiving** another parent, and, when direct contact isn't working, a **facilitated conversation**. All three rest on the same premise, which covenant families accept in advance: every child is capable of harm, and the parent who comes to you directly is doing you a favor.
 

@@ -3,7 +3,7 @@
  * Factory form (() => definition) so per-document state resets on each compile.
  */
 
-const REPO_BLOB = 'https://github.com/christophersansone/savio-project/blob/master';
+const REPO_BLOB = 'https://github.com/christophersansone/savio-standard/blob/master';
 
 /** filename (no extension) -> site route. Kept in sync with src/lib/registry.ts. */
 const ROUTES = {
@@ -27,7 +27,7 @@ const ROOT_FILES = ['CLA', 'CODE_OF_CONDUCT', 'CONTRIBUTING', 'LICENSE', 'README
 /**
  * Remove the document's own H1 (the page layout supplies the title), and the
  * status line that immediately follows when it is a lone italicized paragraph
- * ("*The Savio Project (working title) · Working draft*").
+ * ("*The Savio Standard (working title) · Working draft*").
  */
 export const stripLeadingH1 = () => {
   let done = false;

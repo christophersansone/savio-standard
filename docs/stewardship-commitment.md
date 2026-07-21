@@ -1,6 +1,6 @@
 # The Stewardship Commitment
 
-*The Savio Project (working title) · Patrons: St. Dominic Savio & St. John Bosco · Working draft*
+*The Savio Standard (working title) · Patrons: St. Dominic Savio & St. John Bosco · Working draft*
 
 This Project belongs to the families who live it. But someone must hold the pen, keep the website running, and answer for the whole — a steward: **[Steward Entity]**, serving until a dedicated entity is formed, acting solely in that capacity — separate from its owner's company and products — and making these commitments publicly, binding itself and any successor:
 

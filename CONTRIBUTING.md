@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping. This repository is the canonical source for all Savio Project documents and content; formatted documents, the website, and app content are generated from it.
+Thank you for helping. This repository is the canonical source for all Savio Standard documents and content; formatted documents, the website, and app content are generated from it.
 
 **New to GitHub or Markdown?** Start with [Working With This Repository](docs/working-with-this-repo.md) — it explains why the project works this way and walks through submitting a change from your browser, no tools required.
 

@@ -15,12 +15,12 @@ interface Props {
 }
 
 const {
-  title = 'The Savio Project',
+  title = 'The Savio Standard',
   description = 'A parent-led movement to rebuild culture in Catholic grade schools.',
   type = 'website',
 } = Astro.props;
 
-const pageTitle = title === 'The Savio Project' ? title : `${title} · The Savio Project`;
+const pageTitle = title === 'The Savio Standard' ? title : `${title} · The Savio Standard`;
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site);
 const ogImage = new URL('/og.png', Astro.site);
@@ -30,14 +30,14 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      name: 'The Savio Project',
+      name: 'The Savio Standard',
       url: Astro.site?.toString(),
       logo: new URL('/favicon.svg', Astro.site).toString(),
       description,
     },
     {
       '@type': 'WebSite',
-      name: 'The Savio Project',
+      name: 'The Savio Standard',
       url: Astro.site?.toString(),
     },
   ],
@@ -63,7 +63,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="sitemap" href="/sitemap.xml" />
-    <meta property="og:site_name" content="The Savio Project" />
+    <meta property="og:site_name" content="The Savio Standard" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
@@ -71,7 +71,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="The Savio Project — The Golden Rule is the standard, not the goal." />
+    <meta property="og:image:alt" content="The Savio Standard — The Golden Rule is the standard, not the goal." />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
@@ -86,7 +86,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <header class="border-b border-line bg-paper/90 backdrop-blur sticky top-0 z-10">
       <div class="mx-auto max-w-5xl px-5 py-4 flex items-center justify-between gap-6 relative">
         <a href="/" class="font-display text-2xl font-semibold tracking-wide text-ink-deep whitespace-nowrap">
-          The Savio Project
+          The Savio Standard
         </a>
 
         <nav class="hidden md:flex font-sans text-[0.8rem] font-semibold tracking-[0.14em] uppercase flex-wrap gap-x-5 gap-y-1 items-baseline">
@@ -160,7 +160,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
         <div class="ornament mb-6 text-gold">✦</div>
         <div class="grid gap-8 sm:grid-cols-3">
           <div>
-            <p class="font-display text-lg text-ink-deep mb-1">The Savio Project</p>
+            <p class="font-display text-lg text-ink-deep mb-1">The Savio Standard</p>
             <p class="italic font-serif">
               A lay movement under the patronage of St.&nbsp;Dominic&nbsp;Savio and St.&nbsp;John&nbsp;Bosco.
             </p>
@@ -182,7 +182,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
           </div>
         </div>
         <p class="mt-8 text-xs text-ink-soft/80">
-          Working draft · “The Savio Project” is a working title · Content licensed{' '}
+          Working draft · “The Savio Standard” is a working title · Content licensed{' '}
           <a href={`${REPO_URL}/blob/master/LICENSE.md`} class="underline underline-offset-2 hover:text-gold">CC BY-NC-SA 4.0</a>{' '}
           · © 2026 [Steward Entity]
         </p>

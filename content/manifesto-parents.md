@@ -1,6 +1,6 @@
 # A Manifesto of Catholic School Parents
 
-*The Savio Project (working title) · Working draft · One page — the parent version; see also the [community version](manifesto-community.md)*
+*The Savio Standard (working title) · Working draft · One page — the parent version; see also the [community version](manifesto-community.md)*
 
 We are parents who choose a Catholic school on purpose, not once but every day, entrusting to it what is most precious to us: our children. We hold these truths to be self-evident among all who profess Christ:
 

@@ -1,6 +1,6 @@
 # Contributor License Agreement
 
-*Individual Contributor License Agreement for The Savio Project (working title). Working draft — to be finalized by counsel before wide use.*
+*Individual Contributor License Agreement for The Savio Standard (working title). Working draft — to be finalized by counsel before wide use.*
 
 Thank you for contributing. This agreement exists for one reason: the project's work must remain licensable as a single whole — so it can be offered free to families under a public license, licensed commercially to fund the mission, transferred to a future nonprofit steward, and published — none of which is possible if each contribution carries separate, unclarified rights. You keep credit, and you keep free use of everything, forever.
 

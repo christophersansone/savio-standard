@@ -1,4 +1,4 @@
-# The Savio Project
+# The Savio Standard
 
 *A parent-led movement to rebuild culture in Catholic grade schools.*
 
@@ -14,7 +14,7 @@
 
 ## What this is
 
-Catholic grade schools promise a community formed by the Gospel, yet many families experience something different: social aggression that persists despite everyone's good intentions, a school office asked to carry burdens it was never built to carry, and a culture where the kindest families quietly leave. The Savio Project organizes parents directly — independent of school administration — to build real community, adopt a shared standard of conduct, learn a common language for social aggression, handle parent-to-parent conflict with charity and skill, raise children who stand up for one another, and form children as wise, supervised users of technology.
+Catholic grade schools promise a community formed by the Gospel, yet many families experience something different: social aggression that persists despite everyone's good intentions, a school office asked to carry burdens it was never built to carry, and a culture where the kindest families quietly leave. The Savio Standard organizes parents directly — independent of school administration — to build real community, adopt a shared standard of conduct, learn a common language for social aggression, handle parent-to-parent conflict with charity and skill, raise children who stand up for one another, and form children as wise, supervised users of technology.
 
 The project is a lay movement under the patronage of St. Dominic Savio — the schoolboy saint who organized his classmates to defend the smallest among them — and of his teacher, St. John Bosco.
 
@@ -58,7 +58,7 @@ This repository is the canonical source. Formatted documents, the website, and a
 
 ## Contact & questions
 
-This repository lives at [github.com/christophersansone/savio-project](https://github.com/christophersansone/savio-project) (its home until a formal steward entity is established). The best way to ask a question or raise a concern is to [open an issue](https://github.com/christophersansone/savio-project/issues); for private matters — including Code of Conduct reports — contact a maintainer directly ([@christophersansone](https://github.com/christophersansone)).
+This repository lives at [github.com/christophersansone/savio-standard](https://github.com/christophersansone/savio-standard) (its home until a formal steward entity is established). The best way to ask a question or raise a concern is to [open an issue](https://github.com/christophersansone/savio-standard/issues); for private matters — including Code of Conduct reports — contact a maintainer directly ([@christophersansone](https://github.com/christophersansone)).
 
 ## License
 

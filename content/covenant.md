@@ -1,6 +1,6 @@
 # The Family Covenant
 
-*The Savio Project (working title) · Working draft · One page, signed as a household, renewed each school year*
+*The Savio Standard (working title) · Working draft · One page, signed as a household, renewed each school year*
 
 ---
 
