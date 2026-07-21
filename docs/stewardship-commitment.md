@@ -2,7 +2,7 @@
 
 *The Savio Standard (working title) · Patrons: St. Dominic Savio & St. John Bosco · Working draft*
 
-This Project belongs to the families who live it. But someone must hold the pen, keep the website running, and answer for the whole — a steward: **[Steward Entity]**, serving until a dedicated entity is formed, acting solely in that capacity — separate from its owner's company and products — and making these commitments publicly, binding itself and any successor:
+This Project belongs to the families who live it. But someone must hold the pen, keep the website running, and answer for the whole — a steward: **Savio Standard**, serving until a dedicated entity is formed, acting solely in that capacity — separate from its owner's company and products — and making these commitments publicly, binding itself and any successor:
 
 1. **Free for families, forever.** The Project's own assets — the core content (covenant, glossary, playbooks, formation materials) and the Project website that delivers it — are free to every family and every school. Participation will never carry a price.
 

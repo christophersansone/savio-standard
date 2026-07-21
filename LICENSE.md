@@ -1,6 +1,6 @@
 # License
 
-**© 2026 [Steward Entity]. Working draft.**
+**© 2026 Savio Standard. Working draft.**
 
 All content in this repository is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**, except as noted below.
 

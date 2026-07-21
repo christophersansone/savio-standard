@@ -8,7 +8,7 @@
 >
 > "I can't do big things, but I want everything I do, even the smallest thing, to be for the greater glory of God." — St. Dominic Savio
 
-*© 2026 [Steward Entity]. Working draft for invited reviewers. Provided for informational and planning purposes only, "as is," without warranty; nothing here is legal, medical, psychological, or other professional advice, and anyone applying these ideas does so voluntarily and at their own risk. Program names are working titles. Third-party marks belong to their respective owners and imply no affiliation or endorsement. See [LICENSE.md](../LICENSE.md) and [Stewardship & Operations](stewardship-and-operations.md).*
+*© 2026 Savio Standard. Working draft for invited reviewers. Provided for informational and planning purposes only, "as is," without warranty; nothing here is legal, medical, psychological, or other professional advice, and anyone applying these ideas does so voluntarily and at their own risk. Program names are working titles. Third-party marks belong to their respective owners and imply no affiliation or endorsement. See [LICENSE.md](../LICENSE.md) and [Stewardship & Operations](stewardship-and-operations.md).*
 
 ---
 
@@ -228,7 +228,7 @@ No incident reporting, no logging of conflicts, no naming of children in any sto
 
 How the organization operates — entity structure, licensing, terms of use, safety guidance, and sustainability — lives in a companion document, [Stewardship & Operations](stewardship-and-operations.md), so that this plan stays about the mission. What belongs here is the short version and the guardrails that shape daily culture.
 
-**The short version.** The organization publishes a free framework and stewards its content, name, and app; the local groups that adopt it — Savio Communities — are independent, self-organizing parent groups responsible for their own activities. [Steward Entity] serves as steward of the Project's intellectual property until a dedicated entity is formed, under a published [Stewardship Commitment](stewardship-commitment.md) whose first promise is that the mission is free for families, forever.
+**The short version.** The organization publishes a free framework and stewards its content, name, and app; the local groups that adopt it — Savio Communities — are independent, self-organizing parent groups responsible for their own activities. Savio Standard serves as steward of the Project's intellectual property until a dedicated entity is formed, under a published [Stewardship Commitment](stewardship-commitment.md) whose first promise is that the mission is free for families, forever.
 
 Standing guardrails, adopted at founding and printed in every manual: children are never named in written or digital records; facilitators never adjudicate and never carry information out of the room; the Project never publicly criticizes the school or parish; no Project channel may be used to discuss a specific family's situation; no Project platform carries messaging or user-generated content — the Project will not build for parents the very medium it trains children to resist; safeguarding escalations (Section 8.5) override every confidentiality norm; and leadership roles rotate on two-year terms.
 

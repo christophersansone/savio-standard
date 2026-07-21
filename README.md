@@ -6,7 +6,7 @@
 >
 > "I can't do big things, but I want everything I do, even the smallest thing, to be for the greater glory of God." — St. Dominic Savio
 
-**Status: working draft — pilot planning.** The project name is a working title; the final name belongs to the founding team. The steward entity is not yet designated and appears throughout as `[Steward Entity]`.
+**Status: working draft — pilot planning.** The project name is a working title; the final name belongs to the founding team. The steward entity is Savio Standard, serving in that capacity until a dedicated entity is formed.
 
 > ### 📖 Start here: the [Strategic Plan](docs/strategic-plan.md)
 >

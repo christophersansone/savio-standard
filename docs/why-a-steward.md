@@ -10,7 +10,7 @@ Because the law gives every piece of writing an owner automatically, whether we 
 
 ## Who is the steward, and why them?
 
-Someone has to go first: buy the domain, pay the hosting, file the paperwork, carry the insurance, and do it before there is any money or any certainty this succeeds. For now that is **[Steward Entity]** — expected to be a founder-managed entity acting under the Project's own registered name — until the founding team settles the designation and, eventually, a dedicated entity is formed. The steward role is temporary by design: the written commitments require handing the mission assets to a dedicated nonprofit when the Project grows into one.
+Someone has to go first: buy the domain, pay the hosting, file the paperwork, carry the insurance, and do it before there is any money or any certainty this succeeds. For now that is **Savio Standard** — expected to be a founder-managed entity acting under the Project's own registered name — until the founding team settles the designation and, eventually, a dedicated entity is formed. The steward role is temporary by design: the written commitments require handing the mission assets to a dedicated nonprofit when the Project grows into one.
 
 ## Isn't this a power move?
 

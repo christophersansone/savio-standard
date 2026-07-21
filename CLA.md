@@ -6,7 +6,7 @@ Thank you for contributing. This agreement exists for one reason: the project's 
 
 By stating in a pull request that you agree to this CLA, you accept the following for that and all future contributions:
 
-1. **Definitions.** "Contribution" means any original work of authorship you intentionally submit to the project. "Steward" means [Steward Entity], the project's designated rights steward, and its successors (including any nonprofit to which the project's assets are transferred).
+1. **Definitions.** "Contribution" means any original work of authorship you intentionally submit to the project. "Steward" means Savio Standard, the project's designated rights steward, and its successors (including any nonprofit to which the project's assets are transferred).
 
 2. **License grant.** You grant the steward a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, reproduce, modify, adapt, publish, translate, distribute, publicly display, and sublicense your contribution, and to license it under any terms the steward chooses — including the project's public license (CC BY-NC-SA 4.0) and commercial licenses whose proceeds support the mission — consistent with the [Stewardship Commitment](docs/stewardship-commitment.md).
 
