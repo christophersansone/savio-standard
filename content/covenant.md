@@ -10,7 +10,7 @@ As parents at **[School]**, we believe our children are made in the image of God
 
 2. **Humility.** We accept that our child is capable of unkindness, exclusion, and cruelty, as all children are. If another parent approaches us about our child's behavior, our first response will be to listen and thank them — not to deny, dismiss, or retaliate.
 
-3. **Directness.** If we have a concern about another covenant family's child, we will bring it privately, charitably, and promptly to those parents — never to the bleachers, the group chat, or the rumor mill.
+3. **Directness.** If we have a concern about another covenant family's child, we will bring it privately, charitably, and promptly to those parents — never to the bleachers, the group chat, or the rumor mill — according to Christ's teachings in Matthew 18.
 
 4. **Teaching the standard.** We will actively teach our children to include the excluded, to refuse to be an audience for cruelty, and to speak up or get help when they see someone mistreated.
 

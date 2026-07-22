@@ -5,7 +5,7 @@
 We, the parents, teachers, staff, administrators, and clergy of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to it; the rest of us receive that trust as sacred. We hold these truths to be self-evident among all who profess Christ:
 
 - Every child is made in the image of God and bears a dignity that no one's behavior, position, or convenience may discount.
-- The Golden Rule is the standard of a Christian community, not its aspiration.
+- The Golden Rule is the **standard** of a Christian community, not its aspiration.
 - Parents are the first educators of their children, and the school is their indispensable partner; neither can form a child alone.
 - A Catholic school is a community of believers before it is an institution, and what a community tolerates, it teaches.
 - The Faith is not a subject. It is _taught_ in religion class and _lived_ in the hallway, the lunchroom, the faculty room, and the group chat.
