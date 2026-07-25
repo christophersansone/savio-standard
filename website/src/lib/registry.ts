@@ -64,7 +64,7 @@ export const docs: Doc[] = [
     srcPath: 'content/convictions-community.md',
     title: 'The Community Convictions',
     description:
-      'The same truths as shared affirmations — for parents, teachers, staff, administration, and clergy to sign together.',
+      'The same truths as shared affirmations — for parents, teachers, staff, and leadership to sign together.',
     section: 'For Families',
   },
   {

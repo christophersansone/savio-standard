@@ -1,8 +1,8 @@
 # The Convictions of Our Catholic School Community
 
-*The Savio Standard · Working draft · One page — for parents, teachers, staff, administration, and clergy to sign together; see also the [parent version](convictions-parents.md)*
+*The Savio Standard · Working draft · One page — for parents, teachers, staff, and leadership to sign together; see also the [parent version](convictions-parents.md)*
 
-We, the parents, teachers, staff, administrators, and clergy of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to it; the rest of us receive that trust as sacred. We hold these truths to be self-evident among all who profess Christ:
+We, the parents, teachers, staff, and leadership of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to it; the rest of us receive that trust as sacred. We hold these truths to be self-evident among all who profess Christ:
 
 - Every child is made in the image of God and bears a dignity that no one's behavior, position, or convenience may discount.
 - The Golden Rule is the **standard** of a Christian community, not its aspiration.
@@ -29,6 +29,6 @@ That is: while the things on the right have real value, whenever they conflict w
 
 **As administrators,** we will apply one standard to every child without favoritism, exercise discernment rather than false balance, answer aggression firmly enough to change it, protect the child who speaks, and treat parents as partners: told early, involved early, trusted with the truth.
 
-**As clergy,** we will teach this standard from the pulpit, hold the whole community, including the school, accountable to it, and shepherd every family in it, the difficult ones most of all.
+**As pastor and parish leadership,** we will preach this standard everywhere we're heard, hold the whole community, including the school, accountable to it, and shepherd every family in it, the difficult ones most of all.
 
 We sign this not because it is easy, but because we believe it — and when this community lives by the standard it states, we will be its strongest advocates.

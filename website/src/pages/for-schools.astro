@@ -81,58 +81,69 @@ const reading = [
     </p>
   </section>
 
-  <!-- Reading order -->
+  <!-- Where it can lead -->
   <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-3xl px-5 py-16">
-      <div class="ornament mb-10"><span class="eyebrow">Read these, if you want the full picture</span></div>
-      <ol class="space-y-8">
-        {
-          reading.map((r, i) => (
-            <li class="flex gap-5">
-              <div class="font-display text-3xl text-gold font-semibold shrink-0 w-8 text-center">{i + 1}</div>
-              <div>
-                <a
-                  href={'/' + r.doc!.slug}
-                  class="font-display text-xl font-semibold text-ink-deep hover:text-gold transition-colors"
-                >
-                  {r.doc!.title}
-                </a>
-                <span class="font-sans text-xs uppercase tracking-[0.1em] text-ink-soft/70 ml-2">{r.time}</span>
-                <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-1.5">{r.why}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ol>
+    <div class="mx-auto max-w-3xl px-5 py-14 text-center">
+      <p class="eyebrow mb-4">Two convictions, one standard</p>
+      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">Where the school's path can start, or end</h2>
+      <p class="text-lg leading-relaxed text-ink-soft">
+        A parent-led community begins with the <a href="/convictions" class="text-gold underline underline-offset-2">Parents' Convictions</a> — parents alone, stating plainly what they hold self-evident and expect of themselves and their children. The <a href="/convictions/community" class="text-gold underline underline-offset-2">Community Convictions</a> restates those same truths as shared affirmations for parents, teachers, staff, and leadership to sign together, publicly, as the standard of the whole school. A school can initiate there directly, proclaiming the standard from the top down. More often, it's where a parent-led community ends up once its work has actually taken hold — the moment the standard stops belonging to the families who started it and becomes the new normal for everyone in the building.
+      </p>
     </div>
   </section>
 
+  <!-- Reading order -->
+  <section class="mx-auto max-w-3xl px-5 py-16">
+    <div class="ornament mb-10"><span class="eyebrow">Read these, if you want the full picture</span></div>
+    <ol class="space-y-8">
+      {
+        reading.map((r, i) => (
+          <li class="flex gap-5">
+            <div class="font-display text-3xl text-gold font-semibold shrink-0 w-8 text-center">{i + 1}</div>
+            <div>
+              <a
+                href={'/' + r.doc!.slug}
+                class="font-display text-xl font-semibold text-ink-deep hover:text-gold transition-colors"
+              >
+                {r.doc!.title}
+              </a>
+              <span class="font-sans text-xs uppercase tracking-[0.1em] text-ink-soft/70 ml-2">{r.time}</span>
+              <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-1.5">{r.why}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
   <!-- A friendly meeting -->
-  <section class="mx-auto max-w-3xl px-5 py-16 text-center">
-    <p class="eyebrow mb-4">Then what</p>
-    <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">A short, friendly meeting</h2>
-    <p class="text-lg leading-relaxed text-ink-soft">
-      Most schools first hear about this when a small team of parents asks for a short meeting with the principal or pastor — not to seek approval, but to introduce themselves, share what they're doing, and answer questions. If parents haven't approached you yet and you like what you've read, there's nothing stopping you from raising it yourself.
-    </p>
-    <div class="mt-9 flex flex-wrap justify-center gap-4 font-sans">
-      <a
-        href="/plan"
-        class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
-      >
-        Read the Plan
-      </a>
-      <a
-        href="/library"
-        class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
-      >
-        See everything else
-      </a>
+  <section class="border-y border-line bg-paper-deep">
+    <div class="mx-auto max-w-3xl px-5 py-14 text-center">
+      <p class="eyebrow mb-4">Then what</p>
+      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">A short, friendly meeting</h2>
+      <p class="text-lg leading-relaxed text-ink-soft">
+        Most schools first hear about this when a small team of parents asks for a short meeting with the principal or pastor — not to seek approval, but to introduce themselves, share what they're doing, and answer questions. If parents haven't approached you yet and you like what you've read, there's nothing stopping you from raising it yourself.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4 font-sans">
+        <a
+          href="/plan"
+          class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
+        >
+          Read the Plan
+        </a>
+        <a
+          href="/library"
+          class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
+        >
+          Explore the Library
+        </a>
+      </div>
+      <p class="mt-8 font-sans text-sm text-ink-soft">
+        Have parents ready to start? Point them to the <a href="/for-parents" class="text-gold underline underline-offset-2">parent starter page</a>.
+      </p>
+      <p class="mt-3 font-sans text-sm text-ink-soft">
+        Questions? Best way in is <a href={`${REPO_URL}/issues`} class="text-gold underline underline-offset-2">an issue on GitHub</a> — or reach a maintainer directly.
+      </p>
     </div>
-    <p class="mt-8 font-sans text-sm text-ink-soft">
-      Have parents ready to start? Point them to the <a href="/for-parents" class="text-gold underline underline-offset-2">parent starter page</a>.
-    </p>
-    <p class="mt-3 font-sans text-sm text-ink-soft">
-      Questions? Best way in is <a href={`${REPO_URL}/issues`} class="text-gold underline underline-offset-2">an issue on GitHub</a> — or reach a maintainer directly.
-    </p>
   </section>
 </Base>
