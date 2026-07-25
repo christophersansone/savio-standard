@@ -29,13 +29,7 @@ npm run build    # static build to dist/
 
 ## Analytics
 
-[Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/) — no cookies, no client-side storage, no cross-site tracking, so it needs no consent banner and matches the Project's privacy commitments. It's off by default; the beacon script in `src/layouts/Base.astro` only renders when a token is present.
-
-Setup:
-
-1. In the Cloudflare dashboard: **Analytics & Logs → Web Analytics → Add a site**, add `saviostandard.org`, and copy the `token` value out of the generated snippet (not the whole `<script>` tag).
-2. Set it as a build environment variable named `PUBLIC_CF_BEACON_TOKEN` on the Worker (Settings → Variables), or in a local `.env` (copy `.env.example`) for testing.
-3. Redeploy. Metrics appear in the dashboard under Web Analytics — no code changes needed to view them.
+[Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/) is enabled for this site — no cookies, no client-side storage, no cross-site tracking, so it needs no consent banner and matches the Project's privacy commitments. It's turned on at the zone level (Cloudflare dashboard → Analytics & Logs → Web Analytics), which auto-injects the beacon into every HTML response for `saviostandard.org` — no code in this repo required, and nothing to configure here. Metrics live in the dashboard under Web Analytics.
 
 ## Deploy (Cloudflare Workers, static assets)
 

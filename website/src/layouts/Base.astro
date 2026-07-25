@@ -50,12 +50,6 @@ const nav = [
 ];
 
 const isActive = (href: string) => path === href || path.startsWith(href + '/');
-
-// Cloudflare Web Analytics: cookie-free, no client-side storage, no cross-site
-// tracking — matches the Project's "no cookie popups, no tracking" commitment.
-// Only loads when a token is configured (production), so local dev stays clean.
-// See website/README.md for setup.
-const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 ---
 
 <!doctype html>
@@ -83,13 +77,6 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    {cfBeaconToken && (
-      <script
-        defer
-        src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
-      />
-    )}
   </head>
   <body class="min-h-screen flex flex-col">
     <div class="h-[3px] bg-gradient-to-r from-gold-soft via-gold to-gold-soft"></div>
