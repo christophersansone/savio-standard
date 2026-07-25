@@ -7,6 +7,7 @@ const REPO_BLOB = 'https://github.com/christophersansone/savio-standard/blob/mas
 
 /** filename (no extension) -> site route. Kept in sync with src/lib/registry.ts. */
 const ROUTES = {
+  'the-case': '/the-case',
   'strategic-plan': '/plan',
   'covenant': '/covenant',
   'convictions-parents': '/convictions',

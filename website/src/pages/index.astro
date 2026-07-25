@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { docs, REPO_URL } from '../lib/registry';
+import savioPortrait from '../assets/images/st-dominic-savio-original.png';
 
 const featured = docs.filter((d) => d.featured);
 
@@ -108,17 +110,32 @@ const pillars = [
 
   <!-- Patron -->
   <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-3xl px-5 py-14 text-center">
-      <p class="eyebrow mb-4">Our patron</p>
-      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">Why “Savio”</h2>
-      <p class="text-lg leading-relaxed text-ink-soft">
-        St. Dominic Savio was a schoolboy — fourteen when he died, canonized for the holiness of an ordinary school life. At his school he organized his classmates into a company of mutual care: he defended the smallest boys from bullying, broke up fights, and befriended the friendless. He is exactly what this movement asks our children to become, and behind the pupil stands the teacher — his mentor, St. John Bosco, who formed young people through reason, religion, and loving-kindness so thoroughly that discipline was rarely needed. Every gathering, covenant, and skit in this project is an attempt to make Savio’s way ordinary again.
-      </p>
-      <p class="mt-6 font-sans text-sm">
-        <a href="/plan#patronage-and-identity" class="text-gold font-semibold uppercase tracking-wide hover:text-ink-deep transition-colors">
-          Read more in the plan →
-        </a>
-      </p>
+    <div class="mx-auto max-w-4xl px-5 py-14">
+      <div class="rounded-lg border border-line shadow-sm overflow-hidden bg-white flex flex-col sm:flex-row">
+        <div class="h-80 sm:h-auto sm:w-2/5 shrink-0">
+          <Image
+            src={savioPortrait}
+            alt="St. Dominic Savio, patron of the Project"
+            width={480}
+            height={600}
+            densities={[1, 1.5, 2]}
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="flex-1 p-8 sm:p-10 flex flex-col justify-center text-center sm:text-left">
+          <p class="eyebrow mb-4">St. Dominic Savio</p>
+          <h2 class="font-display text-3xl font-semibold text-ink-deep mb-4">Our Patron</h2>
+          <p class="font-sans text-sm leading-relaxed text-ink-soft">
+            St. Dominic Savio was a schoolboy — fourteen when he died, canonized for the holiness of an ordinary school life. At his school he organized his classmates into a company of mutual care: he defended the smallest boys from bullying, broke up fights, and befriended the friendless. He is exactly what this movement asks our children to become, and behind the pupil stands the teacher — his mentor, St. John Bosco, who formed young people through reason, religion, and loving-kindness so thoroughly that discipline was rarely needed. Every gathering, covenant, and skit in this project is an attempt to make Savio’s way ordinary again.
+          </p>
+          <p class="mt-6 font-sans text-sm">
+            <a href="/the-case#patronage-and-identity" class="text-gold font-semibold uppercase tracking-wide hover:text-ink-deep transition-colors">
+              Read more in the Case →
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 

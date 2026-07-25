@@ -25,15 +25,25 @@ export const REPO_URL = 'https://github.com/christophersansone/savio-standard';
 
 export const docs: Doc[] = [
   {
+    slug: 'the-case',
+    collection: 'docs',
+    id: 'the-case',
+    srcPath: 'docs/the-case.md',
+    title: 'The Case for The Savio Standard',
+    description:
+      'Who we are, why we exist, and what we believe — the problem being named, the theory of change, the vision and principles, and the six pillars.',
+    section: 'Start Here',
+    featured: true,
+  },
+  {
     slug: 'plan',
     collection: 'docs',
     id: 'strategic-plan',
     srcPath: 'docs/strategic-plan.md',
     title: 'The Strategic Plan',
     description:
-      'Who we are, why we exist, and how this works — the problem we are naming, the theory of change, the six pillars, and the year-one pilot.',
-    section: 'Start Here',
-    featured: true,
+      'The tactical companion to The Case: the year-one pilot calendar, the content roadmap, the app, and how progress is measured.',
+    section: 'The Project',
   },
   {
     slug: 'covenant',
