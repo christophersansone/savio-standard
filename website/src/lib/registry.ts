@@ -46,6 +46,17 @@ export const docs: Doc[] = [
     section: 'The Project',
   },
   {
+    slug: 'convictions',
+    collection: 'content',
+    id: 'convictions-parents',
+    srcPath: 'content/convictions-parents.md',
+    title: 'The Convictions of Catholic School Parents',
+    description:
+      'The truths we hold self-evident, and the expectations we state plainly — beginning with ourselves.',
+    section: 'For Families',
+    featured: true,
+  },
+  {
     slug: 'covenant',
     collection: 'content',
     id: 'covenant',
@@ -55,27 +66,6 @@ export const docs: Doc[] = [
       'Eight commitments, signed as a household and renewed each year. Private until eight families in a grade have signed — no family stands alone.',
     section: 'For Families',
     featured: true,
-  },
-  {
-    slug: 'convictions',
-    collection: 'content',
-    id: 'convictions-parents',
-    srcPath: 'content/convictions-parents.md',
-    title: 'The Parents’ Convictions',
-    description:
-      'The truths we hold self-evident, and the expectations we state plainly — beginning with ourselves.',
-    section: 'For Families',
-    featured: true,
-  },
-  {
-    slug: 'convictions/community',
-    collection: 'content',
-    id: 'convictions-community',
-    srcPath: 'content/convictions-community.md',
-    title: 'The Community Convictions',
-    description:
-      'The same truths as shared affirmations — for parents, teachers, staff, and leadership to sign together.',
-    section: 'For Families',
   },
   {
     slug: 'protocol',
@@ -97,6 +87,16 @@ export const docs: Doc[] = [
     description:
       'A shared language that turns “drama” into specific, discussable behavior — taught to parents and children alike.',
     section: 'For Families',
+  },
+  {
+    slug: 'convictions/community',
+    collection: 'content',
+    id: 'convictions-community',
+    srcPath: 'content/convictions-community.md',
+    title: 'The Convictions of Our Catholic School Community',
+    description:
+      'The same truths as shared affirmations — for parents, teachers, staff, and leadership to sign together.',
+    section: 'For Communities',
   },
   {
     slug: 'roles',

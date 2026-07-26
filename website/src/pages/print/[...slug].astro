@@ -1,0 +1,19 @@
+---
+import { getEntry, render } from 'astro:content';
+import Print from '../../layouts/Print.astro';
+import { docs } from '../../lib/registry';
+
+export function getStaticPaths() {
+  return docs.map((d) => ({ params: { slug: d.slug }, props: { doc: d } }));
+}
+
+const { doc } = Astro.props;
+const entry = await getEntry(doc.collection, doc.id);
+if (!entry) throw new Error(`Missing entry: ${doc.collection}/${doc.id}`);
+const { Content } = await render(entry);
+---
+
+<Print title={doc.title} description={doc.description} canonicalPath={'/' + doc.slug}>
+  <span slot="eyebrow" class="eyebrow">{doc.section}</span>
+  <Content />
+</Print>
