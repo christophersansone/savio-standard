@@ -4,13 +4,17 @@
 
 Most conversations between parents about a conflict between their children fail. They fail in predictable ways — denial, script-flipping, gossip, escalation to the school — and the failure usually costs a friendship and teaches both children nothing. This protocol exists because the conversation doesn't have to fail. It has three modes: **approaching** another parent, **receiving** another parent, and, when direct contact isn't working, a **facilitated conversation**. All three rest on the same premise, which covenant families accept in advance: every child is capable of harm, and the parent who comes to you directly is doing you a favor.
 
+Underneath all three modes is one instruction, and it comes first every time — *"So in everything, do to others what you would have them do to you"* (Matthew 7:12). Every section below opens with it as Step 0, before any tactic or script, because the tactics only work on a heart that's already asked the question.
+
 A note before anything else: this protocol is for social aggression between children — exclusion, cruelty, rumors, group-chat pile-ons, and ordinary conflicts that have outgrown the children's ability to resolve them. It is **not** for everything. See [When not to use this protocol](#when-not-to-use-this-protocol) — some situations must go to the school, the diocese, or the authorities immediately.
 
 ---
 
 ## Part 1: Before you approach anyone
 
-The conversation is usually won or lost before it starts. Four steps, in order:
+The conversation is usually won or lost before it starts. Step 0, then four more, in order:
+
+**0. Remember the Golden Rule.** Before you gather facts, before you decide what you want, before you even pray — put yourself on the other end of this conversation. *"So in everything, do to others what you would have them do to you"* (Matthew 7:12). That is not a suggestion this protocol makes; it is the premise underneath every step that follows. If you lose the thread anywhere else in this document, come back to this one line.
 
 **1. Pray first. Genuinely.** Not as a formality — because the state of your heart is the largest variable in the conversation you're about to have. Pray for the other child by name. It is very difficult to open with an accusation about a child you have just prayed for.
 
@@ -25,6 +29,8 @@ The conversation is usually won or lost before it starts. Four steps, in order:
 ---
 
 ## Part 2: Approaching — when your child was harmed
+
+**0. Remember the Golden Rule.** Before you pick up the phone, put yourself where the other parent is about to stand: if your child were the one who'd caused harm, how would you want this news to reach you? What tone, what pacing, what words would let you actually hear it instead of just defend against it? Approach the way you'd want to be approached — that decides everything that follows.
 
 **1. Contact privately.** In person or by phone — never text, never email, never in a group setting, never within earshot of children. Text and email feel safer and are far more dangerous: tone vanishes, words become screenshots, and screenshots become exactly the kind of ammunition this project exists to eliminate. A good opener to arrange the conversation: *"Do you have a few minutes to talk this week, just the two of us? It's about our kids — nothing scary, but I'd rather do it in person."*
 
@@ -57,6 +63,8 @@ Then set the follow-up expectation explicitly: *"Can we check in by the weekend?
 
 This is the conversation the covenant's second commitment exists for, and the one that determines whether the whole project works. It is also the harder role. The approaching parent has had days to prepare; you have ten seconds. That is exactly why the covenant asks you to decide your first response *years in advance.*
 
+**0. Remember the Golden Rule.** Before you say a word, put yourself where this parent stood an hour ago: the days spent working up the nerve, the fear you'll take it badly, the risk of trusting the covenant instead of the group chat. This parent is standing where you would stand if your child were the one who got hurt. Ask what you'd want done for you if the families were reversed — then do that.
+
 **1. Say thank you first, and mean it.**
 
 > *"Thank you for coming to me instead of around me."*
@@ -85,6 +93,7 @@ When direct contact fails, gets too hot, or the accounts can't be reconciled, ei
 
 **The ground rules, stated aloud at the start:**
 
+0. Remember the Golden Rule. Everyone in this room would want the same patience, privacy, and good faith extended to their own child — say so, out loud, before the rest of this list.
 1. The goal is the good of both children — not a verdict.
 2. Specific behaviors, not character. No "she always," no "that family."
 3. Each side restates the other's account, to the other side's satisfaction, before responding to it.
@@ -115,12 +124,12 @@ This protocol handles social aggression between children of willing families. It
 
 ## Quick reference: the one-page card
 
-**Before approaching anyone:** Pray first. Get your child's account twice, a day apart. Decide on a restorative goal. Wait one to three days — never the same hour.
+**Before approaching anyone:** Step 0 — remember the Golden Rule: how would you want this to reach you? Pray first. Get your child's account twice, a day apart. Decide on a restorative goal. Wait one to three days — never the same hour.
 
-**Approaching:** Private, voice or in person — never text. Open: *"I need your help with something between our kids — I'd want you to come to me if it were reversed."* Behavior, not character. Admit you know one side. Give grace for the defensive flinch. Close with a small ask and a follow-up date.
+**Approaching:** Step 0 — approach the way you'd want to be approached. Private, voice or in person — never text. Open: *"I need your help with something between our kids — I'd want you to come to me if it were reversed."* Behavior, not character. Admit you know one side. Give grace for the defensive flinch. Close with a small ask and a follow-up date.
 
-**Receiving:** *"Thank you for coming to me instead of around me."* Listen; don't adjudicate on the spot. Commit to talking with your child; set a follow-up call — and make it. If your child did it: repair, consequence, and tell them what you did. If accounts conflict: request a facilitator.
+**Receiving:** Step 0 — put yourself where this parent is standing. *"Thank you for coming to me instead of around me."* Listen; don't adjudicate on the spot. Commit to talking with your child; set a follow-up call — and make it. If your child did it: repair, consequence, and tell them what you did. If accounts conflict: request a facilitator.
 
-**Facilitated:** Both families, trained facilitator, neutral home, no kids. Behaviors, not character; restate before responding; what's said stays; end with written agreements and a date.
+**Facilitated:** Step 0 — remember the Golden Rule, stated aloud. Both families, trained facilitator, neutral home, no kids. Behaviors, not character; restate before responding; what's said stays; end with written agreements and a date.
 
 **Never:** text/email the conflict, quote other parents, compare children, threaten escalation, or use this protocol for abuse, sexual matter, threats, or crime — those go to the school, diocese, and authorities immediately.
