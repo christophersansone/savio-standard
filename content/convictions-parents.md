@@ -2,9 +2,10 @@
 
 *The Savio Standard · One page — the parent version; see also the [community version](convictions-community.md)*
 
-We are parents who choose a Catholic school on purpose—not once, but every day—entrusting to it what is most precious to us: our children. We do so because we believe that Catholic education is more than academic excellence: it is the formation of young people in truth, virtue, and communion with Christ.
+> _"In everything, do to others what you would have them do to you, for this sums up the Law and the Prophets."_
+> **— Jesus Christ (Matthew 7:12)**
 
-We know that no school community is perfect because no community is made of perfect people. Children will fail, parents will fail, and schools will sometimes fail. Our hope is not for perfection, but for a community that responds to failure with truth, charity, justice, and the courage to begin again.
+We are parents who choose a Catholic school on purpose—not once, but every day—entrusting to it what is most precious to us: our children. We do so because we believe that Catholic education is more than academic excellence; it is the formation of young people in truth, virtue, and communion with Christ. A Catholic school community should be the place where Christ's command is taught clearly, practiced faithfully, and expected consistently.
 
 We believe these truths are shared by all who seek to follow Christ:
 
@@ -39,7 +40,7 @@ Because we believe these truths, we believe they should be evident in the life o
 
 - **That the Faith be evident not only in the curriculum but throughout the life of the school:** how children treat one another is an essential part of Catholic formation, not an interruption to it.
 - **That one standard apply to every child, without favoritism:** every family should be able to trust that expectations are applied fairly and consistently.
-- **That when accounts conflict, prudent discernment prevail:** considering patterns, context, power dynamics, and the courage it often takes for a child to speak up, remembering that justice requires more than treating every situation as though it were the same.
+- **That when accounts conflict, prudent discernment prevail:** weighing patterns, context, power dynamics, credibility, and the cost of speaking up, knowing that justice requires more than simply giving every account equal weight.
 - **That aggression be addressed firmly and consistently enough to change behavior,** protecting those who are harmed while helping those who cause harm grow in virtue, responsibility, and reconciliation.
 - **That parents be treated as true partners:** communicating early, involving us early, and trusting us with the truth.
 

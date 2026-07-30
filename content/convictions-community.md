@@ -2,9 +2,12 @@
 
 *The Savio Standard · One page — for parents, teachers, staff, and leadership to sign together; see also the [parent version](convictions-parents.md)*
 
-We, the parents, teachers, staff, and leadership of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to it; the rest of us receive that trust as sacred. Together, we seek to form children in truth, virtue, and communion with Christ.
+> _"In everything, do to others what you would have them do to you, for this sums up the Law and the Prophets."_
+> **— Jesus Christ (Matthew 7:12)**
 
-We hold these truths to be shared among all who profess Christ:
+Christ gave this command to His disciples, and through them to His Church, as the ordinary standard of Christian life. We believe a Catholic school community should be where that standard is most visible, not only in what is taught, but in how parents, students, teachers, staff, and leaders treat one another every day.
+
+We, the parents, teachers, staff, and leadership of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to this community; the rest of us receive that trust as sacred. The convictions that follow are our shared understanding of what it means to live Christ's command together.
 
 - Every child is made in the image of God and bears a dignity that no one's behavior, position, or convenience may diminish.
 - **The Golden Rule is the standard of a Christian community**, not merely its aspiration.

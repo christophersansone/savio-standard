@@ -4,7 +4,12 @@
 
 ---
 
-As parents at **[School]**, we believe our children are made in the image of God, and that how they treat one another is the truest measure of what we are teaching them. We therefore commit:
+> _"In everything, do to others what you would have them do to you, for this sums up the Law and the Prophets."_
+> **— Jesus Christ (Matthew 7:12)**
+
+Christ gave His followers a remarkably simple standard: treat every person as we ourselves would hope to be treated. We believe this is more than a worthy aspiration. It is the ordinary expectation of Christian discipleship.
+
+As parents at **[School]**, we believe our children are made in the image of God, and that how they treat one another is among the clearest expressions of what we are teaching them. The covenant that follows is our promise to help our community—beginning with ourselves and our children—live Christ's command each day.
 
 1. **The standard.** We hold the Golden Rule as the standard of conduct for our children and ourselves — not an aspiration, but a standard.
 
