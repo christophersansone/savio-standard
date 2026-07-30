@@ -1,17 +1,13 @@
 ---
-import '@fontsource-variable/source-serif-4';
 import '@fontsource-variable/source-sans-3';
-// Only weight 600 of the display face is ever used on the site (font-semibold);
-// the 500/700 static weights were dead imports that no element ever requested.
-import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/lora/700.css';
 import '../styles/global.css';
 import { REPO_URL } from '../lib/registry';
 
 // Resolved, content-hashed URLs for the three font files actually used above the
 // fold on every page (nav/title text, body text) — preloaded below so Safari
 // starts fetching them immediately instead of only after CSS is parsed.
-import cormorantDisplayFontUrl from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-normal.woff2?url';
-import sourceSerifBodyFontUrl from '@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2?url';
+import loraDisplayFontUrl from '@fontsource/lora/files/lora-latin-700-normal.woff2?url';
 import sourceSansUiFontUrl from '@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2?url';
 
 interface Props {
@@ -84,8 +80,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" as="font" type="font/woff2" href={cormorantDisplayFontUrl} crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href={sourceSerifBodyFontUrl} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={loraDisplayFontUrl} crossorigin />
     <link rel="preload" as="font" type="font/woff2" href={sourceSansUiFontUrl} crossorigin />
   </head>
   <body class="min-h-screen flex flex-col">
