@@ -5,7 +5,7 @@
 > _"In everything, do to others what you would have them do to you, for this sums up the Law and the Prophets."_
 > **— Jesus Christ (Matthew 7:12)**
 
-We are parents who choose a Catholic school on purpose—not once, but every day—entrusting to it what is most precious to us: our children. We do so because we believe that Catholic education is more than academic excellence; it is the formation of young people in truth, virtue, and communion with Christ. A Catholic school community should be the place where Christ's command is taught clearly, practiced faithfully, and expected consistently.
+We are parents who choose a Catholic school on purpose—not once, but every day—entrusting to it what is most precious to us: our children. We do so because we believe that Catholic education is more than academic excellence; it is the formation of young people in truth, virtue, and communion with Christ. A Catholic school community should be the place where Christ's command is taught clearly, practiced faithfully, and expected consistently, even when we inevitably fall short of it.
 
 We believe these truths are shared by all who seek to follow Christ:
 

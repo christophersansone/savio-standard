@@ -9,7 +9,7 @@
 
 Christ gave His followers a remarkably simple standard: treat every person as we ourselves would hope to be treated. We believe this is more than a worthy aspiration. It is the ordinary expectation of Christian discipleship.
 
-As parents at **[School]**, we believe our children are made in the image of God, and that how they treat one another is among the clearest expressions of what we are teaching them. The covenant that follows is our promise to help our community—beginning with ourselves and our children—live Christ's command each day.
+As parents at **[School]**, we believe our children are made in the image of God, and that how they treat one another is among the clearest expressions of what we are teaching them. The covenant that follows is our own household's promise — beginning with ourselves and our children — to live Christ's command every day, and to hold ourselves to it before we ask it of anyone else.
 
 1. **The standard.** We hold the Golden Rule as the standard of conduct for our children and ourselves — not an aspiration, but a standard.
 
@@ -47,4 +47,4 @@ As parents at **[School]**, we believe our children are made in the image of God
 
 **The covenant is renewed each school year.** Renewal is a choice, made freshly, every fall. A covenant signed once and forgotten is a signed PDF; a covenant renewed annually is a practice.
 
-**The covenant binds only its signers.** It judges no one, names no one, and asks nothing of any family that has not signed it. It is sustained by nothing except conscience and community — which is the point.
+**Signing is a signal, not a shield.** The Golden Rule expectation applies to every family at [School], signed or not. What signing changes is the conversation: with another signer, a concern can open with *"just as a reminder, here's how it should go."* With a family that hasn't signed, we'd raise the same concern the same way — we'd just explain the play we're running instead of assuming they already know it.

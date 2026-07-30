@@ -7,7 +7,7 @@
 
 Christ gave this command to His disciples, and through them to His Church, as the ordinary standard of Christian life. We believe a Catholic school community should be where that standard is most visible, not only in what is taught, but in how parents, students, teachers, staff, and leaders treat one another every day.
 
-We, the parents, teachers, staff, and leadership of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to this community; the rest of us receive that trust as sacred. The convictions that follow are our shared understanding of what it means to live Christ's command together.
+We, the parents, teachers, staff, and leadership of **[School]**, choose this community on purpose, and we choose it anew every day. The parents among us entrust their children to this community; the rest of us receive that trust as sacred. Together, we seek to form children in truth, virtue, and communion with Christ, and we hold these truths in common:
 
 - Every child is made in the image of God and bears a dignity that no one's behavior, position, or convenience may diminish.
 - **The Golden Rule is the standard of a Christian community**, not merely its aspiration.
