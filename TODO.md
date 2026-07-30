@@ -23,10 +23,11 @@ Working checklist — basic project management, not codified content. Edit freel
 
 - [ ] The Covenant one-pager — drafted at `content/covenant.md`; final wording pending founding team
 - [ ] The kickoff-night talk
-- [ ] The Protocol guide — drafted at `content/parent-to-parent-protocol.md`; review pending
-- [ ] Facilitator onboarding — drafted at `content/facilitator-onboarding.md`; review pending
-- [ ] Roles & responsibilities — drafted at `content/roles-and-responsibilities.md`; review pending
-- [ ] Glossary — parent version drafted at `content/glossary.md`; child versions (K–2, 3–5, 6–8) to follow
+- [x] The Protocol guide — `content/parent-to-parent-protocol.md`
+- [x] Facilitator onboarding — `content/facilitator-onboarding.md`
+- [x] Roles & responsibilities — `content/roles-and-responsibilities.md`
+- [x] Glossary — parent version, `content/glossary.md`
+- [ ] Glossary — child versions (K–2, 3–5, 6–8)
 - [ ] Convictions — both versions drafted (`content/convictions-parents.md`, `content/convictions-community.md`); founding team to review and choose how each is used
 - [ ] The founding-team charter
 

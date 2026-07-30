@@ -1,6 +1,6 @@
 # Why a Steward?
 
-*A plain answer for contributors and founding families · The Savio Standard · Working draft*
+*A plain answer for contributors and founding families · The Savio Standard*
 
 If you contribute to this Project — writing, hosting, testing, or just showing up — you deserve a straight answer about who owns what and why. Here it is.
 

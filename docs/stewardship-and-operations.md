@@ -1,6 +1,6 @@
 # Stewardship & Operations
 
-*The Savio Standard — companion to the [Strategic Plan](strategic-plan.md) · Working draft · © 2026 Savio Standard*
+*The Savio Standard — companion to the [Strategic Plan](strategic-plan.md) · © 2026 Savio Standard*
 
 ## 1. Purpose
 

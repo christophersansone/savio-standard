@@ -2,13 +2,13 @@
 
 *A Parent-Led Movement to Rebuild Culture in Catholic Grade Schools*
 
-**Working draft** · A lay movement under the patronage of St. Dominic Savio and St. John Bosco
+A lay movement under the patronage of St. Dominic Savio and St. John Bosco
 
 > "So in everything, do to others what you would have them do to you, for this sums up the Law and the Prophets." — Matthew 7:12
 >
 > "I can't do big things, but I want everything I do, even the smallest thing, to be for the greater glory of God." — St. Dominic Savio
 
-*© 2026 Savio Standard. Working draft for invited reviewers. Provided for informational and planning purposes only, "as is," without warranty; nothing here is legal, medical, psychological, or other professional advice, and anyone applying these ideas does so voluntarily and at their own risk. The children's program name is a working title, still to be chosen. Third-party marks belong to their respective owners and imply no affiliation or endorsement. See [LICENSE.md](../LICENSE.md), the companion [Strategic Plan](strategic-plan.md) for the year-one pilot and content roadmap, and [Stewardship & Operations](stewardship-and-operations.md).*
+*© 2026 Savio Standard. Provided for informational and planning purposes only, "as is," without warranty; nothing here is legal, medical, psychological, or other professional advice, and anyone applying these ideas does so voluntarily and at their own risk. The children's program name is a working title, still to be chosen. Third-party marks belong to their respective owners and imply no affiliation or endorsement. See [LICENSE.md](../LICENSE.md), the companion [Strategic Plan](strategic-plan.md) for the year-one pilot and content roadmap, and [Stewardship & Operations](stewardship-and-operations.md).*
 
 ---
 

@@ -2,9 +2,9 @@
 
 *The Savio Standard — Year One Pilot, Content Roadmap, and Measurement*
 
-**Working draft** · Companion document to [The Case for The Savio Standard](the-case.md)
+Companion document to [The Case for The Savio Standard](the-case.md)
 
-*© 2026 Savio Standard. Working draft for invited reviewers. Provided for informational and planning purposes only, "as is," without warranty; nothing here is legal, medical, psychological, or other professional advice, and anyone applying these ideas does so voluntarily and at their own risk. The children's program name is a working title, still to be chosen. Third-party marks belong to their respective owners and imply no affiliation or endorsement. See [LICENSE.md](../LICENSE.md) and [Stewardship & Operations](stewardship-and-operations.md).*
+*© 2026 Savio Standard. Provided for informational and planning purposes only, "as is," without warranty; nothing here is legal, medical, psychological, or other professional advice, and anyone applying these ideas does so voluntarily and at their own risk. The children's program name is a working title, still to be chosen. Third-party marks belong to their respective owners and imply no affiliation or endorsement. See [LICENSE.md](../LICENSE.md) and [Stewardship & Operations](stewardship-and-operations.md).*
 
 ---
 
