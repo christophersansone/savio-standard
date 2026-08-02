@@ -1,0 +1,42 @@
+---
+import type { PhotoBlock } from '../types';
+import { effectTargetClass } from '../effects';
+
+interface Props {
+  block: PhotoBlock;
+}
+
+const { block } = Astro.props;
+const layout = block.layout ?? 'contained';
+const alt = block.alt ?? block.caption ?? '';
+const frameClass = [
+  'story-photo__frame',
+  effectTargetClass('fade'),
+].join(' ');
+const imgClass = [
+  'story-photo__img',
+  effectTargetClass('parallax'),
+  effectTargetClass('zoom'),
+].join(' ');
+const captionClass = effectTargetClass('fade');
+---
+
+<figure
+  class:list={['story-photo', `story-photo--${layout}`]}
+  id={block.id}
+>
+  <div class={frameClass}>
+    <img
+      class={imgClass}
+      src={block.image}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  {block.caption && (
+    <figcaption class:list={['story-photo__caption', captionClass]}>
+      {block.caption}
+    </figcaption>
+  )}
+</figure>

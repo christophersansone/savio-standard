@@ -1,0 +1,32 @@
+---
+import type { Story, StoryTheme } from './types';
+import { getDirectorContext } from './director';
+import StoryBlock from './StoryBlock.astro';
+import './styles/story.css';
+import './styles/blocks.css';
+import './styles/effects.css';
+import './styles/transitions.css';
+
+interface Props {
+  story: Story;
+  theme?: StoryTheme;
+}
+
+const { story, theme = 'default' } = Astro.props;
+---
+
+<article class="story" data-theme={theme} data-story>
+  {
+    story.map((block, index) => (
+      <StoryBlock
+        block={block}
+        index={index}
+        director={getDirectorContext(story, index)}
+      />
+    ))
+  }
+</article>
+
+<script>
+  import './effects/client.ts';
+</script>

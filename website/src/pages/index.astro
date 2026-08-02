@@ -42,14 +42,100 @@ const pillars = [
 
 <Base>
   <!-- Hero -->
-  <section class="mx-auto max-w-3xl px-5 pt-20 pb-14 text-center">
+  <section class="mx-auto max-w-3xl px-5 pt-20 pb-10 text-center">
+    <svg
+      viewBox="0 0 24 24"
+      class="mx-auto mb-6 size-8 text-gold"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="5" r="2"></circle>
+      <path d="M12 7v13"></path>
+      <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+      <path d="M8 10l4-2 4 2"></path>
+    </svg>
     <p class="eyebrow mb-6">A parent-led movement for Catholic grade schools</p>
     <h1 class="font-display text-5xl sm:text-6xl font-semibold leading-[1.08] text-ink-deep text-balance">
-      The Golden Rule is the standard,<br class="hidden sm:block" /> not the goal.
+      Anchor your school<br class="hidden sm:block" /> in the Golden Rule.
     </h1>
-    <p class="mt-7 text-lg leading-relaxed text-ink-soft max-w-2xl mx-auto">
-      We are parents who choose a Catholic school on purpose — and who believe our children should be surrounded by classmates who treat one another with kindness and dignity. Culture is not delegated to a school office. It is built by families, together, on purpose.
-    </p>
+  </section>
+
+  <!-- Scripture -->
+  <section class="border-y border-line bg-paper-deep">
+    <div class="mx-auto max-w-2xl px-5 py-14 text-center font-serif italic text-ink-soft">
+      <blockquote class="text-xl sm:text-2xl leading-relaxed">
+        “So in everything, do to others what you would have them do to you, for this sums up the Law and the Prophets.”
+      </blockquote>
+      <p class="eyebrow mt-5 not-italic">Matthew 7:12</p>
+    </div>
+  </section>
+
+  <!-- Why it exists -->
+  <section class="mx-auto max-w-2xl px-5 py-20 text-center">
+    <p class="eyebrow mb-10">Why it exists</p>
+    <div class="space-y-6">
+      <p class="font-display text-2xl sm:text-3xl font-semibold leading-snug text-ink-deep text-balance">
+        School culture drifts — away from the Golden Rule.
+      </p>
+      <p class="font-sans text-lg text-ink-soft">
+        Teasing. Gossip. Exclusion. Small cruelties that compound.
+      </p>
+      <p class="font-display text-2xl sm:text-3xl font-semibold leading-snug text-ink-deep text-balance">
+        Culture isn't just the school's responsibility. It's all of ours.
+      </p>
+      <p class="font-display text-xl sm:text-2xl font-semibold leading-snug text-gold text-balance">
+        The Savio Standard is the anchor — families, on purpose, together.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="border-y border-line bg-paper-deep">
+    <div class="mx-auto max-w-4xl px-5 py-16">
+      <div class="ornament mb-10"><span class="eyebrow">How it works</span></div>
+      <div class="grid gap-8 sm:grid-cols-3 text-center">
+        <div>
+          <h3 class="font-display text-xl font-semibold text-ink-deep mb-2">Expectations</h3>
+          <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+            The Golden Rule becomes the standard, as Christ commands.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold text-ink-deep mb-2">Formation</h3>
+          <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+            Parents trained together — shared language, shared protocols.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold text-ink-deep mb-2">Covenant</h3>
+          <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+            A commitment signed grade by grade. The anchor, made concrete.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-3xl px-5 py-16 text-center">
+    <div class="flex flex-wrap justify-center gap-4 font-sans">
+      <a
+        href="/the-case"
+        class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
+      >
+        Read the Case
+      </a>
+      <a
+        href="/library"
+        class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
+      >
+        Explore the Library
+      </a>
+    </div>
   </section>
 
   <!-- Start by role -->
@@ -79,33 +165,6 @@ const pillars = [
         </p>
       </a>
     </div>
-  </section>
-
-  <!-- Quote band -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-4xl px-5 py-12 grid gap-10 sm:grid-cols-2 text-center font-serif italic text-ink-soft">
-      <figure>
-        <blockquote class="text-lg leading-relaxed">
-          “So in everything, do to others what you would have them do to you, for this sums up the Law and the Prophets.”
-        </blockquote>
-        <figcaption class="eyebrow mt-4 not-italic">Matthew 7:12</figcaption>
-      </figure>
-      <figure>
-        <blockquote class="text-lg leading-relaxed">
-          “I can’t do big things, but I want everything I do, even the smallest thing, to be for the greater glory of God.”
-        </blockquote>
-        <figcaption class="eyebrow mt-4 not-italic">St. Dominic Savio</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- The problem -->
-  <section class="mx-auto max-w-3xl px-5 py-16 text-center">
-    <p class="eyebrow mb-4">Why this exists</p>
-    <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">A community cannot delegate its culture</h2>
-    <p class="text-lg leading-relaxed text-ink-soft">
-      Social aggression persists despite everyone’s good intentions. The school office is asked to carry burdens it was never built to carry. Conversations between parents fail in predictable ways — and the kindest families quietly leave. The adults best positioned to change any of this are not employed by the school. They are us.
-    </p>
   </section>
 
   <!-- Patron -->

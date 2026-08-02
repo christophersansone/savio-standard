@@ -1,0 +1,21 @@
+---
+import type { NarrativeBlock } from '../types';
+import { effectTargetClass } from '../effects';
+
+interface Props {
+  block: NarrativeBlock;
+}
+
+const { block } = Astro.props;
+const width = block.width ?? 'narrow';
+const revealClass = effectTargetClass('reveal');
+---
+
+<div class="story-narrative" id={block.id}>
+  <div class:list={['story-inner', width === 'wide' && 'story-inner--wide', revealClass]}>
+    <p class="story-narrative__text">{block.text}</p>
+    {block.highlight && (
+      <p class="story-narrative__highlight">{block.highlight}</p>
+    )}
+  </div>
+</div>

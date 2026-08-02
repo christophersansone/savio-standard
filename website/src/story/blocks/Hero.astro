@@ -1,0 +1,39 @@
+---
+import type { HeroBlock } from '../types';
+import { effectTargetClass } from '../effects';
+
+interface Props {
+  block: HeroBlock;
+}
+
+const { block } = Astro.props;
+const alignment = block.alignment ?? 'center';
+const overlay = block.overlay ?? (block.background ? 'dark' : 'none');
+const titleClass = effectTargetClass('fade');
+const subtitleClass = effectTargetClass('reveal');
+const mediaClass = [
+  'story-hero__media-inner',
+  effectTargetClass('zoom'),
+].join(' ');
+---
+
+<div
+  class:list={['story-hero', `story-hero--${alignment}`]}
+  id={block.id}
+>
+  <div class="story-hero__media" aria-hidden={block.background ? undefined : 'true'}>
+    <div
+      class={mediaClass}
+      style={block.background ? `background-image: url(${block.background})` : undefined}
+    ></div>
+  </div>
+  {overlay !== 'none' && (
+    <div class={`story-hero__overlay story-hero__overlay--${overlay}`} aria-hidden="true"></div>
+  )}
+  <div class="story-hero__content">
+    <h1 class:list={['story-hero__title', titleClass]}>{block.title}</h1>
+    {block.subtitle && (
+      <p class:list={['story-hero__subtitle', subtitleClass]}>{block.subtitle}</p>
+    )}
+  </div>
+</div>

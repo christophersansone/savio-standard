@@ -1,0 +1,373 @@
+/* Block presentation. No animation logic here — see effects.css. */
+
+/* —— Hero —— */
+.story-hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: stretch;
+  color: var(--story-on-media);
+  overflow: clip;
+}
+
+.story-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.story-hero__media-inner {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  width: 100%;
+  background-color: var(--story-ink-deep);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.story-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.story-hero__overlay--dark {
+  background: var(--story-overlay-dark);
+}
+
+.story-hero__overlay--light {
+  background: var(--story-overlay-light);
+  color: var(--story-ink-deep);
+}
+
+.story-hero__overlay--none {
+  background: transparent;
+}
+
+.story-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+  padding: var(--story-space-block) 1.25rem;
+  width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
+.story-hero--left .story-hero__content {
+  align-items: flex-start;
+  text-align: left;
+  margin-inline: 0 auto;
+  padding-inline-start: clamp(1.25rem, 6vw, 4rem);
+}
+
+.story-hero--center .story-hero__content {
+  align-items: center;
+  text-align: center;
+}
+
+.story-hero--right .story-hero__content {
+  align-items: flex-end;
+  text-align: right;
+  margin-inline: auto 0;
+  padding-inline-end: clamp(1.25rem, 6vw, 4rem);
+}
+
+.story-hero__title {
+  font-family: var(--story-font-display);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.story-hero__subtitle {
+  margin: 1rem 0 0;
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  line-height: 1.45;
+  opacity: 0.92;
+  max-width: 28rem;
+  text-wrap: pretty;
+}
+
+.story-hero--center .story-hero__subtitle {
+  margin-inline: auto;
+}
+
+/* —— Narrative —— */
+.story-narrative {
+  padding-block: var(--story-space-block);
+}
+
+.story-narrative__text {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--story-ink);
+  margin: 0;
+  white-space: pre-line;
+  text-wrap: pretty;
+}
+
+.story-narrative__highlight {
+  margin: 1.75rem 0 0;
+  padding: 1rem 1.25rem;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--story-ink-deep);
+  background: var(--story-bg-deep);
+  border-left: 3px solid var(--story-accent-soft);
+  border-radius: 0 0.375rem 0.375rem 0;
+  text-wrap: pretty;
+}
+
+/* —— Quote —— */
+.story-quote {
+  position: relative;
+  padding-block: clamp(4rem, 10vw, 7rem);
+  overflow: clip;
+}
+
+.story-quote__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.story-quote__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--story-overlay-dark);
+}
+
+.story-quote--has-bg {
+  color: var(--story-on-media);
+}
+
+.story-quote__content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2.5rem, 36rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.story-quote__text {
+  margin: 0;
+  font-family: var(--story-font-display);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.35;
+  text-wrap: balance;
+  border: none;
+}
+
+.story-quote__text::before {
+  content: '“';
+}
+
+.story-quote__text::after {
+  content: '”';
+}
+
+.story-quote__attribution {
+  margin: 1.5rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--story-accent);
+}
+
+.story-quote--has-bg .story-quote__attribution {
+  color: var(--story-accent-soft);
+}
+
+/* —— Photo —— */
+.story-photo {
+  margin: 0;
+  padding-block: var(--story-space-block);
+  position: relative;
+}
+
+.story-photo--fullscreen {
+  padding-block: 0;
+  min-height: 100svh;
+}
+
+.story-photo--contained {
+  width: min(100% - 2.5rem, var(--story-measure-wide));
+  margin-inline: auto;
+}
+
+.story-photo__frame {
+  position: relative;
+  overflow: clip;
+  background: var(--story-bg-deep);
+}
+
+.story-photo--fullscreen .story-photo__frame {
+  min-height: 100svh;
+}
+
+.story-photo--contained .story-photo__frame {
+  aspect-ratio: 16 / 10;
+  border-radius: 0.25rem;
+}
+
+.story-photo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.story-photo--fullscreen .story-photo__img {
+  position: absolute;
+  inset: 0;
+  min-height: 100svh;
+}
+
+.story-photo__caption {
+  margin: 0.85rem auto 0;
+  width: min(100% - 2.5rem, var(--story-measure-narrow));
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--story-ink-soft);
+  text-align: center;
+}
+
+.story-photo--fullscreen .story-photo__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 1;
+  color: var(--story-on-media);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* —— Statistic —— */
+.story-statistic {
+  padding-block: var(--story-space-block);
+  text-align: center;
+}
+
+.story-statistic__number {
+  font-family: var(--story-font-display);
+  font-weight: 700;
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--story-ink-deep);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.story-statistic__label {
+  margin: 1rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--story-accent);
+}
+
+.story-statistic__description {
+  margin: 1.25rem auto 0;
+  max-width: 28rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--story-ink-soft);
+  text-wrap: pretty;
+}
+
+/* —— Chapter —— */
+.story-chapter {
+  padding-block: var(--story-space-chapter);
+  text-align: center;
+  background: var(--story-bg-deep);
+}
+
+.story-chapter__title {
+  margin: 1.25rem 0 0;
+  font-family: var(--story-font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--story-ink-deep);
+  text-wrap: balance;
+}
+
+.story-chapter__subtitle {
+  margin: 0.85rem auto 0;
+  max-width: 28rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--story-ink-soft);
+}
+
+/* —— CTA —— */
+.story-cta {
+  padding-block: var(--story-space-block);
+  text-align: center;
+  border-top: 1px solid var(--story-line);
+}
+
+.story-cta__title {
+  margin: 0;
+  font-family: var(--story-font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--story-ink-deep);
+  text-wrap: balance;
+}
+
+.story-cta__text {
+  margin: 1rem auto 0;
+  max-width: 32rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--story-ink-soft);
+  text-wrap: pretty;
+}
+
+.story-cta__button {
+  display: inline-block;
+  margin-top: 1.75rem;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--story-font-body);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--story-bg);
+  background: var(--story-ink-deep);
+  border-radius: 0.35rem;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.story-cta__button:hover {
+  background: var(--story-accent);
+  color: var(--story-bg);
+}
+
+.story-cta__button:focus-visible {
+  outline: 2px solid var(--story-accent);
+  outline-offset: 3px;
+}

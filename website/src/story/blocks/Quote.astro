@@ -1,0 +1,30 @@
+---
+import type { QuoteBlock } from '../types';
+import { effectTargetClass } from '../effects';
+
+interface Props {
+  block: QuoteBlock;
+}
+
+const { block } = Astro.props;
+const fadeClass = effectTargetClass('fade');
+---
+
+<figure
+  class:list={['story-quote', block.background && 'story-quote--has-bg']}
+  id={block.id}
+>
+  {block.background && (
+    <div
+      class="story-quote__media"
+      style={`background-image: url(${block.background})`}
+      aria-hidden="true"
+    ></div>
+  )}
+  <div class:list={['story-quote__content', fadeClass]}>
+    <blockquote class="story-quote__text">{block.quote}</blockquote>
+    {block.attribution && (
+      <figcaption class="story-quote__attribution">{block.attribution}</figcaption>
+    )}
+  </div>
+</figure>

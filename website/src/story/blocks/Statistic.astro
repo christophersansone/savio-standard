@@ -1,0 +1,29 @@
+---
+import type { StatisticBlock } from '../types';
+import { effectTargetClass } from '../effects';
+
+interface Props {
+  block: StatisticBlock;
+}
+
+const { block } = Astro.props;
+const prefix = block.prefix ?? '';
+const suffix = block.suffix ?? '';
+const display = `${prefix}${block.number}${suffix}`;
+const revealClass = effectTargetClass('reveal');
+---
+
+<div class:list={['story-statistic', 'story-inner', revealClass]} id={block.id}>
+  <p
+    class="story-statistic__number"
+    data-count-to={block.number}
+    data-count-prefix={prefix || undefined}
+    data-count-suffix={suffix || undefined}
+  >
+    {display}
+  </p>
+  <p class="story-statistic__label">{block.label}</p>
+  {block.description && (
+    <p class="story-statistic__description">{block.description}</p>
+  )}
+</div>

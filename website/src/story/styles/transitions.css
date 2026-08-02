@@ -1,0 +1,211 @@
+/*
+  Director-driven section transitions.
+  Layout (pin / overlap) works everywhere; motion enhances under @supports.
+*/
+
+/* —— Pin-over: media holds while the next block scrolls across it —— */
+
+.story-block[data-transition-out='pin-over'] {
+  position: relative;
+  z-index: 1;
+  height: 220svh;
+}
+
+.story-block[data-transition-out='pin-over'] > :first-child {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 100svh;
+  max-height: 100svh;
+  box-sizing: border-box;
+  overflow: clip;
+}
+
+/* Hero / fullscreen photo already fill the sticky frame */
+.story-block[data-transition-out='pin-over'] .story-hero {
+  min-height: 100%;
+  height: 100%;
+}
+
+.story-block[data-transition-out='pin-over'] .story-photo--fullscreen {
+  min-height: 100%;
+  height: 100%;
+  padding-block: 0;
+}
+
+.story-block[data-transition-out='pin-over'] .story-photo--fullscreen .story-photo__frame {
+  min-height: 100%;
+  height: 100%;
+}
+
+.story-block[data-transition-in='pin-over'] {
+  position: relative;
+  z-index: 2;
+  margin-top: -100svh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(22, 31, 54, 0.55) 28%,
+    rgba(22, 31, 54, 0.82) 100%
+  );
+  color: var(--story-on-media);
+}
+
+.story-block[data-transition-in='pin-over'][data-block='narrative'] .story-narrative__text {
+  color: var(--story-on-media);
+}
+
+.story-block[data-transition-in='pin-over'][data-block='narrative'] .story-narrative__highlight {
+  color: var(--story-on-media);
+  background: rgba(250, 248, 242, 0.12);
+  border-left-color: var(--story-accent-soft);
+}
+
+.story-block[data-transition-in='pin-over'][data-block='quote'] {
+  padding-block: clamp(4rem, 12vw, 8rem);
+}
+
+.story-block[data-transition-in='pin-over'][data-block='quote'] .story-quote {
+  overflow: visible;
+  padding-block: 0;
+  color: var(--story-on-media);
+}
+
+.story-block[data-transition-in='pin-over'][data-block='quote'] .story-quote__media {
+  display: none;
+}
+
+.story-block[data-transition-in='pin-over'][data-block='quote'] .story-quote__attribution {
+  color: var(--story-accent-soft);
+}
+
+/* —— Crossfade: previous recedes, next arrives —— */
+
+.story-block[data-transition-out='crossfade'],
+.story-block[data-transition-in='crossfade'] {
+  position: relative;
+  z-index: 1;
+}
+
+/* —— Stack: opaque next surface covers the previous —— */
+
+.story-block[data-transition-out='stack'] {
+  position: relative;
+  z-index: 1;
+}
+
+.story-block[data-transition-in='stack'] {
+  position: relative;
+  z-index: 2;
+  background: var(--story-bg);
+  box-shadow: 0 -24px 48px rgba(22, 31, 54, 0.08);
+}
+
+.story-block[data-transition-in='stack'][data-block='chapter'] {
+  background: var(--story-bg-deep);
+}
+
+/* —— Scroll-driven enter/exit pairing —— */
+
+@keyframes story-pin-text-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+}
+
+@keyframes story-crossfade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes story-overlay-rise {
+  from {
+    opacity: 0;
+    transform: translateY(40vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  /* Pin hold: hero/photo text leaves as the overlay approaches */
+  .story-block[data-transition-out='pin-over'] .story-hero__content,
+  .story-block[data-transition-out='pin-over'] .story-photo__caption {
+    animation: story-pin-text-exit linear both;
+    animation-timeline: view();
+    animation-range: contain 30% contain 70%;
+    animation-duration: 1ms;
+  }
+
+  /* Disable per-element entry anims on pin text — the pin exit owns the scrub */
+  .story-block[data-transition-out='pin-over'] .story-hero__title.story-effect-fade,
+  .story-block[data-transition-out='pin-over'] .story-hero__subtitle.story-effect-reveal,
+  .story-block[data-transition-out='pin-over'] .story-photo__caption.story-effect-fade {
+    animation: story-pin-text-exit linear both;
+    animation-timeline: view();
+    animation-range: contain 30% contain 70%;
+    animation-duration: 1ms;
+  }
+
+  /* Overlay content rises over the pinned media */
+  .story-block[data-transition-in='pin-over'] > :first-child {
+    animation: story-overlay-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+    animation-duration: 1ms;
+  }
+
+  .story-block[data-transition-out='crossfade'] {
+    animation: story-crossfade-out linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 85%;
+    animation-duration: 1ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-block[data-transition-out='pin-over'] .story-hero__content,
+  .story-block[data-transition-out='pin-over'] .story-photo__caption,
+  .story-block[data-transition-out='pin-over'] .story-hero__title,
+  .story-block[data-transition-out='pin-over'] .story-hero__subtitle,
+  .story-block[data-transition-in='pin-over'] > :first-child,
+  .story-block[data-transition-out='crossfade'] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Keep overlap readable without long pin scroll */
+  .story-block[data-transition-out='pin-over'] {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .story-block[data-transition-out='pin-over'] > :first-child {
+    position: relative;
+    max-height: none;
+  }
+
+  .story-block[data-transition-in='pin-over'] {
+    margin-top: 0;
+    background: var(--story-ink-deep);
+  }
+}

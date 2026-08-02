@@ -1,0 +1,71 @@
+---
+import type { DirectorContext } from './director';
+import type { EffectName, StoryBlock as StoryBlockData } from './types';
+import { applyEffects } from './effects';
+import Hero from './blocks/Hero.astro';
+import Narrative from './blocks/Narrative.astro';
+import Quote from './blocks/Quote.astro';
+import Photo from './blocks/Photo.astro';
+import Statistic from './blocks/Statistic.astro';
+import Chapter from './blocks/Chapter.astro';
+import CTA from './blocks/CTA.astro';
+
+interface Props {
+  block: StoryBlockData;
+  index: number;
+  director: DirectorContext;
+}
+
+const { block, index, director } = Astro.props;
+
+/** Block-level defaults — authors can override via `effects`. */
+function defaultEffectsFor(b: StoryBlockData): EffectName[] | undefined {
+  if (b.effects) return b.effects;
+  switch (b.type) {
+    case 'hero':
+      return ['fade', 'reveal', 'zoom'];
+    case 'narrative':
+    case 'chapter':
+    case 'statistic':
+      return ['reveal'];
+    case 'quote':
+    case 'cta':
+      return ['fade'];
+    case 'photo':
+      return b.layout === 'fullscreen' ? ['fade', 'parallax'] : ['fade'];
+    default:
+      return undefined;
+  }
+}
+
+const applied = applyEffects(defaultEffectsFor(block));
+---
+
+<section
+  class="story-block"
+  data-block={block.type}
+  data-index={index}
+  data-from={director.prevType}
+  data-to={director.nextType}
+  data-transition-out={director.transitionOut ?? undefined}
+  data-transition-in={director.transitionIn ?? undefined}
+  data-effect={applied.dataEffect || undefined}
+>
+  {
+    block.type === 'hero' ? (
+      <Hero block={block} />
+    ) : block.type === 'narrative' ? (
+      <Narrative block={block} />
+    ) : block.type === 'quote' ? (
+      <Quote block={block} />
+    ) : block.type === 'photo' ? (
+      <Photo block={block} />
+    ) : block.type === 'statistic' ? (
+      <Statistic block={block} />
+    ) : block.type === 'chapter' ? (
+      <Chapter block={block} />
+    ) : block.type === 'cta' ? (
+      <CTA block={block} />
+    ) : null
+  }
+</section>

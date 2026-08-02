@@ -1,0 +1,17 @@
+---
+import type { CtaBlock } from '../types';
+import { effectTargetClass } from '../effects';
+
+interface Props {
+  block: CtaBlock;
+}
+
+const { block } = Astro.props;
+const fadeClass = effectTargetClass('fade');
+---
+
+<aside class:list={['story-cta', 'story-inner', fadeClass]} id={block.id}>
+  <h2 class="story-cta__title">{block.title}</h2>
+  {block.text && <p class="story-cta__text">{block.text}</p>}
+  <a class="story-cta__button" href={block.button.href}>{block.button.label}</a>
+</aside>
