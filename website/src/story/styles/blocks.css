@@ -81,9 +81,9 @@
 }
 
 .story-hero__title {
-  font-family: var(--story-font-display);
+  font-family: var(--token-font-display, var(--story-font-display));
   font-weight: 700;
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-size: var(--token-headline-hero);
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-wrap: balance;
@@ -105,13 +105,13 @@
 
 /* —— Narrative —— */
 .story-narrative {
-  padding-block: var(--story-space-block);
+  padding-block: var(--token-spacing-block, var(--story-space-block));
 }
 
 .story-narrative__text {
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-size: var(--token-body-prose);
   line-height: 1.7;
-  color: var(--story-ink);
+  color: var(--token-color-ink, var(--story-ink));
   margin: 0;
   white-space: pre-line;
   text-wrap: pretty;
@@ -165,8 +165,8 @@
 
 .story-quote__text {
   margin: 0;
-  font-family: var(--story-font-display);
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-family: var(--token-font-display, var(--story-font-display));
+  font-size: var(--token-headline-pullquote);
   font-weight: 700;
   font-style: italic;
   line-height: 1.35;
@@ -268,23 +268,23 @@
 }
 
 .story-statistic__number {
-  font-family: var(--story-font-display);
+  font-family: var(--token-font-display, var(--story-font-display));
   font-weight: 700;
-  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-size: var(--token-headline-statistic);
   line-height: 1;
   letter-spacing: -0.02em;
-  color: var(--story-ink-deep);
+  color: var(--token-color-ink-deep, var(--story-ink-deep));
   margin: 0;
   font-variant-numeric: tabular-nums;
 }
 
 .story-statistic__label {
   margin: 1rem 0 0;
-  font-size: 0.72rem;
+  font-size: var(--token-body-label);
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--story-accent);
+  color: var(--token-color-accent, var(--story-accent));
 }
 
 .story-statistic__description {
@@ -298,18 +298,18 @@
 
 /* —— Chapter —— */
 .story-chapter {
-  padding-block: var(--story-space-chapter);
+  padding-block: var(--token-spacing-chapter, var(--story-space-chapter));
   text-align: center;
-  background: var(--story-bg-deep);
+  background: var(--token-surface-secondary, var(--story-bg-deep));
 }
 
 .story-chapter__title {
   margin: 1.25rem 0 0;
-  font-family: var(--story-font-display);
+  font-family: var(--token-font-display, var(--story-font-display));
   font-weight: 700;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: var(--token-headline-section);
   line-height: 1.2;
-  color: var(--story-ink-deep);
+  color: var(--token-color-ink-deep, var(--story-ink-deep));
   text-wrap: balance;
 }
 
@@ -323,18 +323,18 @@
 
 /* —— CTA —— */
 .story-cta {
-  padding-block: var(--story-space-block);
+  padding-block: var(--token-spacing-block, var(--story-space-block));
   text-align: center;
-  border-top: 1px solid var(--story-line);
+  border-top: 1px solid var(--token-color-line, var(--story-line));
 }
 
 .story-cta__title {
   margin: 0;
-  font-family: var(--story-font-display);
+  font-family: var(--token-font-display, var(--story-font-display));
   font-weight: 700;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: var(--token-headline-section);
   line-height: 1.2;
-  color: var(--story-ink-deep);
+  color: var(--token-color-ink-deep, var(--story-ink-deep));
   text-wrap: balance;
 }
 

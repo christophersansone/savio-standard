@@ -1,14 +1,17 @@
 ---
-import type { PhotoBlock } from '../types';
+import type { PhotoContent } from '../model';
+import type { ResolvedPresentation } from '../types';
 import { effectTargetClass } from '../effects';
 
 interface Props {
-  block: PhotoBlock;
+  id: string;
+  content: PhotoContent;
+  presentation: ResolvedPresentation;
 }
 
-const { block } = Astro.props;
-const layout = block.layout ?? 'contained';
-const alt = block.alt ?? block.caption ?? '';
+const { id, content, presentation } = Astro.props;
+const layout = presentation.layout;
+const alt = content.image.alt ?? content.caption ?? '';
 const frameClass = [
   'story-photo__frame',
   effectTargetClass('fade'),
@@ -23,20 +26,20 @@ const captionClass = effectTargetClass('fade');
 
 <figure
   class:list={['story-photo', `story-photo--${layout}`]}
-  id={block.id}
+  id={id}
 >
   <div class={frameClass}>
     <img
       class={imgClass}
-      src={block.image}
+      src={content.image.src}
       alt={alt}
       loading="lazy"
       decoding="async"
     />
   </div>
-  {block.caption && (
+  {content.caption && (
     <figcaption class:list={['story-photo__caption', captionClass]}>
-      {block.caption}
+      {content.caption}
     </figcaption>
   )}
 </figure>

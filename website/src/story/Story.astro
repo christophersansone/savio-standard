@@ -1,28 +1,41 @@
 ---
-import type { Story, StoryTheme } from './types';
-import { getDirectorContext } from './director';
-import StoryBlock from './StoryBlock.astro';
+import type { AuthorStory, StoryTheme } from './types';
+import { buildRenderPlan } from './pipeline/buildRenderPlan';
+import { cssVarsToStyle } from './tokens/css';
+import Section from './Section.astro';
 import './styles/story.css';
 import './styles/blocks.css';
 import './styles/effects.css';
 import './styles/transitions.css';
 
 interface Props {
-  story: Story;
+  story: AuthorStory;
   theme?: StoryTheme;
 }
 
 const { story, theme = 'default' } = Astro.props;
+const plan = buildRenderPlan(story, theme);
+const style = cssVarsToStyle(plan.cssVars);
 ---
 
-<article class="story" data-theme={theme} data-story>
+<article
+  class="story"
+  data-theme={plan.themeId}
+  data-story
+  style={style}
+>
   {
-    story.map((block, index) => (
-      <StoryBlock
-        block={block}
-        index={index}
-        director={getDirectorContext(story, index)}
-      />
+    plan.scenes.map((scene) => (
+      <div
+        class="story-scene"
+        data-scene
+        data-scene-id={scene.id}
+        data-slug={scene.slug}
+      >
+        {scene.sections.map((section) => (
+          <Section section={section} />
+        ))}
+      </div>
     ))
   }
 </article>

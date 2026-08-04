@@ -1,10 +1,8 @@
-/** Reusable effect names applied via data-effect attributes. */
+import type { MediaInput, StoryMedia } from './media';
+
+/** Low-level motion names — theme implementation detail; optional author override. */
 export type EffectName = 'fade' | 'reveal' | 'parallax' | 'zoom';
 
-/**
- * Forward-compatible theme tokens. v1 styles `default` only;
- * other values are reserved for future presentation layers.
- */
 export type StoryTheme =
   | 'default'
   | 'minimal'
@@ -14,68 +12,91 @@ export type StoryTheme =
   | 'editorial'
   | 'documentary';
 
+export type BlockType =
+  | 'hero'
+  | 'narrative'
+  | 'quote'
+  | 'photo'
+  | 'statistic'
+  | 'chapter'
+  | 'cta';
+
 export type HeroAlignment = 'left' | 'center' | 'right';
 export type HeroOverlay = 'dark' | 'light' | 'none';
 export type NarrativeWidth = 'narrow' | 'wide';
 export type PhotoLayout = 'fullscreen' | 'contained';
 
-interface BlockBase {
-  id?: string;
-  effects?: EffectName[];
-  /** Reserved — presentation is driven by Story-level theme CSS vars. */
-  theme?: StoryTheme;
+export type Emphasis = 'low' | 'medium' | 'high';
+export type Pace = 'slow' | 'normal' | 'fast';
+export type Mood = 'neutral' | 'solemn' | 'urgent' | 'hopeful';
+export type Focus = 'text' | 'media' | 'balanced';
+
+/** Narrative intent — themes interpret these as motion/emphasis. */
+export interface AuthorIntent {
+  emphasis?: Emphasis;
+  pace?: Pace;
+  mood?: Mood;
+  focus?: Focus;
 }
 
-export interface HeroBlock extends BlockBase {
+/** Optional presentation escape hatches. Prefer letting the engine infer. */
+export interface AuthorPresentation {
+  alignment?: HeroAlignment;
+  overlay?: HeroOverlay;
+  layout?: PhotoLayout;
+  width?: NarrativeWidth;
+  effects?: EffectName[];
+}
+
+interface AuthorBlockBase {
+  id?: string;
+  intent?: AuthorIntent;
+  presentation?: AuthorPresentation;
+}
+
+export interface AuthorHeroBlock extends AuthorBlockBase {
   type: 'hero';
   title: string;
   subtitle?: string;
-  background?: string;
-  alignment?: HeroAlignment;
-  overlay?: HeroOverlay;
+  background?: MediaInput;
 }
 
-export interface NarrativeBlock extends BlockBase {
+export interface AuthorNarrativeBlock extends AuthorBlockBase {
   type: 'narrative';
   text: string;
-  width?: NarrativeWidth;
-  /** Optional paragraph shown with emphasis after the main text. */
   highlight?: string;
 }
 
-export interface QuoteBlock extends BlockBase {
+export interface AuthorQuoteBlock extends AuthorBlockBase {
   type: 'quote';
   quote: string;
   attribution?: string;
-  background?: string;
+  background?: MediaInput;
 }
 
-export interface PhotoBlock extends BlockBase {
+export interface AuthorPhotoBlock extends AuthorBlockBase {
   type: 'photo';
-  image: string;
+  image: MediaInput;
   caption?: string;
   alt?: string;
-  layout?: PhotoLayout;
 }
 
-export interface StatisticBlock extends BlockBase {
+export interface AuthorStatisticBlock extends AuthorBlockBase {
   type: 'statistic';
-  /** Numeric value to animate toward (e.g. 72). */
   number: number;
-  /** Optional prefix/suffix for display (e.g. "%" → "72%"). */
   prefix?: string;
   suffix?: string;
   label: string;
   description?: string;
 }
 
-export interface ChapterBlock extends BlockBase {
+export interface AuthorChapterBlock extends AuthorBlockBase {
   type: 'chapter';
   title: string;
   subtitle?: string;
 }
 
-export interface CtaBlock extends BlockBase {
+export interface AuthorCtaBlock extends AuthorBlockBase {
   type: 'cta';
   title: string;
   text?: string;
@@ -85,15 +106,50 @@ export interface CtaBlock extends BlockBase {
   };
 }
 
-export type StoryBlock =
-  | HeroBlock
-  | NarrativeBlock
-  | QuoteBlock
-  | PhotoBlock
-  | StatisticBlock
-  | ChapterBlock
-  | CtaBlock;
+export type AuthorBlock =
+  | AuthorHeroBlock
+  | AuthorNarrativeBlock
+  | AuthorQuoteBlock
+  | AuthorPhotoBlock
+  | AuthorStatisticBlock
+  | AuthorChapterBlock
+  | AuthorCtaBlock;
 
-export type Story = StoryBlock[];
+export interface AuthorScene {
+  title?: string;
+  slug?: string;
+  blocks: AuthorBlock[];
+}
 
-export type BlockType = StoryBlock['type'];
+/** Public authoring contract. Source-agnostic once normalized. */
+export interface AuthorStory {
+  meta?: {
+    title?: string;
+    description?: string;
+  };
+  scenes: AuthorScene[];
+}
+
+/** @deprecated Prefer AuthorStory — kept as alias for imports. */
+export type Story = AuthorStory;
+
+export interface ResolvedIntent {
+  emphasis: Emphasis;
+  pace: Pace;
+  mood: Mood;
+  focus: Focus;
+}
+
+export interface ResolvedPresentation {
+  alignment: HeroAlignment;
+  overlay: HeroOverlay;
+  layout: PhotoLayout;
+  width: NarrativeWidth;
+  /** Author override only; theme fills motion when absent. */
+  effects?: EffectName[];
+}
+
+export type {
+  StoryMedia,
+  MediaInput,
+};

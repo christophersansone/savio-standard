@@ -1,29 +1,30 @@
 ---
-import type { StatisticBlock } from '../types';
+import type { StatisticContent } from '../model';
+import type { ResolvedPresentation } from '../types';
 import { effectTargetClass } from '../effects';
 
 interface Props {
-  block: StatisticBlock;
+  id: string;
+  content: StatisticContent;
+  presentation: ResolvedPresentation;
 }
 
-const { block } = Astro.props;
-const prefix = block.prefix ?? '';
-const suffix = block.suffix ?? '';
-const display = `${prefix}${block.number}${suffix}`;
+const { id, content } = Astro.props;
+const display = `${content.prefix}${content.number}${content.suffix}`;
 const revealClass = effectTargetClass('reveal');
 ---
 
-<div class:list={['story-statistic', 'story-inner', revealClass]} id={block.id}>
+<div class:list={['story-statistic', 'story-inner', revealClass]} id={id}>
   <p
     class="story-statistic__number"
-    data-count-to={block.number}
-    data-count-prefix={prefix || undefined}
-    data-count-suffix={suffix || undefined}
+    data-count-to={content.number}
+    data-count-prefix={content.prefix || undefined}
+    data-count-suffix={content.suffix || undefined}
   >
     {display}
   </p>
-  <p class="story-statistic__label">{block.label}</p>
-  {block.description && (
-    <p class="story-statistic__description">{block.description}</p>
+  <p class="story-statistic__label">{content.label}</p>
+  {content.description && (
+    <p class="story-statistic__description">{content.description}</p>
   )}
 </div>

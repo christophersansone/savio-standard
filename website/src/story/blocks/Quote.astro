@@ -1,30 +1,34 @@
 ---
-import type { QuoteBlock } from '../types';
+import type { QuoteContent } from '../model';
+import type { ResolvedPresentation } from '../types';
 import { effectTargetClass } from '../effects';
 
 interface Props {
-  block: QuoteBlock;
+  id: string;
+  content: QuoteContent;
+  presentation: ResolvedPresentation;
 }
 
-const { block } = Astro.props;
+const { id, content } = Astro.props;
 const fadeClass = effectTargetClass('fade');
+const bg = content.background;
 ---
 
 <figure
-  class:list={['story-quote', block.background && 'story-quote--has-bg']}
-  id={block.id}
+  class:list={['story-quote', bg && 'story-quote--has-bg']}
+  id={id}
 >
-  {block.background && (
+  {bg && (
     <div
       class="story-quote__media"
-      style={`background-image: url(${block.background})`}
+      style={`background-image: url(${bg.src})`}
       aria-hidden="true"
     ></div>
   )}
   <div class:list={['story-quote__content', fadeClass]}>
-    <blockquote class="story-quote__text">{block.quote}</blockquote>
-    {block.attribution && (
-      <figcaption class="story-quote__attribution">{block.attribution}</figcaption>
+    <blockquote class="story-quote__text">{content.quote}</blockquote>
+    {content.attribution && (
+      <figcaption class="story-quote__attribution">{content.attribution}</figcaption>
     )}
   </div>
 </figure>

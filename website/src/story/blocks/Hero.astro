@@ -1,39 +1,43 @@
 ---
-import type { HeroBlock } from '../types';
+import type { HeroContent } from '../model';
+import type { ResolvedPresentation } from '../types';
 import { effectTargetClass } from '../effects';
 
 interface Props {
-  block: HeroBlock;
+  id: string;
+  content: HeroContent;
+  presentation: ResolvedPresentation;
 }
 
-const { block } = Astro.props;
-const alignment = block.alignment ?? 'center';
-const overlay = block.overlay ?? (block.background ? 'dark' : 'none');
+const { id, content, presentation } = Astro.props;
+const alignment = presentation.alignment;
+const overlay = presentation.overlay;
 const titleClass = effectTargetClass('fade');
 const subtitleClass = effectTargetClass('reveal');
 const mediaClass = [
   'story-hero__media-inner',
   effectTargetClass('zoom'),
 ].join(' ');
+const bg = content.background;
 ---
 
 <div
   class:list={['story-hero', `story-hero--${alignment}`]}
-  id={block.id}
+  id={id}
 >
-  <div class="story-hero__media" aria-hidden={block.background ? undefined : 'true'}>
+  <div class="story-hero__media" aria-hidden={bg ? undefined : 'true'}>
     <div
       class={mediaClass}
-      style={block.background ? `background-image: url(${block.background})` : undefined}
+      style={bg ? `background-image: url(${bg.src})` : undefined}
     ></div>
   </div>
   {overlay !== 'none' && (
     <div class={`story-hero__overlay story-hero__overlay--${overlay}`} aria-hidden="true"></div>
   )}
   <div class="story-hero__content">
-    <h1 class:list={['story-hero__title', titleClass]}>{block.title}</h1>
-    {block.subtitle && (
-      <p class:list={['story-hero__subtitle', subtitleClass]}>{block.subtitle}</p>
+    <h1 class:list={['story-hero__title', titleClass]}>{content.title}</h1>
+    {content.subtitle && (
+      <p class:list={['story-hero__subtitle', subtitleClass]}>{content.subtitle}</p>
     )}
   </div>
 </div>

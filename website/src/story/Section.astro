@@ -1,0 +1,56 @@
+---
+import type {
+  ChapterContent,
+  CtaContent,
+  HeroContent,
+  NarrativeContent,
+  PhotoContent,
+  QuoteContent,
+  RenderSection,
+  StatisticContent,
+} from './model';
+import Hero from './blocks/Hero.astro';
+import Narrative from './blocks/Narrative.astro';
+import Quote from './blocks/Quote.astro';
+import Photo from './blocks/Photo.astro';
+import Statistic from './blocks/Statistic.astro';
+import Chapter from './blocks/Chapter.astro';
+import CTA from './blocks/CTA.astro';
+
+interface Props {
+  section: RenderSection;
+}
+
+const { section } = Astro.props;
+const { attrs, layout, presentation, content, id, blockType } = section;
+---
+
+<section
+  class="story-block"
+  data-block={attrs['data-block']}
+  data-index={attrs['data-index']}
+  data-effect={attrs['data-effect']}
+  data-transition-out={attrs['data-transition-out']}
+  data-transition-in={attrs['data-transition-in']}
+  data-surface={attrs['data-surface']}
+  data-pin={layout.pin ? 'true' : undefined}
+  data-pull={layout.pullUp ? 'true' : undefined}
+>
+  {
+    blockType === 'hero' ? (
+      <Hero id={id} content={content as HeroContent} presentation={presentation} />
+    ) : blockType === 'narrative' ? (
+      <Narrative id={id} content={content as NarrativeContent} presentation={presentation} />
+    ) : blockType === 'quote' ? (
+      <Quote id={id} content={content as QuoteContent} presentation={presentation} />
+    ) : blockType === 'photo' ? (
+      <Photo id={id} content={content as PhotoContent} presentation={presentation} />
+    ) : blockType === 'statistic' ? (
+      <Statistic id={id} content={content as StatisticContent} presentation={presentation} />
+    ) : blockType === 'chapter' ? (
+      <Chapter id={id} content={content as ChapterContent} presentation={presentation} />
+    ) : blockType === 'cta' ? (
+      <CTA id={id} content={content as CtaContent} presentation={presentation} />
+    ) : null
+  }
+</section>

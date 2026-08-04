@@ -1,19 +1,22 @@
 ---
-import type { ChapterBlock } from '../types';
+import type { ChapterContent } from '../model';
+import type { ResolvedPresentation } from '../types';
 import { effectTargetClass } from '../effects';
 
 interface Props {
-  block: ChapterBlock;
+  id: string;
+  content: ChapterContent;
+  presentation: ResolvedPresentation;
 }
 
-const { block } = Astro.props;
+const { id, content } = Astro.props;
 const revealClass = effectTargetClass('reveal');
 ---
 
-<header class:list={['story-chapter', revealClass]} id={block.id}>
+<header class:list={['story-chapter', revealClass]} id={id}>
   <div class="story-ornament" aria-hidden="true"></div>
-  <h2 class="story-chapter__title">{block.title}</h2>
-  {block.subtitle && (
-    <p class="story-chapter__subtitle">{block.subtitle}</p>
+  <h2 class="story-chapter__title">{content.title}</h2>
+  {content.subtitle && (
+    <p class="story-chapter__subtitle">{content.subtitle}</p>
   )}
 </header>

@@ -1,39 +1,15 @@
-/* Story shell + theme tokens. Blocks and effects consume these vars. */
+/* Story shell. Concrete values come from DesignTokens via inline --token-* vars. */
 
 .story {
-  --story-bg: #faf8f2;
-  --story-bg-deep: #f1ece0;
-  --story-ink: #232f47;
-  --story-ink-deep: #161f36;
-  --story-ink-soft: #3d4863;
-  --story-accent: #a07b2e;
-  --story-accent-soft: #c7a35c;
-  --story-line: #e3dac6;
-  --story-on-media: #faf8f2;
-  --story-overlay-dark: rgba(22, 31, 54, 0.55);
-  --story-overlay-light: rgba(250, 248, 242, 0.72);
-  --story-font-display: 'Lora', Georgia, serif;
-  --story-font-body: 'Source Sans 3 Variable', system-ui, sans-serif;
-  --story-measure-narrow: 36rem;
-  --story-measure-wide: 48rem;
-  --story-space-block: clamp(3.5rem, 8vw, 6.5rem);
-  --story-space-chapter: clamp(5rem, 14vw, 9rem);
-
   display: block;
-  background: var(--story-bg);
-  color: var(--story-ink);
-  font-family: var(--story-font-body);
+  background: var(--token-surface-primary, var(--story-bg, #faf8f2));
+  color: var(--token-color-ink, var(--story-ink, #232f47));
+  font-family: var(--token-font-body, var(--story-font-body, system-ui, sans-serif));
   -webkit-font-smoothing: antialiased;
 }
 
-/* Future themes override the same variable names. */
-.story[data-theme='minimal'],
-.story[data-theme='magazine'],
-.story[data-theme='apple'],
-.story[data-theme='annual-report'],
-.story[data-theme='editorial'],
-.story[data-theme='documentary'] {
-  /* Reserved — fall through to default until implemented. */
+.story-scene {
+  display: block;
 }
 
 .story-block {
@@ -47,19 +23,19 @@
 }
 
 .story-inner {
-  width: min(100% - 2.5rem, var(--story-measure-narrow));
+  width: min(100% - 2.5rem, var(--token-measure-narrow, var(--story-measure-narrow)));
   margin-inline: auto;
 }
 
 .story-inner--wide {
-  width: min(100% - 2.5rem, var(--story-measure-wide));
+  width: min(100% - 2.5rem, var(--token-measure-wide, var(--story-measure-wide)));
 }
 
 .story-ornament {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: var(--story-accent);
+  color: var(--token-color-accent, var(--story-accent));
   width: min(12rem, 40%);
   margin-inline: auto;
 }
@@ -69,7 +45,11 @@
   content: '';
   height: 1px;
   flex: 1;
-  background: linear-gradient(to var(--ornament-dir, right), transparent, var(--story-accent-soft));
+  background: linear-gradient(
+    to var(--ornament-dir, right),
+    transparent,
+    var(--token-color-accent-soft, var(--story-accent-soft))
+  );
 }
 
 .story-ornament::before {
