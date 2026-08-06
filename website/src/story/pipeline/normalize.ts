@@ -8,9 +8,23 @@ import type {
   AuthorBlock,
   AuthorScene,
   AuthorStory,
+  BlockAlignment,
+  BlockType,
   ResolvedIntent,
   ResolvedPresentation,
 } from '../types';
+
+const TEXT_BLOCK_TYPES = new Set<BlockType>([
+  'narrative',
+  'quote',
+  'chapter',
+  'statistic',
+  'cta',
+]);
+
+function isTextBlock(type: BlockType): boolean {
+  return TEXT_BLOCK_TYPES.has(type);
+}
 
 function slugify(input: string): string {
   return input
@@ -105,9 +119,23 @@ function flattenAuthor(story: AuthorStory): FlatAuthor[] {
   return out;
 }
 
+function inferAlignment(
+  block: AuthorBlock,
+  textAlignIndex: number,
+): BlockAlignment {
+  if (block.presentation?.alignment) {
+    return block.presentation.alignment;
+  }
+  if (isTextBlock(block.type)) {
+    return textAlignIndex % 2 === 0 ? 'left' : 'right';
+  }
+  return 'center';
+}
+
 function inferPresentation(
   block: AuthorBlock,
   next: AuthorBlock | undefined,
+  textAlignIndex: number,
 ): ResolvedPresentation {
   const p = block.presentation;
 
@@ -128,7 +156,7 @@ function inferPresentation(
   }
 
   return {
-    alignment: p?.alignment ?? 'center',
+    alignment: inferAlignment(block, textAlignIndex),
     overlay,
     layout,
     width: p?.width ?? 'narrow',
@@ -152,6 +180,7 @@ export function normalize(author: AuthorStory): StoryModel {
 
   const flat = flattenAuthor(author);
   const sceneBuckets = new Map<number, BlockModel[]>();
+  let textAlignIndex = 0;
 
   flat.forEach((entry, globalIndex) => {
     const next = flat[globalIndex + 1]?.block;
@@ -165,6 +194,11 @@ export function normalize(author: AuthorStory): StoryModel {
         ? slugify(entry.scene.title)
         : `scene-${entry.sceneIndex + 1}`);
 
+    const currentTextIndex = textAlignIndex;
+    if (isTextBlock(entry.block.type) && !entry.block.presentation?.alignment) {
+      textAlignIndex += 1;
+    }
+
     const model: BlockModel = {
       id,
       type: entry.block.type,
@@ -172,7 +206,7 @@ export function normalize(author: AuthorStory): StoryModel {
       index: globalIndex,
       content: extractContent(entry.block),
       intent: resolveIntent(entry.block),
-      presentation: inferPresentation(entry.block, next),
+      presentation: inferPresentation(entry.block, next, currentTextIndex),
     };
 
     const list = sceneBuckets.get(entry.sceneIndex) ?? [];

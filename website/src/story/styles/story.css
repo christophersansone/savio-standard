@@ -6,6 +6,7 @@
   color: var(--token-color-ink, var(--story-ink, #232f47));
   font-family: var(--token-font-body, var(--story-font-body, system-ui, sans-serif));
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 .story-scene {
@@ -16,6 +17,7 @@
   position: relative;
   display: block;
   width: 100%;
+  overflow-x: clip;
 }
 
 .story-block:focus-within {
@@ -23,12 +25,68 @@
 }
 
 .story-inner {
-  width: min(100% - 2.5rem, var(--token-measure-narrow, var(--story-measure-narrow)));
+  --story-gutter: 1.25rem;
+  --story-page: var(--token-measure-page, 67.5rem);
+  /* Inset to the left/right edge of the centered page rail. */
+  --story-rail-inset: max(
+    var(--story-gutter),
+    calc((100% - min(100%, var(--story-page))) / 2)
+  );
+  width: min(100% - (var(--story-gutter) * 2), var(--token-measure-narrow, var(--story-measure-narrow)));
   margin-inline: auto;
 }
 
 .story-inner--wide {
-  width: min(100% - 2.5rem, var(--token-measure-wide, var(--story-measure-wide)));
+  width: min(100% - (var(--story-gutter) * 2), var(--token-measure-wide, var(--story-measure-wide)));
+}
+
+.story-inner--left {
+  margin-inline: var(--story-rail-inset) auto;
+  text-align: left;
+  padding-inline: 0;
+  width: min(
+    calc(100% - (var(--story-rail-inset) * 2)),
+    var(--token-measure-narrow, var(--story-measure-narrow))
+  );
+}
+
+.story-inner--wide.story-inner--left {
+  width: min(
+    calc(100% - (var(--story-rail-inset) * 2)),
+    var(--token-measure-wide, var(--story-measure-wide))
+  );
+}
+
+.story-inner--right {
+  margin-inline: auto var(--story-rail-inset);
+  text-align: right;
+  padding-inline: 0;
+  width: min(
+    calc(100% - (var(--story-rail-inset) * 2)),
+    var(--token-measure-narrow, var(--story-measure-narrow))
+  );
+}
+
+.story-inner--wide.story-inner--right {
+  width: min(
+    calc(100% - (var(--story-rail-inset) * 2)),
+    var(--token-measure-wide, var(--story-measure-wide))
+  );
+}
+
+.story-inner--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .story-inner--left,
+  .story-inner--right {
+    margin-inline: auto;
+    text-align: left;
+    padding-inline: 0;
+    width: min(100% - (var(--story-gutter) * 2), var(--token-measure-narrow, var(--story-measure-narrow)));
+  }
 }
 
 .story-ornament {

@@ -9,22 +9,34 @@ interface Props {
   presentation: ResolvedPresentation;
 }
 
-const { id, content } = Astro.props;
+const { id, content, presentation } = Astro.props;
+const alignment = presentation.alignment;
 const display = `${content.prefix}${content.number}${content.suffix}`;
 const revealClass = effectTargetClass('reveal');
+const driftClass = effectTargetClass('drift');
 ---
 
-<div class:list={['story-statistic', 'story-inner', revealClass]} id={id}>
-  <p
-    class="story-statistic__number"
-    data-count-to={content.number}
-    data-count-prefix={content.prefix || undefined}
-    data-count-suffix={content.suffix || undefined}
+<div class:list={['story-statistic', `story-statistic--${alignment}`]} id={id}>
+  <div
+    class:list={[
+      'story-inner',
+      `story-inner--${alignment}`,
+      driftClass,
+    ]}
   >
-    {display}
-  </p>
-  <p class="story-statistic__label">{content.label}</p>
-  {content.description && (
-    <p class="story-statistic__description">{content.description}</p>
-  )}
+    <div class={revealClass}>
+      <p
+        class="story-statistic__number"
+        data-count-to={content.number}
+        data-count-prefix={content.prefix || undefined}
+        data-count-suffix={content.suffix || undefined}
+      >
+        {display}
+      </p>
+      <p class="story-statistic__label">{content.label}</p>
+      {content.description && (
+        <p class="story-statistic__description">{content.description}</p>
+      )}
+    </div>
+  </div>
 </div>

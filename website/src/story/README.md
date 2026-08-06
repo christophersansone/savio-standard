@@ -111,8 +111,17 @@ Prefer omitting presentation. Examples of inference:
 - Hero with media → `overlay: 'dark'`
 - Photo before quote/narrative → `layout: 'fullscreen'`
 - Narrative → `width: 'narrow'`
+- Text blocks (`narrative`, `quote`, `chapter`, `statistic`, `cta`) → `alignment` alternates `left` / `right`; theme adds `drift` toward center. Opt out with `presentation: { alignment: 'center' }`. Hero defaults to `center`.
 
 Escape hatch:
+
+```ts
+{
+  type: 'narrative',
+  text: '…',
+  presentation: { alignment: 'center' }, // stay centered, no drift
+}
+```
 
 ```ts
 {
@@ -184,7 +193,7 @@ Themes supply a full [`DesignTokens`](tokens/types.ts) object. `tokensToCssVars(
 | `headline.*` | hero, section, pullquote, statistic |
 | `body.*` | prose, caption, label |
 | `spacing.*` | block, chapter, inline, large |
-| `measure.*` | narrow, wide, hero |
+| `measure.*` | narrow, wide, hero, page |
 | `motion.*` | gentle, emphatic, parallax, zoom |
 | `shadow.*` | soft |
 | `layout.*` | pinHeight, pinPullUp, viewport |
@@ -216,7 +225,7 @@ type Theme = {
 };
 ```
 
-Default theme maps types/intent → `fade` | `reveal` | `parallax` | `zoom` (implementation detail). `presentation.effects` wins when set.
+Default theme maps types/intent → `fade` | `reveal` | `parallax` | `zoom` | `drift` (implementation detail). `presentation.effects` wins when set. `drift` is applied to side-aligned text blocks (horizontal settle toward center).
 
 Component dispatch for the default theme lives in [`Section.astro`](Section.astro). Future themes can swap that map without changing stories.
 
@@ -251,7 +260,9 @@ story/
 
 ## Effects (implementation layer)
 
-Effects are **not** author vocabulary (except override). Theme motion resolves them; CSS in `styles/effects.css` animates via `data-effect` + `.story-effect-*` classes.
+Effects are **not** author vocabulary (except override). Theme motion resolves them; CSS in `styles/effects.css` animates via `data-effect` + `.story-effect-*` classes. Side-aligned sections also set `data-align` so `drift` knows horizontal direction.
+
+Viewport thirds (`cover` range): bottom third animates in, center holds, top third animates out. Heroes are enter-only (no exit) so pin-over sticky copy stays visible.
 
 Client JS ([`effects/client.ts`](effects/client.ts)): statistic counters only.
 

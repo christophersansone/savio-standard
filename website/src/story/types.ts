@@ -1,7 +1,7 @@
 import type { MediaInput, StoryMedia } from './media';
 
 /** Low-level motion names — theme implementation detail; optional author override. */
-export type EffectName = 'fade' | 'reveal' | 'parallax' | 'zoom';
+export type EffectName = 'fade' | 'reveal' | 'parallax' | 'zoom' | 'drift';
 
 export type StoryTheme =
   | 'default'
@@ -21,7 +21,9 @@ export type BlockType =
   | 'chapter'
   | 'cta';
 
-export type HeroAlignment = 'left' | 'center' | 'right';
+export type BlockAlignment = 'left' | 'center' | 'right';
+/** @deprecated Prefer BlockAlignment */
+export type HeroAlignment = BlockAlignment;
 export type HeroOverlay = 'dark' | 'light' | 'none';
 export type NarrativeWidth = 'narrow' | 'wide';
 export type PhotoLayout = 'fullscreen' | 'contained';
@@ -41,7 +43,7 @@ export interface AuthorIntent {
 
 /** Optional presentation escape hatches. Prefer letting the engine infer. */
 export interface AuthorPresentation {
-  alignment?: HeroAlignment;
+  alignment?: BlockAlignment;
   overlay?: HeroOverlay;
   layout?: PhotoLayout;
   width?: NarrativeWidth;
@@ -141,7 +143,7 @@ export interface ResolvedIntent {
 }
 
 export interface ResolvedPresentation {
-  alignment: HeroAlignment;
+  alignment: BlockAlignment;
   overlay: HeroOverlay;
   layout: PhotoLayout;
   width: NarrativeWidth;

@@ -1,6 +1,14 @@
 import type { DirectedBlockModel } from '../../model';
 import type { EffectName } from '../../types';
 
+const TEXT_TYPES = new Set([
+  'narrative',
+  'quote',
+  'chapter',
+  'statistic',
+  'cta',
+]);
+
 /**
  * Default theme maps block type + intent + presentation → concrete effects.
  * Other themes may blur/slide instead without changing stories.
@@ -10,18 +18,23 @@ export function resolveMotion(block: DirectedBlockModel): EffectName[] {
     return [...block.presentation.effects];
   }
 
+  let motion: EffectName[];
+
   switch (block.type) {
     case 'hero':
-      return ['fade', 'reveal', 'zoom'];
+      motion = ['fade', 'reveal', 'zoom'];
+      break;
     case 'narrative':
     case 'chapter':
     case 'statistic':
-      return ['reveal'];
+      motion = ['reveal'];
+      break;
     case 'quote':
     case 'cta':
-      return ['fade'];
+      motion = ['fade'];
+      break;
     case 'photo': {
-      const motion: EffectName[] =
+      motion =
         block.presentation.layout === 'fullscreen'
           ? ['fade', 'parallax']
           : ['fade'];
@@ -31,9 +44,18 @@ export function resolveMotion(block: DirectedBlockModel): EffectName[] {
       ) {
         motion.push('zoom');
       }
-      return motion;
+      break;
     }
     default:
-      return ['fade'];
+      motion = ['fade'];
   }
+
+  if (
+    TEXT_TYPES.has(block.type) &&
+    block.presentation.alignment !== 'center'
+  ) {
+    motion.push('drift');
+  }
+
+  return motion;
 }

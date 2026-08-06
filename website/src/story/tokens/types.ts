@@ -49,12 +49,15 @@ export interface DesignTokens {
     narrow: string;
     wide: string;
     hero: string;
+    /** Centered content rail; side-aligned copy stays inside this. */
+    page: string;
   };
   motion: {
     gentle: { distance: string; range: string };
     emphatic: { distance: string; range: string; scaleFrom: string };
     parallax: { travel: string; scale: string };
     zoom: { to: string };
+    drift: { distance: string };
     pinExit: { distance: string };
     overlayRise: { distance: string };
   };

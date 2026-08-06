@@ -42,6 +42,7 @@ export function tokensToCssVars(tokens: DesignTokens): Record<string, string> {
     '--token-measure-narrow': tokens.measure.narrow,
     '--token-measure-wide': tokens.measure.wide,
     '--token-measure-hero': tokens.measure.hero,
+    '--token-measure-page': tokens.measure.page,
 
     '--token-motion-gentle-distance': tokens.motion.gentle.distance,
     '--token-motion-gentle-range': tokens.motion.gentle.range,
@@ -51,6 +52,7 @@ export function tokensToCssVars(tokens: DesignTokens): Record<string, string> {
     '--token-motion-parallax-travel': tokens.motion.parallax.travel,
     '--token-motion-parallax-scale': tokens.motion.parallax.scale,
     '--token-motion-zoom-to': tokens.motion.zoom.to,
+    '--token-motion-drift-distance': tokens.motion.drift.distance,
     '--token-motion-pin-exit-distance': tokens.motion.pinExit.distance,
     '--token-motion-overlay-rise-distance': tokens.motion.overlayRise.distance,
 

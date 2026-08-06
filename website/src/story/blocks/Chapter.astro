@@ -9,14 +9,26 @@ interface Props {
   presentation: ResolvedPresentation;
 }
 
-const { id, content } = Astro.props;
+const { id, content, presentation } = Astro.props;
+const alignment = presentation.alignment;
 const revealClass = effectTargetClass('reveal');
+const driftClass = effectTargetClass('drift');
 ---
 
-<header class:list={['story-chapter', revealClass]} id={id}>
-  <div class="story-ornament" aria-hidden="true"></div>
-  <h2 class="story-chapter__title">{content.title}</h2>
-  {content.subtitle && (
-    <p class="story-chapter__subtitle">{content.subtitle}</p>
-  )}
+<header class:list={['story-chapter', `story-chapter--${alignment}`]} id={id}>
+  <div
+    class:list={[
+      'story-inner',
+      `story-inner--${alignment}`,
+      driftClass,
+    ]}
+  >
+    <div class={revealClass}>
+      <div class="story-ornament" aria-hidden="true"></div>
+      <h2 class="story-chapter__title">{content.title}</h2>
+      {content.subtitle && (
+        <p class="story-chapter__subtitle">{content.subtitle}</p>
+      )}
+    </div>
+  </div>
 </header>

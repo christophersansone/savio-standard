@@ -52,6 +52,7 @@ function sectionFromBlock(block: DirectedBlockModel, theme: Theme): RenderSectio
     attrs: {
       'data-block': block.type,
       'data-index': String(block.index),
+      'data-align': block.presentation.alignment,
       'data-effect': motion.join(' ') || undefined,
       'data-transition-out': transitionOut,
       'data-transition-in': transitionIn,

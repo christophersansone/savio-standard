@@ -49,16 +49,19 @@ export const defaultTokens: DesignTokens = {
     narrow: '36rem',
     wide: '48rem',
     hero: '42rem',
+    /** ~1080px — Apple-like content rail; backgrounds stay full-bleed. */
+    page: '67.5rem',
   },
   motion: {
-    gentle: { distance: '4rem', range: 'entry 0% entry 65%' },
+    gentle: { distance: '4rem', range: 'cover 0% cover 33.333%' },
     emphatic: {
       distance: '6.5rem',
-      range: 'entry 0% entry 75%',
+      range: 'cover 0% cover 33.333%',
       scaleFrom: '0.97',
     },
     parallax: { travel: '16%', scale: '1.12' },
     zoom: { to: '1.18' },
+    drift: { distance: '2rem' },
     pinExit: { distance: '3rem' },
     overlayRise: { distance: '40vh' },
   },

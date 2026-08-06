@@ -1,4 +1,5 @@
 import type { EffectName } from '../types';
+import { drift } from './drift';
 import { fade } from './fade';
 import { parallax } from './parallax';
 import { reveal } from './reveal';
@@ -15,6 +16,7 @@ const REGISTRY: Record<EffectName, EffectDescriptor> = {
   reveal,
   parallax,
   zoom,
+  drift,
 };
 
 const VALID = new Set<string>(Object.keys(REGISTRY));
@@ -57,4 +59,4 @@ export function effectTargetClass(name: EffectName): string {
   return REGISTRY[name].targetClass;
 }
 
-export { fade, reveal, parallax, zoom };
+export { fade, reveal, parallax, zoom, drift };

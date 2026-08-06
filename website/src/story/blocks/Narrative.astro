@@ -11,14 +11,25 @@ interface Props {
 
 const { id, content, presentation } = Astro.props;
 const width = presentation.width;
+const alignment = presentation.alignment;
 const revealClass = effectTargetClass('reveal');
+const driftClass = effectTargetClass('drift');
 ---
 
-<div class="story-narrative" id={id}>
-  <div class:list={['story-inner', width === 'wide' && 'story-inner--wide', revealClass]}>
-    <p class="story-narrative__text">{content.text}</p>
-    {content.highlight && (
-      <p class="story-narrative__highlight">{content.highlight}</p>
-    )}
+<div class:list={['story-narrative', `story-narrative--${alignment}`]} id={id}>
+  <div
+    class:list={[
+      'story-inner',
+      width === 'wide' && 'story-inner--wide',
+      `story-inner--${alignment}`,
+      driftClass,
+    ]}
+  >
+    <div class={revealClass}>
+      <p class="story-narrative__text">{content.text}</p>
+      {content.highlight && (
+        <p class="story-narrative__highlight">{content.highlight}</p>
+      )}
+    </div>
   </div>
 </div>
