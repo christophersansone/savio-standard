@@ -22,16 +22,15 @@ const { Content } = await render(entry);
       </h1>
       <p class="mt-4 font-sans text-[0.95rem] leading-relaxed text-ink-soft max-w-2xl">{doc.description}</p>
       <p class="mt-4 font-sans text-xs uppercase tracking-[0.14em] text-ink-soft/70">
-        Working draft{' · '}
+        <a href={`/print/${doc.slug}`} class="text-gold hover:text-ink-deep transition-colors">
+          printer-friendly version
+        </a>
+        {' · '}
         <a
           href={`${REPO_URL}/blob/master/${doc.srcPath}`}
           class="text-gold hover:text-ink-deep transition-colors"
         >
           suggest an edit
-        </a>
-        {' · '}
-        <a href={`/print/${doc.slug}`} class="text-gold hover:text-ink-deep transition-colors">
-          printer-friendly version
         </a>
       </p>
     </header>
