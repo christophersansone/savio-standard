@@ -52,7 +52,7 @@ export const docs: Doc[] = [
     srcPath: 'content/convictions-parents.md',
     title: 'The Convictions of Catholic School Parents',
     description:
-      'The truths we hold self-evident, and the expectations we state plainly — beginning with ourselves.',
+      'The truths we hold, and the expectations we state plainly, beginning with ourselves.',
     section: 'For Families',
     featured: true,
   },
