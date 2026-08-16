@@ -8,111 +8,137 @@ const featured = docs.filter((d) => d.featured);
 
 const pillars = [
   {
-    n: 'I',
+    n: 'Pillar 01',
     name: 'Community',
     text: 'School Leads and Homeroom Hosts keep the culture alive in every room — every family known, every family invited, every time.',
   },
   {
-    n: 'II',
+    n: 'Pillar 02',
     name: 'Formation',
     text: 'An eight-session parent series on social aggression, conflict, and childhood — because we cannot enforce a standard we cannot articulate.',
   },
   {
-    n: 'III',
+    n: 'Pillar 03',
     name: 'Shared Language',
     text: 'A covenant and a glossary held in common, so a child, her parents, and the other family are finally using the same words.',
   },
   {
-    n: 'IV',
+    n: 'Pillar 04',
     name: 'Conflict Navigation',
     text: 'A protocol for the hard conversation between parents — and trained facilitators for when it gets stuck.',
   },
   {
-    n: 'V',
+    n: 'Pillar 05',
     name: 'Upstander Kids',
     text: 'Monthly club meetings where children rehearse courage — skits, stories, and scripts until standing up is muscle memory.',
   },
   {
-    n: 'VI',
+    n: 'Pillar 06',
     name: 'Digital Oversight',
     text: 'Simple household norms every family can keep: messages open to review, no devices in bedrooms, nothing unfiltered, ever.',
+  },
+];
+
+const steps = [
+  {
+    when: 'Sign the covenant',
+    body: 'Privately — no one knows until your grade activates.',
+  },
+  {
+    when: 'Eight families activate a grade',
+    body: 'All are introduced. No family stands alone.',
+  },
+  {
+    when: 'A community forms',
+    body: 'Hosts, formation nights, a shared language — a culture, on purpose.',
   },
 ];
 ---
 
 <Base>
   <!-- Hero -->
-  <section class="mx-auto max-w-3xl px-5 pt-20 pb-10 text-center">
-    <svg
-      viewBox="0 0 24 24"
-      class="mx-auto mb-6 size-8 text-gold"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="5" r="2"></circle>
-      <path d="M12 7v13"></path>
-      <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
-      <path d="M8 10l4-2 4 2"></path>
-    </svg>
-    <p class="eyebrow mb-6">A parent-led movement for Catholic grade schools</p>
-    <h1 class="font-display text-5xl sm:text-6xl font-semibold leading-[1.08] text-ink-deep text-balance">
-      Anchor your school<br class="hidden sm:block" /> in the Golden Rule.
-    </h1>
+  <section class="px-5 sm:px-8 pt-16 pb-16">
+    <div class="mx-auto max-w-page grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+      <div>
+        <hr class="rule-gold mb-5" />
+        <p class="eyebrow">A parent-led movement for Catholic grade schools</p>
+        <h1 class="font-display text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight text-strong mt-4 text-balance">
+          Anchor your school in the Golden Rule.
+        </h1>
+        <p class="font-sans text-lg text-muted mt-5 max-w-[46ch]">
+          One sentence, taught until it is habit. The Savio Standard gives families a shared
+          language, a protocol for the hard conversations, and a culture built on purpose rather
+          than left to drift.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="/the-case" class="btn btn-lg btn-gold">Read the case</a>
+          <a href="/library" class="btn btn-lg btn-secondary">Explore the library</a>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <img src="/images/shield.svg" alt="" width="280" height="280" class="w-48 sm:w-64 lg:w-72 h-auto" aria-hidden="true" />
+      </div>
+    </div>
   </section>
 
-  <!-- Scripture -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-2xl px-5 py-14 text-center font-serif italic text-ink-soft">
-      <blockquote class="text-xl sm:text-2xl leading-relaxed">
-        “So in everything, do to others what you would have them do to you, for this sums up the Law and the Prophets.”
+  <!-- Scripture — quoted, once per page -->
+  <section class="bg-navy px-5 sm:px-8 py-16">
+    <div class="mx-auto max-w-prose text-center">
+      <blockquote class="font-display italic text-2xl sm:text-3xl leading-[1.35] text-paper-100">
+        “So in everything, do to others what you would have them do to you, for this sums up the Law
+        and the Prophets.”
       </blockquote>
-      <p class="eyebrow mt-5 not-italic">Matthew 7:12</p>
+      <p class="eyebrow text-gold-300 mt-6">Matthew 7:12</p>
     </div>
   </section>
 
   <!-- Why it exists -->
-  <section class="mx-auto max-w-2xl px-5 py-20 text-center">
-    <p class="eyebrow mb-10">Why it exists</p>
-    <div class="space-y-6">
-      <p class="font-display text-2xl sm:text-3xl font-semibold leading-snug text-ink-deep text-balance">
+  <section class="px-5 sm:px-8 py-24">
+    <div class="mx-auto max-w-prose text-center">
+      <hr class="rule-gold rule-gold--center mb-5" />
+      <p class="eyebrow">Why it exists</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold leading-snug tracking-tight text-strong mt-4 text-balance">
         Culture drifts without an anchor.
-      </p>
-      <p class="font-sans text-lg text-ink-soft">
-        Teasing. Gossip. Exclusion. Small cruelties that compound.
-      </p>
-      <p class="font-display text-2xl sm:text-2xl font-semibold leading-snug text-ink-deep text-balance">
-        It's not just the school's responsibility. It's all of ours.
-      </p>
-      <p class="font-display text-3xl sm:text-4xl font-semibold leading-snug text-gold text-balance">
-        The Savio Standard is the anchor. Families. On purpose. Together.
-      </p>
+      </h2>
+      <div class="mt-6 space-y-5">
+        <p class="font-sans text-lg text-muted">
+          Teasing. Gossip. Exclusion. Small cruelties that compound.
+        </p>
+        <p class="font-sans text-lg text-muted">
+          It's not just the school's responsibility. It's all of ours.
+        </p>
+        <p class="font-display text-2xl sm:text-3xl font-bold leading-snug tracking-tight text-strong text-balance pt-2">
+          The Savio Standard is the anchor. Families. On purpose. Together.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- How it works -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-4xl px-5 py-16">
-      <div class="ornament mb-10"><span class="eyebrow">How it works</span></div>
-      <div class="grid gap-8 sm:grid-cols-3 text-center">
-        <div>
-          <h3 class="font-display text-xl font-semibold text-ink-deep mb-2">Expectations</h3>
-          <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+  <section class="px-5 sm:px-8 pb-24">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">How it works</p>
+      <h2 class="font-display text-3xl font-bold leading-snug tracking-tight text-strong mt-3">
+        Three commitments, held together
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-3 mt-10">
+        <div class="card p-6">
+          <h3 class="font-display text-xl font-bold tracking-tight text-strong">Expectations</h3>
+          <p class="font-sans text-base leading-relaxed text-muted mt-3">
             The Golden Rule becomes the standard, as Christ commands.
           </p>
         </div>
-        <div>
-          <h3 class="font-display text-xl font-semibold text-ink-deep mb-2">Formation</h3>
-          <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+        <div class="card p-6">
+          <h3 class="font-display text-xl font-bold tracking-tight text-strong">Formation</h3>
+          <p class="font-sans text-base leading-relaxed text-muted mt-3">
             Parents trained together: shared language, shared protocols.
           </p>
         </div>
-        <div>
-          <h3 class="font-display text-xl font-semibold text-ink-deep mb-2">Covenant</h3>
-          <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">
+        <div class="card p-6">
+          <h3 class="font-display text-xl font-bold tracking-tight text-strong">Covenant</h3>
+          <p class="font-sans text-base leading-relaxed text-muted mt-3">
             A commitment signed grade by grade. The anchor, made concrete.
           </p>
         </div>
@@ -120,61 +146,41 @@ const pillars = [
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="mx-auto max-w-3xl px-5 py-16 text-center">
-    <div class="flex flex-wrap justify-center gap-4 font-sans">
-      <a
-        href="/the-case"
-        class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
-      >
-        Read the Case
-      </a>
-      <a
-        href="/library"
-        class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
-      >
-        Explore the Library
-      </a>
-    </div>
-  </section>
-
   <!-- Start by role -->
-  <section class="mx-auto max-w-3xl px-5 pb-16">
-    <div class="ornament mb-8"><span class="eyebrow">New here?</span></div>
-    <div class="grid gap-5 sm:grid-cols-2">
-      <a
-        href="/for-parents"
-        class="group rounded-lg border border-line bg-white/50 p-6 text-center transition-all hover:border-gold-soft hover:shadow-sm"
-      >
-        <h3 class="font-display text-2xl font-semibold text-ink-deep group-hover:text-gold transition-colors">
-          For Parents
-        </h3>
-        <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-2">
-          Why culture drifts, and the playbook for restoring the Golden Rule as the standard.
-        </p>
-      </a>
-      <a
-        href="/for-schools"
-        class="group rounded-lg border border-line bg-white/50 p-6 text-center transition-all hover:border-gold-soft hover:shadow-sm"
-      >
-        <h3 class="font-display text-2xl font-semibold text-ink-deep group-hover:text-gold transition-colors">
-          For Schools &amp; Parishes
-        </h3>
-        <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-2">
-          What it is, why it helps, and how to bring it to your school.
-        </p>
-      </a>
+  <section class="px-5 sm:px-8 pb-24">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">New here?</p>
+      <h2 class="font-display text-3xl font-bold leading-snug tracking-tight text-strong mt-3">
+        Start where you stand
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2 mt-10">
+        <a href="/for-parents" class="card card-interactive card-top-rule p-6 no-underline block">
+          <h3 class="font-display text-xl font-bold tracking-tight text-strong">For parents</h3>
+          <p class="font-sans text-base leading-relaxed text-muted mt-3">
+            Why culture drifts, and the playbook for restoring the Golden Rule as the standard.
+          </p>
+        </a>
+        <a href="/for-schools" class="card card-interactive card-top-rule p-6 no-underline block">
+          <h3 class="font-display text-xl font-bold tracking-tight text-strong">
+            For schools &amp; parishes
+          </h3>
+          <p class="font-sans text-base leading-relaxed text-muted mt-3">
+            What it is, why it helps, and how to bring it to your school.
+          </p>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Patron -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-4xl px-5 py-14">
-      <div class="rounded-lg border border-line shadow-sm overflow-hidden bg-white flex flex-col sm:flex-row">
-        <div class="h-full sm:h-auto sm:w-2/5 shrink-0">
+  <section class="px-5 sm:px-8 pb-24">
+    <div class="mx-auto max-w-page">
+      <div class="card overflow-hidden flex flex-col sm:flex-row">
+        <div class="sm:w-2/5 shrink-0">
           <Image
             src={savioPortrait}
-            alt="St. Dominic Savio, patron of the Project"
+            alt="St. Dominic Savio, patron of the movement"
             width={480}
             height={600}
             densities={[1, 1.5, 2]}
@@ -182,15 +188,28 @@ const pillars = [
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="flex-1 p-8 sm:p-10 flex flex-col justify-center text-center sm:text-left">
-          <p class="eyebrow mb-4">St. Dominic Savio</p>
-          <h2 class="font-display text-3xl font-semibold text-ink-deep mb-4">Our Patron</h2>
-          <p class="font-sans text-sm leading-relaxed text-ink-soft">
-            St. Dominic Savio was a schoolboy — fourteen when he died, canonized for the holiness of an ordinary school life. At his school he organized his classmates into a company of mutual care: he defended the smallest boys from bullying, broke up fights, and befriended the friendless. He is exactly what this movement asks our children to become, and behind the pupil stands the teacher — his mentor, St. John Bosco, who formed young people through reason, religion, and loving-kindness so thoroughly that discipline was rarely needed. Every gathering, covenant, and skit in this project is an attempt to make Savio’s way ordinary again.
+        <div class="flex-1 p-8 sm:p-10 flex flex-col justify-center">
+          <hr class="rule-gold mb-5" />
+          <p class="eyebrow">St. Dominic Savio</p>
+          <h2 class="font-display text-3xl font-bold tracking-tight text-strong mt-3 mb-4">
+            Our patron
+          </h2>
+          <p class="font-sans text-base leading-relaxed text-muted">
+            St. Dominic Savio was a schoolboy — fourteen when he died, canonized for the holiness of
+            an ordinary school life. At his school he organized his classmates into a company of
+            mutual care: he defended the smallest boys from bullying, broke up fights, and
+            befriended the friendless. He is exactly what this movement asks our children to become,
+            and behind the pupil stands the teacher — his mentor, St. John Bosco, who formed young
+            people through reason, religion, and loving-kindness so thoroughly that discipline was
+            rarely needed. Every gathering, covenant, and skit in this project is an attempt to make
+            Savio’s way ordinary again.
           </p>
-          <p class="mt-6 font-sans text-sm">
-            <a href="/the-case#patronage-and-identity" class="text-gold font-semibold uppercase tracking-wide hover:text-ink-deep transition-colors">
-              Read more in the Case →
+          <p class="mt-6">
+            <a
+              href="/the-case#patronage-and-identity"
+              class="font-sans text-xs font-semibold uppercase tracking-caps text-gold-600 no-underline hover:text-strong transition-colors duration-140"
+            >
+              Read more in the case →
             </a>
           </p>
         </div>
@@ -199,71 +218,110 @@ const pillars = [
   </section>
 
   <!-- Pillars -->
-  <section class="mx-auto max-w-5xl px-5 py-16">
-    <div class="ornament mb-10"><span class="eyebrow">The six pillars</span></div>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        pillars.map((p) => (
-          <div class="rounded-lg border border-line bg-white/50 p-6">
-            <div class="font-display text-gold text-xl font-semibold">{p.n}</div>
-            <h3 class="font-display text-xl font-semibold text-ink-deep mt-1 mb-2">{p.name}</h3>
-            <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft">{p.text}</p>
-          </div>
-        ))
-      }
+  <section class="px-5 sm:px-8 pb-24">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">The framework</p>
+      <h2 class="font-display text-3xl font-bold leading-snug tracking-tight text-strong mt-3">
+        Six pillars, one rule
+      </h2>
+      <p class="font-sans text-lg text-muted mt-3 max-w-[62ch]">
+        Every practice in the Standard traces back to a single sentence a child can recite.
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+        {
+          pillars.map((p) => (
+            <div class="card card-top-rule p-6 flex flex-col gap-3">
+              <span class="eyebrow">{p.n}</span>
+              <h3 class="font-display text-xl font-bold tracking-tight text-strong">{p.name}</h3>
+              <p class="font-sans text-base leading-relaxed text-muted">{p.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- How it starts — navy proof band -->
+  <section class="bg-navy px-5 sm:px-8 py-24">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow text-gold-400">How it starts</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold leading-snug tracking-tight text-paper-100 mt-3">
+        No permission required.
+      </h2>
+      <ol class="list-none p-0 grid gap-8 sm:grid-cols-3 mt-10">
+        {
+          steps.map((s, i) => (
+            <li class="flex gap-4">
+              <span class="shrink-0 size-8 rounded-full bg-gold-400 text-navy-900 grid place-items-center font-sans text-xs font-bold">
+                {i + 1}
+              </span>
+              <span>
+                <strong class="block font-sans text-base font-semibold text-paper-100">
+                  {s.when}
+                </strong>
+                <span class="block font-sans text-base leading-relaxed text-navy-200 mt-1">
+                  {s.body}
+                </span>
+              </span>
+            </li>
+          ))
+        }
+      </ol>
+      <div class="mt-10">
+        <a href={REPO_URL} class="btn btn-on-navy">Built in the open on GitHub</a>
+      </div>
     </div>
   </section>
 
   <!-- Documents -->
-  <section class="mx-auto max-w-5xl px-5 pb-16">
-    <div class="ornament mb-10"><span class="eyebrow">Start reading</span></div>
-    <div class="grid gap-6 sm:grid-cols-2">
-      {
-        featured.map((d) => (
-          <a
-            href={'/' + d.slug}
-            class="group rounded-lg border border-line bg-white/50 p-6 transition-all hover:border-gold-soft hover:shadow-sm"
-          >
-            <p class="eyebrow mb-2">{d.section}</p>
-            <h3 class="font-display text-2xl font-semibold text-ink-deep group-hover:text-gold transition-colors">
-              {d.title}
-            </h3>
-            <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-2">{d.description}</p>
-          </a>
-        ))
-      }
+  <section class="px-5 sm:px-8 py-24">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">Start reading</p>
+      <h2 class="font-display text-3xl font-bold leading-snug tracking-tight text-strong mt-3">
+        The documents
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2 mt-10">
+        {
+          featured.map((d) => (
+            <a href={'/' + d.slug} class="card card-interactive p-6 no-underline block">
+              <p class="eyebrow">{d.section}</p>
+              <h3 class="font-display text-xl font-bold tracking-tight text-strong mt-3">
+                {d.title}
+              </h3>
+              <p class="font-sans text-base leading-relaxed text-muted mt-3">{d.description}</p>
+            </a>
+          ))
+        }
+      </div>
+      <p class="mt-8 font-sans text-base text-muted max-w-[62ch]">
+        Everything else — the glossary, the community roles, the facilitator guide, and the
+        project’s own governance — is in the{' '}
+        <a
+          href="/library"
+          class="text-navy-600 underline decoration-gold-400 underline-offset-2 hover:text-strong transition-colors duration-140"
+          >library</a
+        >.
+      </p>
     </div>
-    <p class="mt-8 text-center font-sans text-sm text-ink-soft">
-      Everything else — the glossary, the community roles, the facilitator guide, and the project’s own governance — is in the <a href="/library" class="text-gold underline underline-offset-2">library</a>.
-    </p>
   </section>
 
-  <!-- How it starts -->
-  <section class="border-t border-line bg-paper-deep">
-    <div class="mx-auto max-w-4xl px-5 py-16 text-center">
-      <p class="eyebrow mb-4">How it starts</p>
-      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-10">No permission required</h2>
-      <div class="grid gap-8 sm:grid-cols-3 font-sans text-[0.95rem] text-ink-soft">
+  <!-- Closing CTA -->
+  <section class="px-5 sm:px-8 pb-24">
+    <div class="mx-auto max-w-page border-t border-hairline pt-16">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
         <div>
-          <div class="font-display text-4xl text-gold font-semibold mb-2">1</div>
-          <p><strong class="text-ink-deep">Sign the covenant.</strong> Privately — no one knows until your grade activates.</p>
+          <h2 class="font-display text-3xl font-bold tracking-tight text-strong">
+            Start with one grade.
+          </h2>
+          <p class="font-sans text-lg text-muted mt-3 max-w-[52ch]">
+            Eight families is all it takes to activate. Most schools begin with a single homeroom,
+            then go building-wide the following year.
+          </p>
         </div>
-        <div>
-          <div class="font-display text-4xl text-gold font-semibold mb-2">2</div>
-          <p><strong class="text-ink-deep">Eight families activate a grade.</strong> All are introduced. No family stands alone.</p>
-        </div>
-        <div>
-          <div class="font-display text-4xl text-gold font-semibold mb-2">3</div>
-          <p><strong class="text-ink-deep">A community forms.</strong> Hosts, formation nights, a shared language — a culture, on purpose.</p>
-        </div>
-      </div>
-      <div class="mt-10">
-        <a
-          href={REPO_URL}
-          class="font-sans text-sm font-semibold uppercase tracking-wide text-gold hover:text-ink-deep transition-colors"
-        >
-          Built in the open on GitHub →
-        </a>
+        <a href="/covenant" class="btn btn-lg btn-gold shrink-0">Read the covenant</a>
       </div>
     </div>
   </section>

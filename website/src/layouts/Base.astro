@@ -1,13 +1,12 @@
 ---
 import '@fontsource-variable/source-sans-3';
-import '@fontsource/lora/700.css';
 import '../styles/global.css';
 import { REPO_URL } from '../lib/registry';
 
-// Resolved, content-hashed URLs for the three font files actually used above the
-// fold on every page (nav/title text, body text) — preloaded below so Safari
-// starts fetching them immediately instead of only after CSS is parsed.
-import loraDisplayFontUrl from '@fontsource/lora/files/lora-latin-700-normal.woff2?url';
+// Resolved, content-hashed URL for the body face used above the fold on every
+// page — preloaded below so Safari starts fetching it immediately instead of
+// only after CSS is parsed. Bitter and Source Serif 4 are self-hosted from
+// /public/fonts and preloaded by path.
 import sourceSansUiFontUrl from '@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2?url';
 
 interface Props {
@@ -52,6 +51,36 @@ const nav = [
   { href: '/library', label: 'Library' },
 ];
 
+const footerColumns = [
+  {
+    heading: 'The movement',
+    links: [
+      { label: 'For parents', href: '/for-parents' },
+      { label: 'For schools & parishes', href: '/for-schools' },
+      { label: 'Read the case', href: '/the-case' },
+      { label: 'The covenant', href: '/covenant' },
+    ],
+  },
+  {
+    heading: 'Library',
+    links: [
+      { label: 'All documents', href: '/library' },
+      { label: 'Glossary', href: '/glossary' },
+      { label: 'Roles & responsibilities', href: '/roles' },
+      { label: 'Facilitator onboarding', href: '/facilitators' },
+    ],
+  },
+  {
+    heading: 'Governance',
+    links: [
+      { label: 'Stewardship commitment', href: '/commitment' },
+      { label: 'Stewardship & operations', href: '/stewardship' },
+      { label: 'Strategic plan', href: '/plan' },
+      { label: 'Repository', href: REPO_URL },
+    ],
+  },
+];
+
 const isActive = (href: string) => path === href || path.startsWith(href + '/');
 ---
 
@@ -78,28 +107,40 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="theme-color" content="#f5f3ed" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" as="font" type="font/woff2" href={loraDisplayFontUrl} crossorigin />
     <link rel="preload" as="font" type="font/woff2" href={sourceSansUiFontUrl} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/bitter-latin-wght-normal.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/source-serif-4-latin-700-normal.woff2" crossorigin />
   </head>
-  <body class="min-h-screen flex flex-col">
-    <div class="h-[3px] bg-gradient-to-r from-gold-soft via-gold to-gold-soft"></div>
+  <body class="min-h-screen flex flex-col bg-page">
+    <!-- The brand motif: a flat 3px gold rule. No gradients anywhere. -->
+    <div class="h-[3px] bg-accent"></div>
 
-    <header class="border-b border-line bg-paper/90 backdrop-blur sticky top-0 z-10">
-      <div class="mx-auto max-w-5xl px-5 py-4 flex items-center justify-between gap-6 relative">
-        <a href="/" class="font-display text-2xl font-semibold tracking-wide text-ink-deep whitespace-nowrap">
-          The Savio Standard
+    <header
+      class="border-b border-hairline sticky top-0 z-20 supports-[backdrop-filter]:bg-[rgba(252,251,248,0.92)] bg-raised backdrop-blur-[10px] backdrop-saturate-150"
+    >
+      <div class="mx-auto max-w-page px-5 sm:px-8 py-3 flex items-center gap-6 sm:gap-8 relative">
+        <a href="/" class="flex items-center gap-2.5 shrink-0 no-underline" aria-label="The Savio Standard — home">
+          <img src="/images/shield.svg" alt="" width="36" height="36" class="block size-9" aria-hidden="true" />
+          <span
+            class="font-logo font-bold text-strong text-[18px] sm:text-xl leading-none tracking-[-0.005em] whitespace-nowrap"
+          >
+            The Savio Standard
+          </span>
         </a>
 
-        <nav class="hidden md:flex font-sans text-[0.8rem] font-semibold tracking-[0.14em] uppercase flex-wrap gap-x-5 gap-y-1 items-baseline">
+        <nav class="hidden md:flex ml-auto items-center gap-6 font-sans text-sm font-semibold">
           {
             nav.map((item) => (
               <a
                 href={item.href}
                 class:list={[
-                  'transition-colors hover:text-gold',
-                  isActive(item.href) ? 'text-gold' : 'text-ink-soft',
+                  'no-underline pb-1.5 border-b-[3px] transition-colors duration-140',
+                  isActive(item.href)
+                    ? 'text-strong border-accent'
+                    : 'text-muted border-transparent hover:text-body',
                 ]}
               >
                 {item.label}
@@ -108,20 +149,27 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
           }
         </nav>
 
+        <a
+          href="/the-case"
+          class="hidden md:inline-flex ml-2 h-8 items-center rounded-sm border-2 border-accent bg-accent px-4 font-sans text-2xs font-semibold uppercase tracking-caps text-on-gold no-underline transition-colors duration-140 hover:bg-accent-hover hover:border-accent-hover active:translate-y-px"
+        >
+          Read the case
+        </a>
+
         <button
           id="nav-toggle"
           type="button"
-          class="md:hidden -mr-1.5 p-1.5 text-ink-deep hover:text-gold transition-colors"
+          class="md:hidden ml-auto -mr-1.5 p-1.5 text-strong hover:text-accent-press transition-colors"
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label="Open menu"
         >
-          <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" class="size-6">
+          <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="size-6">
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
-          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" class="size-6 hidden">
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="size-6 hidden">
             <line x1="5" y1="5" x2="19" y2="19"></line>
             <line x1="19" y1="5" x2="5" y2="19"></line>
           </svg>
@@ -129,23 +177,28 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
 
         <nav
           id="mobile-menu"
-          class="md:hidden absolute right-5 top-full mt-2 w-56 origin-top-right rounded-lg border border-line bg-paper shadow-lg py-2 flex flex-col font-sans text-[0.8rem] font-semibold tracking-[0.14em] uppercase opacity-0 scale-95 pointer-events-none transition duration-150 ease-out z-20"
+          class="md:hidden absolute right-5 top-full mt-2 w-60 origin-top-right rounded-md border border-hairline bg-card shadow-raised py-2 flex flex-col font-sans text-sm font-semibold opacity-0 -translate-y-2.5 pointer-events-none transition duration-[220ms] ease-[cubic-bezier(.2,.6,.2,1)] z-30"
         >
           {
             nav.map((item) => (
               <a
                 href={item.href}
                 class:list={[
-                  'px-4 py-2 transition-colors hover:text-gold hover:bg-paper-deep',
-                  isActive(item.href) ? 'text-gold' : 'text-ink-soft',
+                  'px-4 py-2.5 no-underline border-l-[3px] transition-colors',
+                  isActive(item.href)
+                    ? 'text-strong border-accent bg-gold-100'
+                    : 'text-muted border-transparent hover:text-body hover:bg-raised',
                 ]}
               >
                 {item.label}
               </a>
             ))
           }
-          <a href={REPO_URL} class="px-4 py-2 text-ink-soft hover:text-gold hover:bg-paper-deep transition-colors" title="GitHub repository">
-            GitHub
+          <a
+            href="/the-case"
+            class="px-4 py-2.5 no-underline border-l-[3px] border-transparent text-muted hover:text-body hover:bg-raised transition-colors"
+          >
+            Read the case
           </a>
         </nav>
       </div>
@@ -155,25 +208,53 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
       <slot />
     </main>
 
-    <footer class="border-t border-line bg-paper-deep mt-20">
-      <div class="mx-auto max-w-5xl px-5 py-10 font-sans text-sm text-ink-soft">
-        <div class="ornament mb-6 text-gold">✦</div>
-        <div class="grid gap-8 sm:grid-cols-3">
+    <footer class="bg-navy-deep text-navy-200">
+      <div class="mx-auto max-w-page px-5 sm:px-8 pt-16 pb-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <p class="font-display font-semibold text-lg text-ink-deep mb-1">The Savio Standard</p>
-            <p class="italic font-serif">A lay movement under the patronage of St.&nbsp;Dominic&nbsp;Savio and St.&nbsp;John&nbsp;Bosco.</p>
+            <img src="/images/shield-gold.svg" alt="" width="40" height="40" class="block size-10 mb-4" aria-hidden="true" />
+            <p class="font-display text-xl font-bold leading-tight text-gold-300 tracking-tight">
+              The Savio<br />Standard
+            </p>
+            <p class="font-sans text-sm text-navy-200 mt-4 max-w-[32ch]">
+              Anchor your school in the Golden Rule. A lay movement under the patronage of
+              St.&nbsp;Dominic&nbsp;Savio and St.&nbsp;John&nbsp;Bosco.
+            </p>
           </div>
-          <div>
-            <p class="eyebrow mb-2">Our promise</p>
-            <p>Free for families, forever. Read the <a href="/commitment" class="underline decoration-gold-soft underline-offset-2 hover:text-gold">Stewardship Commitment</a>.</p>
-          </div>
-          <div>
-            <p class="eyebrow mb-2">Built in the open</p>
-            <p>Every document on this site lives in a public <a href={REPO_URL} class="underline decoration-gold-soft underline-offset-2 hover:text-gold">repository</a> — corrections and contributions welcome.</p>
-          </div>
+          {
+            footerColumns.map((col) => (
+              <div>
+                <p class="eyebrow text-gold-400">{col.heading}</p>
+                <ul class="list-none p-0 mt-4 flex flex-col gap-2">
+                  {col.links.map((link) => (
+                    <li>
+                      <a
+                        href={link.href}
+                        class="font-sans text-sm text-navy-200 no-underline hover:text-gold-300 transition-colors duration-140"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
         </div>
-        <p class="mt-8 text-xs text-ink-soft/80">Working draft · Content licensed <a href={`${REPO_URL}/blob/master/LICENSE.md`} class="underline underline-offset-2 hover:text-gold">CC BY-NC-SA 4.0</a> · © 2026 Savio Standard</p>
-        <p class="mt-2 text-xs text-ink-soft/80">Not legal, medical, or professional advice — see <a href="/stewardship" class="underline underline-offset-2 hover:text-gold">Stewardship &amp; Operations</a> for full terms.</p>
+
+        <div class="mt-12 pt-5 border-t border-navy-700 flex flex-col sm:flex-row sm:justify-between gap-3 font-sans text-2xs text-navy-400">
+          <p>
+            Working draft · © 2026 The Savio Standard · Content licensed{' '}
+            <a
+              href={`${REPO_URL}/blob/master/LICENSE.md`}
+              class="text-navy-400 underline underline-offset-2 hover:text-gold-300 transition-colors">CC BY-NC-SA 4.0</a>
+          </p>
+          <p>
+            Free for families, forever. Not legal, medical, or professional advice — see{' '}
+            <a href="/stewardship" class="text-navy-400 underline underline-offset-2 hover:text-gold-300 transition-colors">
+              Stewardship &amp; Operations</a>.
+          </p>
+        </div>
       </div>
     </footer>
 
@@ -188,10 +269,10 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
           toggle.setAttribute('aria-expanded', String(open));
           toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
           menu.classList.toggle('opacity-100', open);
-          menu.classList.toggle('scale-100', open);
+          menu.classList.toggle('translate-y-0', open);
           menu.classList.toggle('pointer-events-auto', open);
           menu.classList.toggle('opacity-0', !open);
-          menu.classList.toggle('scale-95', !open);
+          menu.classList.toggle('-translate-y-2.5', !open);
           menu.classList.toggle('pointer-events-none', !open);
           iconHamburger.classList.toggle('hidden', open);
           iconClose.classList.toggle('hidden', !open);

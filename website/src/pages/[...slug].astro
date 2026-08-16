@@ -14,21 +14,25 @@ const { Content } = await render(entry);
 ---
 
 <Base title={doc.title} description={doc.description} type="article">
-  <article class="mx-auto max-w-3xl px-5 py-14">
-    <header class="mb-10 border-b border-line pb-8">
-      <p class="eyebrow mb-3">{doc.section}</p>
-      <h1 class="font-display text-4xl sm:text-5xl font-semibold leading-tight text-ink-deep text-balance">
+  <article class="mx-auto max-w-page py-16">
+    <header class="pb-10">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">{doc.section}</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold leading-snug tracking-tight text-strong mt-4 text-balance">
         {doc.title}
       </h1>
-      <p class="mt-4 font-sans text-[0.95rem] leading-relaxed text-ink-soft max-w-2xl">{doc.description}</p>
-      <p class="mt-4 font-sans text-xs uppercase tracking-[0.14em] text-ink-soft/70">
-        <a href={`/print/${doc.slug}`} class="text-gold hover:text-ink-deep transition-colors">
+      <p class="font-sans text-lg leading-relaxed text-muted mt-5 max-w-[62ch]">{doc.description}</p>
+      <p class="mt-6 font-sans text-2xs uppercase tracking-caps text-subtle">
+        <a
+          href={`/print/${doc.slug}`}
+          class="text-gold-600 no-underline hover:text-strong transition-colors duration-140"
+        >
           printer-friendly version
         </a>
         {' · '}
         <a
           href={`${REPO_URL}/blob/master/${doc.srcPath}`}
-          class="text-gold hover:text-ink-deep transition-colors"
+          class="text-gold-600 no-underline hover:text-strong transition-colors duration-140"
         >
           suggest an edit
         </a>

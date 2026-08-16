@@ -31,99 +31,149 @@ const reading = [
   description="The Golden Rule, restored as the standard — why culture drifts without one, and the playbook for parents who want to hold it on purpose."
 >
   <!-- Hero -->
-  <section class="mx-auto max-w-3xl px-5 pt-20 pb-14 text-center">
-    <p class="eyebrow mb-6">For Parents</p>
-    <h1 class="font-display text-5xl sm:text-6xl font-semibold leading-[1.08] text-ink-deep text-balance">
-      The Golden Rule, restored as the standard
-    </h1>
-    <p class="mt-7 text-lg leading-relaxed text-ink-soft max-w-2xl mx-auto">
-      Not a slogan on a classroom wall, but the plain, enforced expectation of daily life — the standard a grade's families hold together, on purpose. This is the parent playbook: why culture drifts without one, and where to begin.
-    </p>
-  </section>
-
-  <!-- Why -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-3xl px-5 py-14 text-center">
-      <p class="eyebrow mb-4">Why this exists</p>
-      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">Culture doesn’t hold itself together</h2>
-      <p class="text-lg leading-relaxed text-ink-soft">
-        Left alone, a school culture drifts toward whatever its most persistent voices normalize — one grade, one group chat, one birthday-party guest list at a time. Kindness becomes something to praise when it shows up, rather than something to expect. None of this is anyone's fault in particular; it's simply what happens when a culture is left undirected instead of built on purpose.
+  <section class="px-5 sm:px-8 pt-16 pb-16">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">For parents</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold leading-[1.08] tracking-tight text-strong mt-4 max-w-[18ch] text-balance">
+        The Golden Rule, restored as the standard.
+      </h1>
+      <p class="font-sans text-lg text-muted mt-6 max-w-[62ch]">
+        Not a slogan on a classroom wall, but the plain, enforced expectation of daily life — the
+        standard a grade's families hold together, on purpose. This is the parent playbook: why
+        culture drifts without one, and where to begin.
       </p>
     </div>
   </section>
 
-  <!-- The standard -->
-  <section class="mx-auto max-w-3xl px-5 py-16 text-center">
-    <p class="eyebrow mb-4">The standard, not the goal</p>
-    <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">Kindness and dignity are the floor</h2>
-    <p class="text-lg leading-relaxed text-ink-soft">
-      The Golden Rule set the bar a long time ago. The Savio Standard treats it as a floor a grade's families can name, expect, and hold together — not an aspiration to hope for, and not a weight any one family should carry alone.
-    </p>
-  </section>
-
-  <!-- The antidote -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-3xl px-5 py-14 text-center">
-      <p class="eyebrow mb-4">The antidote</p>
-      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">A playbook, not a program</h2>
-      <p class="text-lg leading-relaxed text-ink-soft">
-        This project exists so no parent has to build the response from scratch: a covenant already written, a shared language already tested, a protocol for the hard conversation already scripted, and a community structure — School Leads, Homeroom Hosts — already designed. Four documents cover the essentials.
-      </p>
+  <!-- Why this exists -->
+  <section class="px-5 sm:px-8 pb-16">
+    <div class="mx-auto max-w-page">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="card card-top-rule p-6 flex flex-col gap-3">
+          <span class="eyebrow">Why this exists</span>
+          <h2 class="font-display text-xl font-bold tracking-tight text-strong">
+            Culture doesn’t hold itself together
+          </h2>
+          <p class="font-sans text-base leading-relaxed text-muted">
+            Left alone, a school culture drifts toward whatever its most persistent voices normalize
+            — one grade, one group chat, one birthday-party guest list at a time. Kindness becomes
+            something to praise when it shows up, rather than something to expect. None of this is
+            anyone's fault in particular; it's simply what happens when a culture is left undirected
+            instead of built on purpose.
+          </p>
+        </div>
+        <div class="card card-top-rule p-6 flex flex-col gap-3">
+          <span class="eyebrow">The standard, not the goal</span>
+          <h2 class="font-display text-xl font-bold tracking-tight text-strong">
+            Kindness and dignity are the floor
+          </h2>
+          <p class="font-sans text-base leading-relaxed text-muted">
+            The Golden Rule set the bar a long time ago. The Savio Standard treats it as a floor a
+            grade's families can name, expect, and hold together — not an aspiration to hope for,
+            and not a weight any one family should carry alone.
+          </p>
+        </div>
+        <div class="card card-top-rule p-6 flex flex-col gap-3">
+          <span class="eyebrow">The antidote</span>
+          <h2 class="font-display text-xl font-bold tracking-tight text-strong">
+            A playbook, not a program
+          </h2>
+          <p class="font-sans text-base leading-relaxed text-muted">
+            This project exists so no parent has to build the response from scratch: a covenant
+            already written, a shared language already tested, a protocol for the hard conversation
+            already scripted, and a community structure — School Leads, Homeroom Hosts — already
+            designed. Four documents cover the essentials.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Reading order -->
-  <section class="mx-auto max-w-3xl px-5 py-16">
-    <div class="ornament mb-10"><span class="eyebrow">Read these, in this order</span></div>
-    <ol class="space-y-8">
-      {
-        reading.map((r, i) => (
-          <li class="flex gap-5">
-            <div class="font-display text-3xl text-gold font-semibold shrink-0 w-8 text-center">{i + 1}</div>
-            <div>
-              <a
-                href={'/' + r.doc!.slug}
-                class="font-display text-xl font-semibold text-ink-deep hover:text-gold transition-colors"
-              >
-                {r.doc!.title}
-              </a>
-              <span class="font-sans text-xs uppercase tracking-[0.1em] text-ink-soft/70 ml-2">{r.time}</span>
-              <p class="font-sans text-[0.95rem] leading-relaxed text-ink-soft mt-1.5">{r.why}</p>
-            </div>
-          </li>
-        ))
-      }
-    </ol>
+  <section class="px-5 sm:px-8 py-20 bg-navy">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow text-gold-400">Read these, in this order</p>
+      <h2 class="font-display text-3xl font-bold leading-snug tracking-tight text-paper-100 mt-3">
+        Four documents, about an hour.
+      </h2>
+      <ol class="list-none p-0 mt-10 flex flex-col gap-8">
+        {
+          reading.map((r, i) => (
+            <li class="flex gap-5">
+              <span class="shrink-0 size-8 rounded-full bg-gold-400 text-navy-900 grid place-items-center font-sans text-xs font-bold">
+                {i + 1}
+              </span>
+              <div>
+                <a
+                  href={'/' + r.doc!.slug}
+                  class="font-display text-xl font-bold tracking-tight text-paper-100 no-underline hover:text-gold-300 transition-colors duration-140"
+                >
+                  {r.doc!.title}
+                </a>
+                <span class="font-sans text-2xs uppercase tracking-caps text-gold-300 ml-3 align-middle">
+                  {r.time}
+                </span>
+                <p class="font-sans text-base leading-relaxed text-navy-200 mt-2 max-w-[62ch]">
+                  {r.why}
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
   </section>
 
   <!-- How it starts -->
-  <section class="border-y border-line bg-paper-deep">
-    <div class="mx-auto max-w-3xl px-5 py-16 text-center">
-      <p class="eyebrow mb-4">How it starts</p>
-      <h2 class="font-display text-3xl font-semibold text-ink-deep mb-6">Quietly, or all at once</h2>
-      <p class="text-lg leading-relaxed text-ink-soft">
-        It can start small: a parent reads, signs the covenant privately, and mentions it to a couple of families already trusted in the grade. When eight households in a grade have signed, the grade activates and everyone is introduced at once — no family holds the standard by itself. Or it can move faster: a family ready to launch it school-wide becomes the <a href="/roles" class="text-gold underline underline-offset-2">Director</a> themselves, or finds the parent who should be, and builds the founding team directly rather than waiting for a grade to fill in on its own. Either way, it runs independent of the school and the parish, alongside them rather than through them.
+  <section class="px-5 sm:px-8 py-20">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow">How it starts</p>
+      <h2 class="font-display text-3xl font-bold leading-snug tracking-tight text-strong mt-3">
+        Quietly, or all at once.
+      </h2>
+      <p class="font-sans text-lg text-muted mt-5 max-w-[62ch]">
+        It can start small: a parent reads, signs the covenant privately, and mentions it to a
+        couple of families already trusted in the grade. When eight households in a grade have
+        signed, the grade activates and everyone is introduced at once — no family holds the
+        standard by itself.
       </p>
-      <div class="mt-9 flex flex-wrap justify-center gap-4 font-sans">
+      <p class="font-sans text-lg text-muted mt-4 max-w-[62ch]">
+        Or it can move faster: a family ready to launch it school-wide becomes the{' '}
         <a
-          href="/covenant"
-          class="rounded-md bg-ink-deep px-6 py-3 text-sm font-semibold tracking-wide text-paper uppercase hover:bg-ink transition-colors"
-        >
-          Read the Covenant
-        </a>
-        <a
-          href="/library"
-          class="rounded-md border border-gold px-6 py-3 text-sm font-semibold tracking-wide text-gold uppercase hover:bg-gold hover:text-paper transition-colors"
-        >
-          Explore the Library
-        </a>
+          href="/roles"
+          class="text-navy-600 underline decoration-gold-400 underline-offset-2 hover:text-strong transition-colors duration-140"
+          >Director</a
+        > themselves, or finds the parent who should be, and builds the founding team directly rather
+        than waiting for a grade to fill in on its own. Either way, it runs independent of the school
+        and the parish, alongside them rather than through them.
+      </p>
+
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="/covenant" class="btn btn-lg btn-gold">Read the covenant</a>
+        <a href="/library" class="btn btn-lg btn-secondary">Explore the library</a>
       </div>
-      <p class="mt-8 font-sans text-sm text-ink-soft">
-        Looking to bring this to a school's leadership instead? There's a <a href="/for-schools" class="text-gold underline underline-offset-2">starter page for that</a>, too.
-      </p>
-      <p class="mt-3 font-sans text-sm text-ink-soft">
-        Questions, or want to be one of the founding families? Best way in is <a href={`${REPO_URL}/issues`} class="text-gold underline underline-offset-2">an issue on GitHub</a> — or reach a maintainer directly.
-      </p>
+
+      <div class="mt-10 pt-8 border-t border-hairline flex flex-col gap-3 max-w-[62ch]">
+        <p class="font-sans text-base text-muted">
+          Looking to bring this to a school's leadership instead? There's a{' '}
+          <a
+            href="/for-schools"
+            class="text-navy-600 underline decoration-gold-400 underline-offset-2 hover:text-strong transition-colors duration-140"
+            >starter page for that</a
+          >, too.
+        </p>
+        <p class="font-sans text-base text-muted">
+          Questions, or want to be one of the founding families? Best way in is{' '}
+          <a
+            href={`${REPO_URL}/issues`}
+            class="text-navy-600 underline decoration-gold-400 underline-offset-2 hover:text-strong transition-colors duration-140"
+            >an issue on GitHub</a
+          > — or reach a maintainer directly.
+        </p>
+      </div>
     </div>
   </section>
 </Base>

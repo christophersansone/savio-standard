@@ -10,42 +10,54 @@ const sections: Section[] = ['Start Here', 'For Families', 'For Communities', 'T
   title="Library"
   description="Every document of The Savio Standard — the case, the plan, the covenant, the convictions, and the guides — free, forever."
 >
-  <section class="mx-auto max-w-5xl px-5 py-14">
-    <header class="mb-12 text-center">
-      <p class="eyebrow mb-3">The Library</p>
-      <h1 class="font-display text-4xl sm:text-5xl font-semibold text-ink-deep">Every document, free, forever</h1>
-      <p class="mt-4 font-sans text-ink-soft max-w-2xl mx-auto">
-        The canonical versions live in a public repository; these pages are generated from it. Spot something to improve? Every page has a “suggest an edit” link.
+  <!-- Page header — navy band -->
+  <section class="bg-navy px-5 sm:px-8 py-16">
+    <div class="mx-auto max-w-page">
+      <hr class="rule-gold mb-5" />
+      <p class="eyebrow text-gold-400">The library</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold leading-snug tracking-tight text-paper-100 mt-4 text-balance">
+        Every document, free, forever.
+      </h1>
+      <p class="font-sans text-lg text-navy-200 mt-5 max-w-[62ch]">
+        The canonical versions live in a public repository; these pages are generated from it. Spot
+        something to improve? Every page has a “suggest an edit” link.
       </p>
-    </header>
+    </div>
+  </section>
 
-    {
-      sections.map((section) => (
-        <div class="mb-12">
-          <div class="ornament mb-6">
-            <span class="eyebrow">{section}</span>
+  <section class="px-5 sm:px-8 py-20">
+    <div class="mx-auto max-w-page">
+      {
+        sections.map((section, i) => (
+          <div class:list={['', i > 0 ? 'mt-16' : '']}>
+            <hr class="rule-gold mb-5" />
+            <h2 class="eyebrow">{section}</h2>
+            <div class="grid gap-6 sm:grid-cols-2 mt-6">
+              {docs
+                .filter((d) => d.section === section)
+                .map((d) => (
+                  <a href={'/' + d.slug} class="card card-interactive p-6 no-underline block">
+                    <h3 class="font-display text-xl font-bold tracking-tight text-strong">
+                      {d.title}
+                    </h3>
+                    <p class="font-sans text-base leading-relaxed text-muted mt-2">
+                      {d.description}
+                    </p>
+                  </a>
+                ))}
+            </div>
           </div>
-          <div class="grid gap-5 sm:grid-cols-2">
-            {docs
-              .filter((d) => d.section === section)
-              .map((d) => (
-                <a
-                  href={'/' + d.slug}
-                  class="group rounded-lg border border-line bg-white/50 p-5 transition-all hover:border-gold-soft hover:shadow-sm"
-                >
-                  <h2 class="font-display text-xl font-semibold text-ink-deep group-hover:text-gold transition-colors">
-                    {d.title}
-                  </h2>
-                  <p class="font-sans text-sm leading-relaxed text-ink-soft mt-1.5">{d.description}</p>
-                </a>
-              ))}
-          </div>
-        </div>
-      ))
-    }
+        ))
+      }
 
-    <p class="text-center font-sans text-sm text-ink-soft">
-      Looking for the license, contributor agreement, or code of conduct? They live <a href={REPO_URL} class="text-gold underline underline-offset-2">in the repository</a>.
-    </p>
+      <p class="mt-16 pt-8 border-t border-hairline font-sans text-base text-muted max-w-[62ch]">
+        Looking for the license, contributor agreement, or code of conduct? They live{' '}
+        <a
+          href={REPO_URL}
+          class="text-navy-600 underline decoration-gold-400 underline-offset-2 hover:text-strong transition-colors duration-140"
+          >in the repository</a
+        >.
+      </p>
+    </div>
   </section>
 </Base>
