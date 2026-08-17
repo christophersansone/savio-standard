@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "covenant",
+    "path": "content/covenant.md",
+    "kind": "public",
+    "title": "The Family Covenant",
+    "description": "Eight commitments, signed as a household and renewed each year."
+  },
+  {
+    "slug": "covenant-template",
+    "path": "content/covenant.md",
+    "kind": "covenant_template",
+    "title": "The Family Covenant (template)",
+    "description": "Source for seeding a new school year's Covenant#body. Contains the [School] placeholder, substituted once at creation time."
+  },
+  {
+    "slug": "convictions",
+    "path": "content/convictions-parents.md",
+    "kind": "public",
+    "title": "The Convictions of Catholic School Parents",
+    "description": "The truths we hold, and the expectations we state plainly, beginning with ourselves."
+  },
+  {
+    "slug": "convictions-community",
+    "path": "content/convictions-community.md",
+    "kind": "public",
+    "title": "The Convictions of Our Catholic School Community",
+    "description": "The same truths as shared affirmations, for parents, teachers, staff, and leadership to sign together."
+  },
+  {
+    "slug": "protocol",
+    "path": "content/parent-to-parent-protocol.md",
+    "kind": "public",
+    "title": "The Parent-to-Parent Protocol",
+    "description": "How to approach another parent, how to receive one, and what to do when the conversation gets stuck."
+  },
+  {
+    "slug": "glossary",
+    "path": "content/glossary.md",
+    "kind": "public",
+    "title": "The Glossary",
+    "description": "A shared language that turns \"drama\" into specific, discussable behavior."
+  },
+  {
+    "slug": "roles",
+    "path": "content/roles-and-responsibilities.md",
+    "kind": "public",
+    "title": "Roles & Responsibilities",
+    "description": "The six volunteer roles of a Savio Community."
+  },
+  {
+    "slug": "facilitators",
+    "path": "content/facilitator-onboarding.md",
+    "kind": "public",
+    "title": "Facilitator Onboarding",
+    "description": "The method, scripts, hard moments, and bright lines for the volunteers who hold the room."
+  }
+]
